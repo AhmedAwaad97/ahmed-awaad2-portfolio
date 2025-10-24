@@ -1,0 +1,739 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Ahmed Mahmoud Awaad — Senior Accountant & Power BI Data Analyst. Power BI dashboards, advanced Excel, financial reporting and data modelling." />
+  <title>Ahmed Mahmoud Awaad | Senior Accountant & Power BI Data Analyst</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- AOS (Animate On Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Font Awesome Icons (kit) -->
+  <script src="https://kit.fontawesome.com/a2d0d6a9b5.js" crossorigin="anonymous" defer></script>
+
+  <style>
+    /* All your CSS styles here (same as before) */
+    /* ===== Accessibility helpers ===== */
+    .sr-only {
+      position: absolute !important;
+      height: 1px; width: 1px;
+      overflow: hidden;
+      clip: rect(1px, 1px, 1px, 1px);
+      white-space: nowrap;
+      clip-path: inset(50%);
+      border: 0;
+      padding: 0;
+      margin: -1px;
+    }
+
+    /* ===== Base Styles ===== */
+    * { box-sizing: border-box; }
+    html,body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: #1a1a2e;
+      color: #e6e6e6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+    a { color: #4cc9f0; text-decoration: none; transition: color .2s ease; }
+    a:hover, a:focus { color: #7de2ff; outline: none; }
+
+    /* ===== Skip link ===== */
+    .skip-link {
+      position: absolute;
+      left: -999px;
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+    .skip-link:focus {
+      left: 1rem;
+      top: 1rem;
+      width: auto;
+      height: auto;
+      padding: .5rem 1rem;
+      background: #4cc9f0;
+      color: #1a1a2e;
+      border-radius: 4px;
+      z-index: 2000;
+    }
+
+    /* ===== Navbar ===== */
+    nav {
+      position: fixed;
+      inset: 0 0 auto 0;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding: .7rem 1.25rem;
+      background: rgba(26,26,46,0.95);
+      backdrop-filter: blur(6px);
+      z-index: 1000;
+      gap: 1rem;
+      transition: all 0.3s ease;
+    }
+    nav.scrolled {
+      padding: .5rem 1.25rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+    .logo { font-size: 1.25rem; font-weight: 700; color: #4cc9f0; letter-spacing: .2px; }
+    .nav-inner { display:flex; align-items:center; gap:1rem; width:100%; max-width:1100px; margin-inline:auto; }
+
+    .nav-links {
+      display:flex;
+      gap: 1rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      align-items: center;
+    }
+    .nav-links a {
+      color: #e6e6e6;
+      font-weight: 500;
+      font-size: .95rem;
+      padding: .35rem .5rem;
+      border-radius: 6px;
+    }
+    .nav-links a:focus-visible,
+    .nav-links a:hover {
+      background: rgba(76,201,240,0.08);
+      color: #7de2ff;
+    }
+
+    /* Mobile menu */
+    .menu-toggle {
+      display: none;
+      background: transparent;
+      border: 0;
+      color: #4cc9f0;
+      font-size: 1.2rem;
+      cursor: pointer;
+      padding: .4rem;
+    }
+
+    /* ===== Header ===== */
+    header {
+      height: 85vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      background: linear-gradient(180deg,#16213e 0%, #1a1a2e 100%);
+      padding: 0 1rem;
+      margin-top: 64px; /* reserve nav height */
+      position: relative;
+      overflow: hidden;
+    }
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(76,201,240,0.03)"/></svg>');
+      background-size: cover;
+    }
+    header .hero {
+      max-width: 980px;
+      padding: 2rem 1rem;
+      position: relative;
+      z-index: 1;
+    }
+    header h1 { font-size: 2.4rem; color:#4cc9f0; margin-bottom: .2rem; letter-spacing: .4px; }
+    header h2 { font-size: 1.05rem; color:#e6e6e6; margin-bottom: .5rem; font-weight: 400; }
+    header p { font-size: .98rem; color: #cccccc; max-width: 820px; margin: 0 auto; }
+    header .contact-inline { margin-top: .9rem; color:#b3b3b3; font-size:.95rem; display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; }
+
+    /* ===== Main / Sections ===== */
+    main { padding-top: 1rem; }
+    section { padding: 3rem 1rem; max-width: 1000px; margin: 0 auto; }
+    section h2 {
+      color: #4cc9f0;
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #4cc9f0;
+      display: inline-block;
+      padding-bottom: .35rem;
+    }
+
+    /* ===== About ===== */
+    #about p { color: #cccccc; font-size: .95rem; }
+
+    /* ===== Skills ===== */
+    .skills {
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .skill {
+      background: #16213e;
+      padding: 1rem;
+      border-radius: 10px;
+      text-align:center;
+      transition: transform .24s ease, box-shadow .24s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .skill::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: #4cc9f0;
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+    .skill:focus-within, .skill:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.45);
+    }
+    .skill:focus-within::after, .skill:hover::after {
+      transform: scaleX(1);
+    }
+    .skill i { font-size: 1.6rem; color: #4cc9f0; margin-bottom: .4rem; display:block; }
+    .skill p { margin: 0; color: #e6e6e6; font-weight: 600; font-size: .95rem; }
+    .skill .skill-detail {
+      font-size: 0.8rem;
+      color: #b3b3b3;
+      margin-top: 0.3rem;
+      font-weight: 400;
+      line-height: 1.3;
+    }
+
+    /* ===== Cards ===== */
+    .card {
+      background: #16213e;
+      padding: 1.2rem;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+      transition: transform .24s ease, box-shadow .24s ease;
+      position: relative;
+    }
+    .card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: #4cc9f0;
+      border-radius: 4px 0 0 4px;
+      transform: scaleY(0);
+      transition: transform 0.3s ease;
+    }
+    .card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.45); }
+    .card:hover::before {
+      transform: scaleY(1);
+    }
+    .card h3 { color: #4cc9f0; margin: 0 0 .4rem 0; font-size: 1.05rem; }
+    .card p, .card li { color: #cccccc; font-size: .95rem; }
+    .card ul { margin: .4rem 0 0 1rem; padding: 0; }
+    
+    /* Experience-specific styles */
+    .experience-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .experience-title {
+      color: #4cc9f0;
+      margin: 0;
+      font-size: 1.1rem;
+    }
+    .experience-company {
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+    .experience-period {
+      color: #b3b3b3;
+      font-size: 0.9rem;
+      white-space: nowrap;
+    }
+    .experience-industry {
+      color: #b3b3b3;
+      font-size: 0.9rem;
+      margin-bottom: 0.75rem;
+      font-style: italic;
+    }
+
+    /* ===== Buttons with Shine Effect ===== */
+    .btn {
+      display:inline-block;
+      position:relative;
+      overflow:hidden;
+      background:#4cc9f0;
+      color:#16213e;
+      padding:.6rem 1rem;
+      border-radius:6px;
+      font-weight:700;
+      transition: background .2s ease, transform .15s ease;
+    }
+    .btn::before {
+      content:"";
+      position:absolute;
+      top:0; left:-110%;
+      width:60%; height:100%;
+      background: linear-gradient(120deg, transparent, rgba(255,255,255,0.5), transparent);
+      transform: skewX(-12deg);
+      transition: left .55s ease;
+      pointer-events: none;
+    }
+    .btn:hover::before { left: 110%; }
+    .btn:focus { outline: 3px solid rgba(76,201,240,0.2); }
+
+    /* ===== Contact Form ===== */
+    form { display:flex; flex-direction:column; gap:.75rem; background:#16213e; padding:1.25rem; border-radius:10px; }
+    label { font-size: .9rem; color: #cccccc; }
+    input, textarea {
+      padding: .7rem;
+      border: none;
+      border-radius: 6px;
+      background: #1f2a4e;
+      color: #fff;
+      font-size: .95rem;
+      resize: vertical;
+      outline: none;
+      transition: box-shadow 0.3s ease;
+    }
+    input:focus, textarea:focus { box-shadow: 0 0 0 3px rgba(76,201,240,0.08); }
+    button[type="submit"] {
+      background: #4cc9f0;
+      color: #16213e;
+      border: none;
+      padding: .8rem;
+      border-radius: 6px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    button[type="submit"]:hover {
+      background: #7de2ff;
+      transform: translateY(-2px);
+    }
+    button[type="submit"]:disabled {
+      background: #3a9fc5;
+      cursor: not-allowed;
+      transform: none;
+    }
+    .loading {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border: 3px solid rgba(22,33,62,0.3);
+      border-radius: 50%;
+      border-top-color: #16213e;
+      animation: spin 1s ease-in-out infinite;
+      margin-right: 10px;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    .social { display:flex; gap:.6rem; justify-content:center; margin-top:1rem; flex-wrap:wrap; }
+    .social a { background:#4cc9f0; color:#16213e; padding: .5rem .75rem; border-radius:6px; font-weight:600; font-size:.9rem; transition: all 0.3s ease; }
+    .social a:hover { background:#7de2ff; transform: translateY(-2px); }
+
+    /* ===== Footer ===== */
+    footer {
+      text-align:center;
+      padding: 1.25rem;
+      color: #999999;
+      background: #16213e;
+      font-size: .88rem;
+      margin-top: 2rem;
+    }
+
+    /* ===== Focus-visible for keyboard users ===== */
+    :focus { outline: none; }
+    :focus-visible { outline: 3px solid rgba(76,201,240,0.12); border-radius: 6px; }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 900px) {
+      header h1 { font-size: 2rem; }
+      header h2 { font-size: 1rem; }
+      .nav-links { display: none; position: absolute; top: 64px; right: 1rem; background: rgba(26,26,46,0.98); padding: .75rem; border-radius: 8px; flex-direction: column; width: min(92%, 320px); }
+      .nav-links.open { display:flex; }
+      .menu-toggle { display: inline-flex; align-items:center; gap: .35rem; }
+      nav { padding: .55rem .75rem; }
+      header { margin-top: 56px; }
+      .experience-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .experience-period {
+        margin-top: 0.25rem;
+      }
+      .skill .skill-detail {
+        font-size: 0.75rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Navbar -->
+  <nav role="navigation" aria-label="Main navigation">
+    <div class="nav-inner" style="width:100%;">
+      <div class="logo">Ahmed Awaad</div>
+
+      <button class="menu-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Toggle navigation" id="menuToggle">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+        <span class="sr-only">Menu</span>
+      </button>
+
+      <ul class="nav-links" id="primary-navigation">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main" tabindex="-1">
+    <!-- Header / Hero -->
+    <header id="home" data-aos="fade-up">
+      <div class="hero">
+        <h1>Ahmed Mahmoud Awaad</h1>
+        <h2>Senior Accountant & Power BI Data Analyst</h2>
+        <p>Transforming financial and operational data into clear insights. I design Power BI reports, automate reporting with Power Query & Excel, and produce management-ready financial analysis.</p>
+
+        <div class="contact-inline" aria-hidden="false">
+          <span><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:Ahmedawwad01097903539@gmail.com">Ahmedawwad01097903539@gmail.com</a></span>
+          <span><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:+966569237463">+966 56 923 7463</a></span>
+        </div>
+      </div>
+    </header>
+
+    <!-- About -->
+    <section id="about" data-aos="fade-up" aria-labelledby="about-heading">
+      <h2 id="about-heading">About Me</h2>
+      <p>I am a Senior Accountant with 5+ years (2019‑present) of experience in accounting, financial reporting and data analytics. I combine accounting best practices with Power BI, DAX, Power Query and advanced Excel to build automated reporting, KPI dashboards and profitability analyses that support strategic decisions.</p>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" data-aos="fade-up" aria-labelledby="skills-heading">
+      <h2 id="skills-heading">Skills</h2>
+      <div class="skills" role="list">
+        <div class="skill" role="listitem" tabindex="0"><i class="fa-solid fa-chart-column" aria-hidden="true"></i><p>Power BI (Dashboarding)</p></div>
+        <div class="skill" role="listitem" tabindex="0"><i class="fa-solid fa-table" aria-hidden="true"></i><p>Advanced Excel</p></div>
+        <div class="skill" role="listitem" tabindex="0"><i class="fa-solid fa-code" aria-hidden="true"></i><p>DAX & Power Query</p></div>
+        <div class="skill" role="listitem" tabindex="0"><i class="fa-solid fa-calculator" aria-hidden="true"></i><p>Financial Analysis</p></div>
+        <div class="skill" role="listitem" tabindex="0"><i class="fa-solid fa-database" aria-hidden="true"></i><p>Data Modeling & ETL</p></div>
+        <div class="skill" role="listitem" tabindex="0"><i class="fa-solid fa-file-invoice" aria-hidden="true"></i><p>Accounting & Reporting</p></div>
+        <div class="skill" role="listitem" tabindex="0">
+          <i class="fa-solid fa-server" aria-hidden="true"></i>
+          <p>ERP Systems</p>
+          <div class="skill-detail">Dynamics 365, Dynamics AX, Double Click</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" data-aos="fade-up" aria-labelledby="experience-heading">
+      <h2 id="experience-heading">Experience</h2>
+
+      <div class="card" role="article" aria-labelledby="exp1-title">
+        <div class="experience-header">
+          <h3 id="exp1-title" class="experience-title">Senior Accountant</h3>
+          <span class="experience-period">03/2025 – Present</span>
+        </div>
+        <p class="experience-company">Deraah Trading Company</p>
+        <p class="experience-industry">Perfumes, Cosmetics & Accessories - KSA</p>
+        <ul>
+          <li>Manage bank operations and reconcile daily/monthly statements</li>
+          <li>Match showroom deposits with accounting records and prepare reconciliation reports</li>
+          <li>Reconcile installment reports from Tamara and Tabby platforms</li>
+          <li>Record journal entries and manage accounts receivable/payable using ERP systems</li>
+          <li>Collaborate with procurement and operations departments for financial accuracy</li>
+        </ul>
+      </div>
+
+      <div class="card" role="article" aria-labelledby="exp2-title">
+        <div class="experience-header">
+          <h3 id="exp2-title" class="experience-title">Senior Accountant</h3>
+          <span class="experience-period">12/2022 – 03/2025</span>
+        </div>
+        <p class="experience-company">Integrated Technics</p>
+        <p class="experience-industry">System Integrator (Security & ICT solutions)</p>
+        <ul>
+          <li>Updated accounts payable and established accounting program database</li>
+          <li>Managed project follow-ups with suppliers, customers, and cross-functional teams</li>
+          <li>Assisted with audits, tax preparations, and financial report analysis</li>
+          <li>Prepared financial reports for regulatory bodies and shareholders</li>
+          <li>Supported month-end and year-end closings and general ledger management</li>
+        </ul>
+      </div>
+
+      <div class="card" role="article" aria-labelledby="exp3-title">
+        <div class="experience-header">
+          <h3 id="exp3-title" class="experience-title">Senior Accountant</h3>
+          <span class="experience-period">02/2020 – 06/2021</span>
+        </div>
+        <p class="experience-company">Tawreda.com</p>
+        <p class="experience-industry">HORECA Food Supply - Cairo, Egypt</p>
+        <ul>
+          <li>Maintained daily accounts and prepared month-end close</li>
+          <li>Prepared monthly financial performance reports and management information</li>
+          <li>Conducted credit control, debt collection, and accounts receivable/payable oversight</li>
+          <li>Reviewed expenses, payroll records, and updated financial data</li>
+          <li>Facilitated month-end closing process and transaction reconciliation</li>
+        </ul>
+      </div>
+
+      <div class="card" role="article" aria-labelledby="exp4-title">
+        <div class="experience-header">
+          <h3 id="exp4-title" class="experience-title">General Accountant</h3>
+          <span class="experience-period">07/2019 – 02/2020</span>
+        </div>
+        <p class="experience-company">Cattelya For Chemical Co</p>
+        <ul>
+          <li>Prepared and recorded journal entries and assisted with expense reviews</li>
+          <li>Aided in financial statement preparation and bank reconciliation</li>
+          <li>Maintained fixed assets register and calculated depreciation</li>
+          <li>Managed online banking transactions and monitored daily cash balances</li>
+        </ul>
+      </div>
+
+      <div class="card" role="article" aria-labelledby="exp5-title">
+        <div class="experience-header">
+          <h3 id="exp5-title" class="experience-title">Accountant</h3>
+          <span class="experience-period">07/2019 – 02/2020</span>
+        </div>
+        <p class="experience-company">Elmotaheda for Trade and Finance</p>
+        <ul>
+          <li>Prepared and recorded journal entries, handled cash management as Treasurer</li>
+          <li>Processed payments and controlled expenses through invoice verification</li>
+          <li>Distributed checks after matching invoices to payments</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Certifications -->
+    <section id="certifications" data-aos="fade-up" aria-labelledby="certs-heading">
+      <h2 id="certs-heading">Certifications</h2>
+
+      <div class="card">
+        <h3>Power BI & Excel Data Analysis</h3>
+        <p>Certified in advanced Power BI, Power Query and Excel techniques for financial analysis and reporting.</p>
+      </div>
+
+      <div class="card">
+        <h3>Qualified Accountant Diploma</h3>
+        <p>Professional qualification focused on financial reporting, analysis and accounting standards.</p>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" data-aos="fade-up" aria-labelledby="projects-heading">
+      <h2 id="projects-heading">Projects</h2>
+      <div class="projects">
+        <div class="card" role="article">
+          <h3>📊 Sales Dashboard</h3>
+          <p>Interactive Power BI dashboard tracking revenue, margin, top customers and sales trends by channel and region.</p>
+        </div>
+
+        <div class="card" role="article">
+          <h3>💼 Reporting Automation</h3>
+          <p>Automated monthly reporting flows using Power Query and scheduled data processes to consolidate financial and operational data.</p>
+        </div>
+
+        <div class="card" role="article">
+          <h3>📈 Cost & Profitability Model</h3>
+          <p>Branch-level profitability and cost analysis models to support pricing and resource allocation decisions.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resume -->
+    <section id="resume" data-aos="fade-up" aria-labelledby="resume-heading">
+      <h2 id="resume-heading">Resume</h2>
+      <p>Download my resume (PDF) to learn more about my background, detailed project experience, and contact information.</p>
+
+      <!-- Updated Download CV button with proper relative path -->
+      <a href="./Ahmed-Mahmoud-Awaad-FlowCV-Resume-20251023_1.pdf" download class="btn" aria-label="Download Ahmed Mahmoud Awaad CV (PDF)">📥 Download CV</a>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" data-aos="fade-up" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact Me</h2>
+
+      <form id="contactForm" method="post" action="#" novalidate aria-describedby="contact-note">
+        <label class="sr-only" for="name">Your name</label>
+        <input id="name" name="name" type="text" placeholder="Your Name" required autocomplete="name">
+
+        <label class="sr-only" for="email">Your email</label>
+        <input id="email" name="email" type="email" placeholder="Your Email" required autocomplete="email">
+
+        <label class="sr-only" for="message">Your message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+
+        <!-- Honeypot to reduce spam -->
+        <input type="text" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;">
+
+        <button type="submit" id="submitBtn">
+          <span id="submitText">Send Message</span>
+        </button>
+
+        <p id="contact-note" style="color:#b3b3b3; font-size:.9rem; margin-top:.5rem;">
+          Or contact me directly:
+          <a href="mailto:Ahmedawwad01097903539@gmail.com" style="color:#4cc9f0;">Ahmedawwad01097903539@gmail.com</a>
+          • <a href="tel:+966569237463" style="color:#4cc9f0;">+966 56 923 7463</a>
+          • <a href="tel:+0201097903539" style="color:#4cc9f0;">+20 0109 790 3539</a>
+        </p>
+
+        <div id="formStatus" aria-live="polite" style="color:#cccccc; font-size:.95rem;"></div>
+      </form>
+
+      <div class="social" aria-label="Social links">
+        <a href="https://www.linkedin.com/in/ahmed-m-awaad-59103b167/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
+        <a href="https://github.com/yourprofile" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a>
+        <a href="mailto:Ahmedawwad01097903539@gmail.com"><i class="fas fa-envelope" aria-hidden="true"></i> Email</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer role="contentinfo">
+    <div id="siteFooter">© <span id="year">2025</span> Ahmed Mahmoud Awaad | All Rights Reserved</div>
+  </footer>
+
+  <!-- AOS JS (deferred) -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+
+  <script>
+    // Initialize AOS when available
+    window.addEventListener('load', function () {
+      if (window.AOS) {
+        AOS.init({ duration: 900, once: true, mirror: false });
+      }
+    });
+
+    // Nav scroll effect
+    window.addEventListener('scroll', function() {
+      const nav = document.querySelector('nav');
+      if (window.scrollY > 50) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    });
+
+    // Mobile nav toggle
+    (function () {
+      const menuToggle = document.getElementById('menuToggle');
+      const nav = document.getElementById('primary-navigation');
+
+      menuToggle.addEventListener('click', function () {
+        const isOpen = nav.classList.toggle('open');
+        menuToggle.setAttribute('aria-expanded', String(isOpen));
+      });
+
+      // close menu when a link is clicked (mobile)
+      nav.addEventListener('click', function (e) {
+        if (e.target.tagName === 'A' && nav.classList.contains('open')) {
+          nav.classList.remove('open');
+          menuToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    })();
+
+    // Form handling with improved UX
+    (function () {
+      const form = document.getElementById('contactForm');
+      const status = document.getElementById('formStatus');
+      const submitBtn = document.getElementById('submitBtn');
+      const submitText = document.getElementById('submitText');
+
+      form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+
+        // Basic client validation (fields already required)
+        const name = form.name.value.trim();
+        const email = form.email.value.trim();
+        const message = form.message.value.trim();
+        const honeypot = form.website.value;
+
+        if (honeypot) {
+          // likely a bot - silently ignore
+          status.textContent = "Message sent."; // appear successful to bots
+          return;
+        }
+
+        if (!name || !email || !message) {
+          status.style.color = "#ffb4a2";
+          status.textContent = "Please complete all required fields.";
+          return;
+        }
+
+        // Show loading state
+        submitBtn.disabled = true;
+        submitText.innerHTML = '<span class="loading"></span> Sending...';
+
+        try {
+          // Replace with your actual form submission endpoint
+          // For now, we'll simulate an API call
+          await submitForm({ name, email, message });
+          
+          status.style.color = "#cfead8";
+          status.textContent = "Thank you — your message has been sent. I will reply shortly.";
+          form.reset();
+        } catch (error) {
+          status.style.color = "#ffb4a2";
+          status.textContent = "Sorry, there was an error sending your message. Please try again or contact me directly.";
+        } finally {
+          // Reset button state
+          submitBtn.disabled = false;
+          submitText.textContent = "Send Message";
+        }
+      });
+
+      // Simulate form submission (replace with actual API call)
+      function submitForm(data) {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            // Simulate random success/failure for demo
+            if (Math.random() > 0.2) {
+              resolve();
+            } else {
+              reject(new Error('Network error'));
+            }
+          }, 1500);
+        });
+      }
+    })();
+
+    // Footer year update
+    (function () {
+      const y = new Date().getFullYear();
+      document.getElementById('year').textContent = y;
+    })();
+  </script>
+</body>
+</html>
