@@ -16,7 +16,6 @@
   <script src="https://kit.fontawesome.com/a2d0d6a9b5.js" crossorigin="anonymous" defer></script>
 
   <style>
-    /* All your CSS styles here (same as before) */
     /* ===== Accessibility helpers ===== */
     .sr-only {
       position: absolute !important;
@@ -300,58 +299,322 @@
     .btn:hover::before { left: 110%; }
     .btn:focus { outline: 3px solid rgba(76,201,240,0.2); }
 
-    /* ===== Contact Form ===== */
-    form { display:flex; flex-direction:column; gap:.75rem; background:#16213e; padding:1.25rem; border-radius:10px; }
-    label { font-size: .9rem; color: #cccccc; }
-    input, textarea {
-      padding: .7rem;
-      border: none;
-      border-radius: 6px;
-      background: #1f2a4e;
-      color: #fff;
-      font-size: .95rem;
-      resize: vertical;
-      outline: none;
-      transition: box-shadow 0.3s ease;
+    /* ===== Projects Section ===== */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1rem;
     }
-    input:focus, textarea:focus { box-shadow: 0 0 0 3px rgba(76,201,240,0.08); }
-    button[type="submit"] {
+
+    .project-card {
+      background: #16213e;
+      padding: 1.5rem;
+      border-radius: 10px;
+      transition: transform .24s ease, box-shadow .24s ease;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .project-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: #4cc9f0;
+      border-radius: 4px 0 0 4px;
+      transform: scaleY(0);
+      transition: transform 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.45);
+    }
+
+    .project-card:hover::before {
+      transform: scaleY(1);
+    }
+
+    .project-icon {
+      font-size: 2rem;
+      color: #4cc9f0;
+      margin-bottom: 1rem;
+    }
+
+    .project-title {
+      color: #4cc9f0;
+      margin: 0 0 0.5rem 0;
+      font-size: 1.2rem;
+    }
+
+    .project-description {
+      color: #cccccc;
+      margin-bottom: 1rem;
+      flex-grow: 1;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .project-tag {
+      background: rgba(76, 201, 240, 0.1);
+      color: #4cc9f0;
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+
+    .project-actions {
+      display: flex;
+      gap: 0.75rem;
+      margin-top: auto;
+    }
+
+    .btn-download {
       background: #4cc9f0;
       color: #16213e;
       border: none;
-      padding: .8rem;
+      padding: 0.5rem 1rem;
       border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+    }
+
+    .btn-download:hover {
+      background: #7de2ff;
+      transform: translateY(-2px);
+    }
+
+    .file-info {
+      color: #b3b3b3;
+      font-size: 0.8rem;
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    /* ===== Contact Form Enhanced Styles ===== */
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    #contactForm {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      background: #16213e;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    #contactForm input,
+    #contactForm textarea {
+      padding: 0.75rem;
+      border: 2px solid #1f2a4e;
+      border-radius: 8px;
+      background: #1f2a4e;
+      color: #ffffff;
+      font-size: 0.95rem;
+      font-family: inherit;
+      resize: vertical;
+      outline: none;
+      transition: all 0.3s ease;
+    }
+
+    #contactForm input:focus,
+    #contactForm textarea:focus {
+      border-color: #4cc9f0;
+      box-shadow: 0 0 0 3px rgba(76, 201, 240, 0.2);
+      background: #253258;
+    }
+
+    #contactForm input:invalid:not(:focus):not(:placeholder-shown),
+    #contactForm textarea:invalid:not(:focus):not(:placeholder-shown) {
+      border-color: #ff6b6b;
+      background: rgba(255, 107, 107, 0.1);
+    }
+
+    .submit-btn {
+      background: #4cc9f0;
+      color: #16213e;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
       font-weight: 700;
       cursor: pointer;
       transition: all 0.3s ease;
       position: relative;
       overflow: hidden;
+      font-size: 1rem;
     }
-    button[type="submit"]:hover {
+
+    .submit-btn:hover:not(:disabled) {
       background: #7de2ff;
       transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(76, 201, 240, 0.3);
     }
-    button[type="submit"]:disabled {
+
+    .submit-btn:disabled {
       background: #3a9fc5;
       cursor: not-allowed;
       transform: none;
+      box-shadow: none;
     }
+
+    .submit-btn::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -110%;
+      width: 60%;
+      height: 100%;
+      background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+      transform: skewX(-12deg);
+      transition: left 0.6s ease;
+      pointer-events: none;
+    }
+
+    .submit-btn:hover::before {
+      left: 110%;
+    }
+
+    /* Enhanced loading animation styles */
     .loading {
       display: inline-block;
-      width: 20px;
-      height: 20px;
-      border: 3px solid rgba(22,33,62,0.3);
+      width: 18px;
+      height: 18px;
+      border: 2px solid transparent;
+      border-top: 2px solid #16213e;
       border-radius: 50%;
-      border-top-color: #16213e;
-      animation: spin 1s ease-in-out infinite;
-      margin-right: 10px;
+      animation: spin 0.8s linear infinite;
+      margin-right: 8px;
+      vertical-align: middle;
     }
+
     @keyframes spin {
-      to { transform: rotate(360deg); }
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
     }
-    .social { display:flex; gap:.6rem; justify-content:center; margin-top:1rem; flex-wrap:wrap; }
-    .social a { background:#4cc9f0; color:#16213e; padding: .5rem .75rem; border-radius:6px; font-weight:600; font-size:.9rem; transition: all 0.3s ease; }
-    .social a:hover { background:#7de2ff; transform: translateY(-2px); }
+
+    /* Enhanced success/error message styles */
+    .form-status {
+      color: #cccccc;
+      font-size: 0.95rem;
+      min-height: 24px;
+      margin-top: 0.5rem;
+      padding: 0.75rem;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+      border-left: 4px solid transparent;
+    }
+
+    .form-success {
+      color: #10b981 !important;
+      background: rgba(16, 185, 129, 0.1);
+      border-left-color: #10b981;
+      font-weight: 600;
+    }
+
+    .form-error {
+      color: #ef4444 !important;
+      background: rgba(239, 68, 68, 0.1);
+      border-left-color: #ef4444;
+      font-weight: 600;
+    }
+
+    .form-info {
+      color: #4cc9f0 !important;
+      background: rgba(76, 201, 240, 0.1);
+      border-left-color: #4cc9f0;
+      font-weight: 500;
+    }
+
+    /* Contact note styling */
+    .contact-note {
+      color: #b3b3b3;
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+      line-height: 1.5;
+    }
+
+    .contact-note a {
+      color: #4cc9f0;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .contact-note a:hover {
+      color: #7de2ff;
+      text-decoration: underline;
+    }
+
+    /* Honeypot field */
+    .honeypot {
+      position: absolute !important;
+      left: -9999px !important;
+      top: -9999px !important;
+      width: 1px !important;
+      height: 1px !important;
+      overflow: hidden !important;
+      opacity: 0 !important;
+      pointer-events: none !important;
+    }
+
+    /* Social links */
+    .social {
+      display: flex;
+      gap: 0.75rem;
+      justify-content: center;
+      margin-top: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .social a {
+      background: #4cc9f0;
+      color: #16213e;
+      padding: 0.6rem 1rem;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .social a:hover {
+      background: #7de2ff;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(76, 201, 240, 0.3);
+    }
+
+    /* Character counter */
+    .char-counter {
+      font-size: 0.8rem;
+      color: #b3b3b3;
+      text-align: right;
+      margin-top: 0.25rem;
+    }
 
     /* ===== Footer ===== */
     footer {
@@ -385,6 +648,51 @@
       }
       .skill .skill-detail {
         font-size: 0.75rem;
+      }
+      .projects {
+        grid-template-columns: 1fr;
+      }
+      .project-actions {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 768px) {
+      #contactForm {
+        padding: 1.25rem;
+        gap: 0.875rem;
+      }
+
+      #contactForm input,
+      #contactForm textarea {
+        padding: 0.875rem;
+        font-size: 16px; /* Prevent zoom on iOS */
+      }
+
+      .submit-btn {
+        padding: 0.875rem 1.25rem;
+      }
+
+      .social {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .social a {
+        width: 100%;
+        max-width: 200px;
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      #contactForm {
+        padding: 1rem;
+      }
+
+      .form-status {
+        font-size: 0.9rem;
+        padding: 0.625rem;
       }
     }
   </style>
@@ -553,20 +861,151 @@
     <!-- Projects -->
     <section id="projects" data-aos="fade-up" aria-labelledby="projects-heading">
       <h2 id="projects-heading">Projects</h2>
+      <p>Explore my work samples and download project files to see my data analysis and reporting capabilities in action.</p>
+      
       <div class="projects">
-        <div class="card" role="article">
-          <h3>📊 Sales Dashboard</h3>
-          <p>Interactive Power BI dashboard tracking revenue, margin, top customers and sales trends by channel and region.</p>
+        <!-- Project 1 -->
+        <div class="project-card" role="article">
+          <div class="project-icon">
+            <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
+          </div>
+          <h3 class="project-title">Sales Performance Dashboard</h3>
+          <p class="project-description">Interactive Power BI dashboard analyzing sales trends, customer behavior, and regional performance with dynamic filtering and KPI tracking.</p>
+          <div class="project-tags">
+            <span class="project-tag">Power BI</span>
+            <span class="project-tag">Dashboard</span>
+            <span class="project-tag">Sales Analysis</span>
+          </div>
+          <div class="project-actions">
+            <a href="./projects/sales-dashboard.pbix" download class="btn-download">
+              <i class="fas fa-download" aria-hidden="true"></i>
+              Download Project
+            </a>
+            <span class="file-info">
+              <i class="fas fa-file" aria-hidden="true"></i>
+              .pbix (2.1 MB)
+            </span>
+          </div>
         </div>
 
-        <div class="card" role="article">
-          <h3>💼 Reporting Automation</h3>
-          <p>Automated monthly reporting flows using Power Query and scheduled data processes to consolidate financial and operational data.</p>
+        <!-- Project 2 -->
+        <div class="project-card" role="article">
+          <div class="project-icon">
+            <i class="fa-solid fa-file-excel" aria-hidden="true"></i>
+          </div>
+          <h3 class="project-title">Financial Reporting Automation</h3>
+          <p class="project-description">Advanced Excel workbook with Power Query integration for automated monthly financial reporting, including P&L analysis and balance sheet reconciliation.</p>
+          <div class="project-tags">
+            <span class="project-tag">Excel</span>
+            <span class="project-tag">Power Query</span>
+            <span class="project-tag">Automation</span>
+          </div>
+          <div class="project-actions">
+            <a href="./projects/financial-reporting.xlsx" download class="btn-download">
+              <i class="fas fa-download" aria-hidden="true"></i>
+              Download Project
+            </a>
+            <span class="file-info">
+              <i class="fas fa-file-excel" aria-hidden="true"></i>
+              .xlsx (3.4 MB)
+            </span>
+          </div>
         </div>
 
-        <div class="card" role="article">
-          <h3>📈 Cost & Profitability Model</h3>
-          <p>Branch-level profitability and cost analysis models to support pricing and resource allocation decisions.</p>
+        <!-- Project 3 -->
+        <div class="project-card" role="article">
+          <div class="project-icon">
+            <i class="fa-solid fa-chart-pie" aria-hidden="true"></i>
+          </div>
+          <h3 class="project-title">Cost & Profitability Analysis</h3>
+          <p class="project-description">Comprehensive cost analysis model with branch-level profitability tracking, variance analysis, and interactive reporting capabilities.</p>
+          <div class="project-tags">
+            <span class="project-tag">Power BI</span>
+            <span class="project-tag">Cost Analysis</span>
+            <span class="project-tag">Profitability</span>
+          </div>
+          <div class="project-actions">
+            <a href="./projects/cost-analysis.pbix" download class="btn-download">
+              <i class="fas fa-download" aria-hidden="true"></i>
+              Download Project
+            </a>
+            <span class="file-info">
+              <i class="fas fa-file" aria-hidden="true"></i>
+              .pbix (1.8 MB)
+            </span>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card" role="article">
+          <div class="project-icon">
+            <i class="fa-solid fa-table" aria-hidden="true"></i>
+          </div>
+          <h3 class="project-title">Budget vs Actual Analysis</h3>
+          <p class="project-description">Excel-based budget tracking system with automated variance analysis, forecasting, and management reporting templates.</p>
+          <div class="project-tags">
+            <span class="project-tag">Excel</span>
+            <span class="project-tag">Budgeting</span>
+            <span class="project-tag">Variance Analysis</span>
+          </div>
+          <div class="project-actions">
+            <a href="./projects/budget-analysis.xlsx" download class="btn-download">
+              <i class="fas fa-download" aria-hidden="true"></i>
+              Download Project
+            </a>
+            <span class="file-info">
+              <i class="fas fa-file-excel" aria-hidden="true"></i>
+              .xlsx (2.7 MB)
+            </span>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-card" role="article">
+          <div class="project-icon">
+            <i class="fa-solid fa-chart-bar" aria-hidden="true"></i>
+          </div>
+          <h3 class="project-title">Inventory Management Dashboard</h3>
+          <p class="project-description">Real-time inventory tracking dashboard with stock level monitoring, reorder point alerts, and supplier performance analysis.</p>
+          <div class="project-tags">
+            <span class="project-tag">Power BI</span>
+            <span class="project-tag">Inventory</span>
+            <span class="project-tag">Supply Chain</span>
+          </div>
+          <div class="project-actions">
+            <a href="./projects/inventory-dashboard.pbix" download class="btn-download">
+              <i class="fas fa-download" aria-hidden="true"></i>
+              Download Project
+            </a>
+            <span class="file-info">
+              <i class="fas fa-file" aria-hidden="true"></i>
+              .pbix (2.5 MB)
+            </span>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="project-card" role="article">
+          <div class="project-icon">
+            <i class="fa-solid fa-calculator" aria-hidden="true"></i>
+          </div>
+          <h3 class="project-title">Financial Modeling Template</h3>
+          <p class="project-description">Comprehensive financial modeling template with scenario analysis, cash flow forecasting, and investment appraisal capabilities.</p>
+          <div class="project-tags">
+            <span class="project-tag">Excel</span>
+            <span class="project-tag">Financial Modeling</span>
+            <span class="project-tag">Forecasting</span>
+          </div>
+          <div class="project-actions">
+            <a href="./projects/financial-model.xlsx" download class="btn-download">
+              <i class="fas fa-download" aria-hidden="true"></i>
+              Download Project
+            </a>
+            <span class="file-info">
+              <i class="fas fa-file-excel" aria-hidden="true"></i>
+              .xlsx (4.2 MB)
+            </span>
+          </div>
         </div>
       </div>
     </section>
@@ -584,37 +1023,53 @@
     <section id="contact" data-aos="fade-up" aria-labelledby="contact-heading">
       <h2 id="contact-heading">Contact Me</h2>
 
-      <form id="contactForm" method="post" action="#" novalidate aria-describedby="contact-note">
-        <label class="sr-only" for="name">Your name</label>
-        <input id="name" name="name" type="text" placeholder="Your Name" required autocomplete="name">
+      <!-- Enhanced Form with proper Formspree configuration -->
+      <form id="contactForm" action="https://formspree.io/f/xrbynngg" method="POST">
+        <input type="hidden" name="_subject" value="New Portfolio Contact Form Submission">
+        <input type="hidden" name="_format" value="plain">
+        
+        <div class="form-group">
+          <label class="sr-only" for="name">Your name</label>
+          <input id="name" name="name" type="text" placeholder="Your Name" required autocomplete="name">
+        </div>
 
-        <label class="sr-only" for="email">Your email</label>
-        <input id="email" name="email" type="email" placeholder="Your Email" required autocomplete="email">
+        <div class="form-group">
+          <label class="sr-only" for="email">Your email</label>
+          <input id="email" name="email" type="email" placeholder="Your Email" required autocomplete="email">
+        </div>
 
-        <label class="sr-only" for="message">Your message</label>
-        <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+        <div class="form-group">
+          <label class="sr-only" for="message">Your message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+        </div>
 
-        <!-- Honeypot to reduce spam -->
-        <input type="text" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;">
+        <!-- Enhanced honeypot for better spam protection -->
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="honeypot">
 
-        <button type="submit" id="submitBtn">
+        <button type="submit" id="submitBtn" class="submit-btn">
           <span id="submitText">Send Message</span>
         </button>
 
-        <p id="contact-note" style="color:#b3b3b3; font-size:.9rem; margin-top:.5rem;">
+        <p id="contact-note" class="contact-note">
           Or contact me directly:
-          <a href="mailto:Ahmedawwad01097903539@gmail.com" style="color:#4cc9f0;">Ahmedawwad01097903539@gmail.com</a>
-          • <a href="tel:+966569237463" style="color:#4cc9f0;">+966 56 923 7463</a>
-          • <a href="tel:+0201097903539" style="color:#4cc9f0;">+20 0109 790 3539</a>
+          <a href="mailto:Ahmedawwad01097903539@gmail.com">Ahmedawwad01097903539@gmail.com</a>
+          • <a href="tel:+966569237463">+966 56 923 7463</a>
+          • <a href="tel:+0201097903539">+20 0109 790 3539</a>
         </p>
 
-        <div id="formStatus" aria-live="polite" style="color:#cccccc; font-size:.95rem;"></div>
+        <div id="formStatus" aria-live="polite" class="form-status"></div>
       </form>
 
       <div class="social" aria-label="Social links">
-        <a href="https://www.linkedin.com/in/ahmed-m-awaad-59103b167/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
-        <a href="https://github.com/yourprofile" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a>
-        <a href="mailto:Ahmedawwad01097903539@gmail.com"><i class="fas fa-envelope" aria-hidden="true"></i> Email</a>
+        <a href="https://www.linkedin.com/in/ahmed-m-awaad-59103b167/" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn
+        </a>
+        <a href="https://github.com/yourprofile" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-github" aria-hidden="true"></i> GitHub
+        </a>
+        <a href="mailto:Ahmedawwad01097903539@gmail.com">
+          <i class="fas fa-envelope" aria-hidden="true"></i> Email
+        </a>
       </div>
     </section>
   </main>
@@ -664,68 +1119,235 @@
       });
     })();
 
-    // Form handling with improved UX
+    // Enhanced Form handling with Formspree integration
     (function () {
       const form = document.getElementById('contactForm');
       const status = document.getElementById('formStatus');
       const submitBtn = document.getElementById('submitBtn');
       const submitText = document.getElementById('submitText');
 
-      form.addEventListener('submit', async function (e) {
-        e.preventDefault();
+      // Enhanced email validation
+      function isValidEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+      }
 
-        // Basic client validation (fields already required)
+      // Show status message
+      function showStatus(message, type = 'info') {
+        status.textContent = message;
+        status.className = `form-status form-${type}`;
+        
+        // Add ARIA attributes for accessibility
+        status.setAttribute('aria-live', 'polite');
+        status.setAttribute('aria-atomic', 'true');
+        
+        if (type === 'error') {
+          status.setAttribute('role', 'alert');
+        } else {
+          status.removeAttribute('role');
+        }
+      }
+
+      // Clear status message
+      function clearStatus() {
+        status.textContent = '';
+        status.className = 'form-status';
+        status.removeAttribute('role');
+      }
+
+      // Validate form fields
+      function validateForm() {
         const name = form.name.value.trim();
         const email = form.email.value.trim();
         const message = form.message.value.trim();
-        const honeypot = form.website.value;
 
+        // Clear previous status
+        clearStatus();
+
+        // Validate name
+        if (!name) {
+          showStatus('❌ Please enter your name.', 'error');
+          form.name.focus();
+          return false;
+        }
+
+        if (name.length < 2) {
+          showStatus('❌ Please enter a valid name (at least 2 characters).', 'error');
+          form.name.focus();
+          return false;
+        }
+
+        // Validate email
+        if (!email) {
+          showStatus('❌ Please enter your email address.', 'error');
+          form.email.focus();
+          return false;
+        }
+
+        if (!isValidEmail(email)) {
+          showStatus('❌ Please enter a valid email address.', 'error');
+          form.email.focus();
+          return false;
+        }
+
+        // Validate message
+        if (!message) {
+          showStatus('❌ Please enter your message.', 'error');
+          form.message.focus();
+          return false;
+        }
+
+        if (message.length < 10) {
+          showStatus('❌ Please write a more detailed message (at least 10 characters).', 'error');
+          form.message.focus();
+          return false;
+        }
+
+        if (message.length > 1000) {
+          showStatus('❌ Message is too long (maximum 1000 characters).', 'error');
+          form.message.focus();
+          return false;
+        }
+
+        return true;
+      }
+
+      // Form submission handler
+      form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+
+        // Honeypot check
+        const honeypot = form._gotcha.value;
         if (honeypot) {
-          // likely a bot - silently ignore
-          status.textContent = "Message sent."; // appear successful to bots
+          showStatus('Thank you for your message!', 'success');
+          form.reset();
           return;
         }
 
-        if (!name || !email || !message) {
-          status.style.color = "#ffb4a2";
-          status.textContent = "Please complete all required fields.";
+        // Validate form
+        if (!validateForm()) {
           return;
         }
 
         // Show loading state
         submitBtn.disabled = true;
         submitText.innerHTML = '<span class="loading"></span> Sending...';
+        showStatus('Sending your message...', 'info');
 
         try {
-          // Replace with your actual form submission endpoint
-          // For now, we'll simulate an API call
-          await submitForm({ name, email, message });
+          // Create FormData object
+          const formData = new FormData(form);
           
-          status.style.color = "#cfead8";
-          status.textContent = "Thank you — your message has been sent. I will reply shortly.";
-          form.reset();
+          // Enhanced Formspree submission with timeout
+          const controller = new AbortController();
+          const timeoutId = setTimeout(() => controller.abort(), 15000); // 15 second timeout
+
+          const response = await fetch(form.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+              'Accept': 'application/json'
+            },
+            signal: controller.signal
+          });
+
+          clearTimeout(timeoutId);
+
+          // Enhanced response handling for Formspree
+          if (response.status >= 200 && response.status < 400) {
+            showStatus('✅ Thank you! Your message has been sent successfully. I will reply to you shortly.', 'success');
+            form.reset();
+            
+            // Auto-clear success message after 10 seconds
+            setTimeout(() => {
+              if (status.textContent.includes('successfully')) {
+                clearStatus();
+              }
+            }, 10000);
+            
+          } else {
+            // Enhanced error parsing
+            let errorMessage = 'Form submission failed. Please try again.';
+            
+            try {
+              const errorData = await response.json();
+              errorMessage = errorData.error || errorMessage;
+              
+              // Handle specific Formspree errors
+              if (errorData.errors) {
+                errorMessage = errorData.errors.map(err => err.message).join(', ');
+              }
+            } catch (jsonError) {
+              errorMessage = `Server error (${response.status}). Please try again.`;
+            }
+            
+            throw new Error(errorMessage);
+          }
         } catch (error) {
-          status.style.color = "#ffb4a2";
-          status.textContent = "Sorry, there was an error sending your message. Please try again or contact me directly.";
+          console.error('Form submission error:', error);
+          
+          if (error.name === 'AbortError') {
+            showStatus('❌ Request timeout. Please check your connection and try again.', 'error');
+          } else if (error.message.includes('Failed to fetch')) {
+            showStatus('❌ Network error. Please check your internet connection and try again.', 'error');
+          } else {
+            showStatus(`❌ ${error.message}`, 'error');
+          }
         } finally {
           // Reset button state
           submitBtn.disabled = false;
-          submitText.textContent = "Send Message";
+          submitText.textContent = 'Send Message';
         }
       });
 
-      // Simulate form submission (replace with actual API call)
-      function submitForm(data) {
-        return new Promise((resolve, reject) => {
-          setTimeout(() => {
-            // Simulate random success/failure for demo
-            if (Math.random() > 0.2) {
-              resolve();
-            } else {
-              reject(new Error('Network error'));
-            }
-          }, 1500);
+      // Enhanced input clearing - clear status when user starts typing
+      const formInputs = form.querySelectorAll('input, textarea');
+      formInputs.forEach(input => {
+        input.addEventListener('input', function() {
+          if (status.textContent && !status.textContent.includes('successfully')) {
+            clearStatus();
+          }
         });
+        
+        // Real-time validation for better UX
+        input.addEventListener('blur', function() {
+          if (this.value.trim() && !validateForm()) {
+            // Keep the error message if validation fails
+          }
+        });
+      });
+
+      // Character counter for message field
+      const messageField = document.getElementById('message');
+      const charCounter = document.createElement('div');
+      charCounter.className = 'char-counter';
+      messageField.parentNode.appendChild(charCounter);
+
+      messageField.addEventListener('input', function() {
+        const length = this.value.length;
+        charCounter.textContent = `${length}/1000 characters`;
+        
+        if (length > 900) {
+          charCounter.style.color = '#ffb4a2';
+        } else if (length > 800) {
+          charCounter.style.color = '#4cc9f0';
+        } else {
+          charCounter.style.color = '#b3b3b3';
+        }
+      });
+
+      // Initialize character counter
+      messageField.dispatchEvent(new Event('input'));
+
+      // Enhanced form reset handling
+      form.addEventListener('reset', function() {
+        clearStatus();
+        messageField.dispatchEvent(new Event('input'));
+      });
+
+      // Prevent form resubmission on page refresh
+      if (window.history.replaceState) {
+        window.history.replaceState(null, null, window.location.href);
       }
     })();
 
