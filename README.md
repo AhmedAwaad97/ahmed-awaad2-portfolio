@@ -35,16 +35,6 @@
 **📞 Phone:** +966 56 923 7463  
 **📧 Email:** ahmedawwad01097903539@gmail.com
 
-## 🚀 Quick Links
-
-<div align="center">
-
-[![Live Portfolio](https://img.shields.io/badge/🌐_Live_Portfolio-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white)](https://ahmedawaad97.github.io/ahmed-awaad2-portfolio/)
-[![View Projects](#-featured-projects)
-[![Download CV](./Ahmed-Mahmoud-Awaad-FlowCV-Resume-20251023_1.pdf)
-[![Contact Me](#-contact)
-
-</div>
 
 ## 💡 Core Competencies
 
