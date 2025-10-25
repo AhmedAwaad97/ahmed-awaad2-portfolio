@@ -1,143 +1,162 @@
 <p align="center">
-  <img src="https://your-image-link-here.jpg" alt="Ahmed Awaad Logo" width="150" height="150" style="border-radius: 50%;">
+  <img src="https://raw.githubusercontent.com/ahmedawaad97/ahmed-awaad2-portfolio/main/assets/images/logo.png" alt="Ahmed Awaad" width="150" height="150" style="border-radius: 50%;">
 </p>
 
-<h1 align="center">🌐 Ahmed Awaad Portfolio</h1>
+<h1 align="center">Ahmed Mahmoud Awaad</h1>
+<h3 align="center">Senior Accountant | Financial Reporting Specialist | Power BI & Excel Expert</h3>
 
 <p align="center">
-  Senior Accountant | Financial Reporting | Power BI & Excel Specialist
+  <a href="https://www.linkedin.com/in/ahmed-m-awaad-59103b167/">
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+  </a>
+  <a href="mailto:ahmedawwad01097903539@gmail.com">
+    <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail">
+  </a>
+  <a href="https://ahmedawaad97.github.io/ahmed-awaad2-portfolio/">
+    <img src="https://img.shields.io/badge/Portfolio-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Portfolio">
+  </a>
 </p>
 
 ---
 
-Hello there! 👋  
-I'm **Ahmed Mahmoud Awaad**, a **Senior Accountant** specializing in financial reporting, auditing, and data analysis using **Power BI**, **Microsoft Excel**, and **ERP systems** such as **Double Click** and **Dynamics 365**.
+## 👨‍💼 Professional Summary
+
+Senior Accountant with over 5 years of experience specializing in financial reporting, auditing, and data analysis. Proficient in **Power BI**, **Microsoft Excel**, and **ERP systems** including **Double Click** and **Dynamics AX**. Strong background in financial analysis, compliance, and process optimization.
+
+## 🚀 Live Portfolio
+
+<div align="center">
+
+[![Portfolio](https://img.shields.io/badge/🌐_Visit_My_Portfolio-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white)](https://ahmedawaad97.github.io/ahmed-awaad2-portfolio/)
+
+</div>
+
+## 📊 Core Competencies
+
+### **Accounting & Finance**
+- Financial Reporting & Analysis
+- General Accounting
+- Auditing & Compliance
+- Budgeting & Forecasting
+- Financial Modeling
+
+### **Technical Skills**
+<div align="center">
+
+| Category | Technologies |
+|----------|--------------|
+| **Data Analysis** | ![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=flat&logo=powerbi&logoColor=black) ![Excel](https://img.shields.io/badge/Microsoft_Excel-217346?style=flat&logo=microsoftexcel&logoColor=white) ![Power Query](https://img.shields.io/badge/Power_Query-00BCF2?style=flat&logo=powerquery&logoColor=white) |
+| **ERP Systems** | ![Dynamics AX](https://img.shields.io/badge/Dynamics_AX-008272?style=flat&logo=microsoft&logoColor=white) ![Double Click](https://img.shields.io/badge/Double_Click-4285F4?style=flat&logo=google&logoColor=white) |
+| **Web Technologies** | ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black) |
+
+</div>
+
+## 💼 Professional Experience
+
+### **Senior Accountant**
+**Darah Company** | *Saudi Arabia* | *2022 - Present*
+- Prepare and analyze financial statements and reports
+- Implement and optimize ERP systems for accounting processes
+- Develop financial models and dashboards using Power BI
+- Ensure compliance with accounting standards and regulations
+
+### **Accountant**
+**Previous Company** | *Egypt* | *2020 - 2022*
+- Managed accounts payable and receivable
+- Prepared monthly financial statements
+- Assisted in audit processes and compliance reporting
+
+## 🎓 Education & Certifications
+
+### **Education**
+- **B.Com. in Accounting** - Tanta University (2015–2019)
+
+### **Certifications**
+<div align="center">
+
+| Certification | Status | Badge |
+|---------------|---------|--------|
+| **Excel Basics for Data Analysis** | Completed | ![Excel](https://img.shields.io/badge/Completed-28a745?style=flat) |
+| **Commercial Excel** | Completed | ![Excel Advanced](https://img.shields.io/badge/Completed-28a745?style=flat) |
+| **Qualified Accountant Diploma** | Completed | ![Accounting](https://img.shields.io/badge/Completed-28a745?style=flat) |
+| **IFRS Certification** | In Progress | ![IFRS](https://img.shields.io/badge/In_Progress-ffc107?style=flat) |
+
+</div>
+
+## 📈 Featured Projects
+
+### **Financial Analytics Dashboard**
+- **Tools:** Power BI, Excel
+- **Description:** Interactive dashboard for financial performance monitoring and KPI tracking
+- **Features:** Real-time data visualization, trend analysis, automated reporting
+
+### **Budget Forecasting Model**
+- **Tools:** Microsoft Excel, Power Query
+- **Description:** Advanced financial model for budget planning and scenario analysis
+- **Features:** Dynamic forecasting, variance analysis, automated calculations
+
+### **ERP Implementation**
+- **Tools:** Dynamics AX, Double Click
+- **Description:** Streamlined accounting processes through ERP system implementation
+- **Features:** Process automation, integrated reporting, compliance management
+
+## 🌐 Portfolio Sections
+
+<div align="center">
+
+| Section | Description | Icon |
+|---------|-------------|-------|
+| **Home** | Professional introduction and overview | 🏠 |
+| **About Me** | Detailed background and skills profile | 👨‍💼 |
+| **Experience** | Career journey and professional milestones | 💼 |
+| **Certifications** | Professional qualifications and courses | 🎓 |
+| **Projects** | Showcase of analytical work and reports | 🧩 |
+| **Resume** | Downloadable CV in PDF format | 📄 |
+| **Contact** | Direct communication options | ✉️ |
+
+</div>
+
+## 📬 Contact Information
+
+<div align="center">
+
+| Method | Details |
+|--------|---------|
+| **📧 Email** | [ahmedawwad01097903539@gmail.com](mailto:ahmedawwad01097903539@gmail.com) |
+| **💼 LinkedIn** | [Ahmed M. Awaad](https://www.linkedin.com/in/ahmed-m-awaad-59103b167/) |
+| **🌐 Portfolio** | [ahmedawaad97.github.io](https://ahmedawaad97.github.io/ahmed-awaad2-portfolio/) |
+| **📍 Location** | Maadi, Cairo, Egypt |
+
+</div>
+
+## 💻 Technical Stack for Portfolio
+
+- **Frontend:** HTML5, CSS3, JavaScript
+- **Styling:** TailwindCSS
+- **Design Tools:** Canva
+- **Version Control:** Git & GitHub
+- **Hosting:** GitHub Pages
 
 ---
 
-## 🧭 Website Sections
+<div align="center">
 
-This personal portfolio website includes the following sections:
+### **📞 Let's Connect!**
 
-- **🏠 Home:** Intro and personal logo or image  
-- **👨‍💼 About Me:** Brief overview of my background and professional profile  
-- **💼 Experience:** Highlights of my accounting experience and career journey  
-- **🎓 Certifications:** List of professional courses and diplomas  
-- **🧩 Projects:** Showcase of my professional work and analytical reports  
-- **📄 Resume:** Direct link to download my CV (PDF format)  
-- **✉️ Contact Me:** Contact form and direct communication options
+I'm always open to discussing new opportunities, collaborations, or professional connections.
 
----
+[![LinkedIn](https://img.shields.io/badge/Connect_on_LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ahmed-m-awaad-59103b167/)
+[![Email](https://img.shields.io/badge/Send_Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ahmedawwad01097903539@gmail.com)
+[![Portfolio](https://img.shields.io/badge/View_Portfolio-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white)](https://ahmedawaad97.github.io/ahmed-awaad2-portfolio/)
 
-## 🚀 Live Website
-
-🌍 [Visit My Portfolio](https://ahmedawaad.github.io/ahmed-awaad-portfolio)
+</div>
 
 ---
 
-## 🧠 About Me
+<div align="center">
 
-- 📍 **Current Location:** Riyadh, Saudi Arabia  
-- 💼 **Position:** Senior Accountant – Darah Company (Saudi Arabia)  
-- 🎯 **Experience:** Over 5 years in accounting, financial reporting, and analysis  
-- 🎓 **Education:** B.Com. in Accounting – Tanta University (2015–2019)  
-- 🧾 **Certifications:**  
-  - Excel Basics for Data Analysis  
-  - Commercial Excel  
-  - Qualified Accountant Diploma  
-  - IFRS (In progress)
+© 2025 Ahmed Awaad – All rights reserved.
 
----
+*This portfolio is hosted for free using GitHub Pages.*
 
-## ⚙️ Tools & Technologies
-
-- **Frontend:** HTML, CSS, JavaScript  
-- **Design:** TailwindCSS / Canva  
-- **Data Analysis:** Power BI, Excel, Power Query  
-- **Version Control:** Git & GitHub  
-
----
-
-## 📬 Contact
-
-- ✉️ **Email:** [ahmedawaad@example.com](mailto:ahmedawaad@example.com)  
-- 💼 **LinkedIn:** [linkedin.com/in/ahmedawaad](https://linkedin.com/in/ahmedawaad)  
-- 🌐 **Portfolio:** [ahmedawaad.github.io](https://ahmedawaad.github.io)
-
----
-
-## 💡 Notes
-
-This website is hosted for free using **GitHub Pages**.  
-Future updates and improvements will be published in this repository.
-
----
-
-# 🇪🇬 الموقع الشخصي لأحمد عواض
-
-<p align="center">
-  <img src="https://your-image-link-here.jpg" alt="Ahmed Awaad Logo" width="120" height="120" style="border-radius: 50%;">
-</p>
-
-مرحبًا! 👋  
-أنا **أحمد محمود عواض** – **محاسب أول (Senior Accountant)** متخصص في إعداد التقارير المالية، والمراجعة، وتحليل البيانات باستخدام أدوات مثل **Power BI** و **Microsoft Excel** و **أنظمة ERP (Double Click و Dynamics AX)**.
-
----
-
-## 🧭 أقسام الموقع
-
-- **🏠 الرئيسية:** مقدمة وصورة أو شعار شخصي  
-- **👨‍💼 من أنا:** نبذة عني وخبراتي ومهاراتي  
-- **💼 الخبرة:** عرض لأهم المناصب والمهام  
-- **🎓 الشهادات:** الدورات والشهادات المهنية  
-- **🧩 المشاريع:** أهم الأعمال والمشاريع السابقة  
-- **📄 السيرة الذاتية:** رابط لتحميل الـ CV بصيغة PDF  
-- **✉️ اتصل بي:** نموذج تواصل مباشر
-
----
-
-## 🚀 رابط الموقع
-
-🌍 [زيارة الموقع](https://ahmedawaad.github.io/ahmed-awaad-portfolio)
-
----
-
-## 🧠 نبذة سريعة
-
-- 📍 الموقع الحالي: الرياض –  السعودية 
-- 💼 الوظيفة: محاسب أول – شركة درعة (السعودية)  
-- 🎯 الخبرة: أكثر من 5 سنوات في المحاسبة والتقارير المالية  
-- 🎓 المؤهل: بكالوريوس تجارة – جامعة طنطا (تخصص محاسبة)  
-- 🧾 الشهادات:  
-  - Excel Basics for Data Analysis  
-  - Commercial Excel  
-  - Qualified Accountant Diploma  
-  - IFRS (قيد الدراسة)
-
----
-
-## ⚙️ الأدوات والتقنيات المستخدمة
-
-- **واجهة المستخدم:** HTML, CSS, JavaScript  
-- **التصميم:** TailwindCSS / Canva  
-- **تحليل البيانات:** Power BI, Excel, Power Query  
-- **إدارة الأكواد:** GitHub  
-
----
-
-## 📬 وسائل التواصل
-
-- ✉️ البريد الإلكتروني: [ahmedawaad@example.com](mailto:ahmedawaad@example.com)  
-- 💼 لينكدإن: [linkedin.com/in/ahmedawaad](https://linkedin.com/in/ahmedawaad)  
-- 🌐 الموقع: [ahmedawaad.github.io](https://ahmedawaad.github.io)
-
----
-
-## 💡 ملاحظات
-
-الموقع مستضاف مجانًا عبر **GitHub Pages**.  
-أي تحديثات مستقبلية سيتم نشرها هنا في هذا الريبو.
-
----
-
-© 2025 Ahmed Awaad – جميع الحقوق محفوظة.
+</div>
