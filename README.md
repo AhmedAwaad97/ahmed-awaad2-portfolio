@@ -51,6 +51,7 @@
 • ![Excel](https://img.shields.io/badge/Excel-217346?style=flat-square&logo=microsoftexcel&logoColor=white)
 • ![Power Query](https://img.shields.io/badge/Power_Query-00BCF2?style=flat-square&logo=powerquery&logoColor=white)
 • ![Dynamics AX](https://img.shields.io/badge/Dynamics_AX-008272?style=flat-square&logo=microsoft&logoColor=white)
+• ![Dynamics 365](https://img.shields.io/badge/Dynamics_365-008272?style=flat-square&logo=microsoft&logoColor=white)
 • ![Double Click](https://img.shields.io/badge/Double_Click-4285F4?style=flat-square&logo=google&logoColor=white)
 
 **Web Technologies**
