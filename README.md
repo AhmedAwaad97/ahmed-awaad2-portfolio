@@ -1,6 +1,4 @@
-<p align="center">
-  <img src="https://raw.githubusercontent.com/ahmedawaad97/ahmed-awaad2-portfolio/main/assets/images/logo.png" alt="Ahmed Awaad - Senior Accountant & Data Analyst" width="150" height="150" style="border-radius: 50%;">
-</p>
+
 
 <h1 align="center">Ahmed Mahmoud Awaad</h1>
 <h3 align="center">Senior Accountant | Financial Reporting Specialist | Power BI & Excel Expert</h3>
