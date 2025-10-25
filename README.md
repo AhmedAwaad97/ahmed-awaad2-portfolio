@@ -1,22 +1,25 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ahmedawaad97/ahmed-awaad2-portfolio/main/assets/images/logo.png" alt="Ahmed Awaad" width="150" height="150" style="border-radius: 50%;">
+  <img src="https://raw.githubusercontent.com/ahmedawaad97/ahmed-awaad2-portfolio/main/assets/images/logo.png" alt="Ahmed Awaad - Senior Accountant & Data Analyst" width="150" height="150" style="border-radius: 50%;">
 </p>
 
 <h1 align="center">Ahmed Mahmoud Awaad</h1>
 <h3 align="center">Senior Accountant | Financial Reporting Specialist | Power BI & Excel Expert</h3>
 
+<!-- SEO Description -->
+<p align="center"><em>Senior Accountant & Financial Data Analyst specializing in Power BI, Excel automation, and financial reporting with 5+ years experience in KSA market</em></p>
+
 <div align="center">
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ahmed-m-awaad-59103b167/)
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ahmedawwad01097903539@gmail.com)
-[![Portfolio](https://img.shields.io/badge/Portfolio-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white)](https://ahmedawaad97.github.io/ahmed-awaad2-portfolio/)
-[![CV](https://img.shields.io/badge/Download_CV-8B5CF6?style=for-the-badge&logo=adobeacrobatreader&logoColor=white)](./Ahmed-Mahmoud-Awaad-FlowCV-Resume-20251023_1.pdf)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=101010)](https://www.linkedin.com/in/ahmed-m-awaad-59103b167/)
+[![Email](https://img.shields.io/badge/Email-Contact-D14836?style=for-the-badge&logo=gmail&logoColor=white&labelColor=101010)](mailto:ahmedawwad01097903539@gmail.com)
+[![Portfolio](https://img.shields.io/badge/Portfolio-View-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white&labelColor=101010)](https://ahmedawaad97.github.io/ahmed-awaad2-portfolio/)
+[![CV](https://img.shields.io/badge/CV-Download-8B5CF6?style=for-the-badge&logo=adobeacrobatreader&logoColor=white&labelColor=101010)](./Ahmed-Mahmoud-Awaad-FlowCV-Resume-20251023_1.pdf)
 
 </div>
 
 ---
 
-## 👋 Welcome to My Professional Profile
+## 👋 Professional Profile
 
 <div align="center">
   
@@ -26,96 +29,101 @@
 
 ## 👨‍💼 Professional Summary
 
-**Senior Accountant** with **5+ years** of experience specializing in financial reporting, auditing, and data analysis. Expert in **Power BI**, **Microsoft Excel**, and **ERP systems** including **Dynamics AX** and **Double Click**. Proven track record in transforming financial data into actionable insights through advanced analytics and automated reporting solutions.
+**Senior Accountant** with **5+ years** of experience transforming financial data into actionable insights through **Power BI**, **Excel automation**, and **ERP systems**. Specialized in financial reporting, data analysis, and process optimization for business growth.
 
-**📍 Current Location:** Al-Farouq, Riyadh, Saudi Arabia 12863  
-**📞 Contact:** +966 56 923 7463  
+**📍 Location:** Al-Farouq, Riyadh, Saudi Arabia  
+**📞 Phone:** +966 56 923 7463  
 **📧 Email:** ahmedawwad01097903539@gmail.com
 
-## 🚀 Live Portfolio
+## 🚀 Quick Links
 
 <div align="center">
 
-[![Visit Portfolio](https://img.shields.io/badge/🌐_Visit_My_Portfolio-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white)](https://ahmedawaad97.github.io/ahmed-awaad2-portfolio/)
+[![Live Portfolio](https://img.shields.io/badge/🌐_Live_Portfolio-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white)](https://ahmedawaad97.github.io/ahmed-awaad2-portfolio/)
+[![View Projects](#-featured-projects)
+[![Download CV](./Ahmed-Mahmoud-Awaad-FlowCV-Resume-20251023_1.pdf)
+[![Contact Me](#-contact)
 
 </div>
 
-## 📊 Core Competencies
+## 💡 Core Competencies
 
-### **🎯 Accounting & Finance Excellence**
-- 📈 **Financial Reporting & Analysis** - Comprehensive financial statements and performance insights
-- 📋 **General Accounting & Compliance** - GAAP, IFRS, and regulatory standards adherence
-- 🔍 **Auditing & Internal Controls** - Risk assessment and control implementation
-- 💰 **Budgeting & Forecasting** - Strategic financial planning and variance analysis
-- 🎯 **Financial Modeling & KPI Tracking** - Advanced modeling for business decisions
+### **📈 Accounting & Finance**
+- 💼 Financial Reporting & Analysis
+- 📋 GAAP/IFRS Compliance
+- 🔍 Auditing & Controls
+- 💰 Budgeting & Forecasting
+- 📊 Financial Modeling
 
-### **💻 Technical Expertise**
+### **🛠️ Technical Skills**
 <div align="center">
 
-| **Data Analytics** | **ERP Systems** | **Development Tools** |
-|--------------------|-----------------|------------------------|
-| ![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black) | ![Dynamics AX](https://img.shields.io/badge/Dynamics_AX-008272?style=for-the-badge&logo=microsoft&logoColor=white) | ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) |
-| ![Excel](https://img.shields.io/badge/Excel-217346?style=for-the-badge&logo=microsoftexcel&logoColor=white) | ![Double Click](https://img.shields.io/badge/Double_Click-4285F4?style=for-the-badge&logo=google&logoColor=white) | ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white) |
-| ![Power Query](https://img.shields.io/badge/Power_Query-00BCF2?style=for-the-badge&logo=powerquery&logoColor=white) | ![Dynamics 365](https://img.shields.io/badge/Dynamics_365-002050?style=for-the-badge&logo=microsoft&logoColor=white) | ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) |
+**Data Analytics & ERP**
+• ![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=flat-square&logo=powerbi&logoColor=black)
+• ![Excel](https://img.shields.io/badge/Excel-217346?style=flat-square&logo=microsoftexcel&logoColor=white)
+• ![Power Query](https://img.shields.io/badge/Power_Query-00BCF2?style=flat-square&logo=powerquery&logoColor=white)
+• ![Dynamics AX](https://img.shields.io/badge/Dynamics_AX-008272?style=flat-square&logo=microsoft&logoColor=white)
+• ![Double Click](https://img.shields.io/badge/Double_Click-4285F4?style=flat-square&logo=google&logoColor=white)
+
+**Web Technologies**
+• ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
+• ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
+• ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+• ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
 
 </div>
 
 ## 💼 Professional Experience
 
-### **📊 Senior Accountant** | Deraah Trading Company
-**📍 Riyadh, Saudi Arabia** | **📅 03/2025 – Present**  
-*Perfumes, Cosmetics & Accessories - KSA*
-- Manage bank operations and reconcile daily/monthly statements
-- Match showroom deposits with accounting records
-- Reconcile installment reports from Tamara and Tabby platforms
-- Record journal entries and manage accounts using ERP systems
+### **💼 Senior Accountant** | Deraah Trading Company
+**📍 Riyadh, KSA** | **📅 03/2025 – Present**  
+*Perfumes & Cosmetics Retail*
+- Bank operations & reconciliation management
+- ERP system journal entries and account management
+- Tamara/Tabby platform installment reporting
 
 ### **🔧 Senior Accountant** | Integrated Technics  
 **📍 Egypt** | **📅 12/2022 – 03/2025**  
-*System Integrator (Security & ICT solutions)*
-- Updated accounts payable and established accounting program database
-- Managed project follow-ups with suppliers, customers, and cross-functional teams
-- Assisted with audits, tax preparations, and financial report analysis
-- Prepared financial reports for regulatory bodies and shareholders
+*Security & ICT Solutions*
+- Accounts payable and database management
+- Cross-functional project coordination
+- Audit preparation and financial reporting
 
 ### **🚀 Senior Accountant** | Tawreda.com
 **📍 Cairo, Egypt** | **📅 02/2020 – 06/2021**  
 *HORECA Food Supply*
-- Maintained daily accounts and prepared month-end close
-- Prepared monthly financial performance reports and management information
-- Conducted credit control, debt collection, and accounts oversight
-- Reviewed expenses, payroll records, and updated financial data
+- Month-end close and financial reporting
+- Credit control and debt collection
+- Expense analysis and payroll oversight
+
+*📖 Full details available in [portfolio](https://ahmedawaad97.github.io/ahmed-awaad2-portfolio/)*
 
 ## 🎓 Education & Certifications
 
 ### **📚 Education**
 - **🎓 B.Com. in Accounting** - Tanta University (2015–2019)
 
-### **🏆 Certifications & Professional Development**
-<div align="center">
+### **🏆 Certifications**
+- ✅ **Power BI & Excel Data Analysis** - Completed
+- ✅ **Qualified Accountant Diploma** - Completed  
+- ✅ **Commercial Excel** - Completed
+- 📚 **IFRS Certification** - In Progress
 
-| Certification | Status | Badge |
-|---------------|---------|--------|
-| **Power BI & Excel Data Analysis** | ✅ Completed | ![Completed](https://img.shields.io/badge/Completed-10B981?style=flat-square) |
-| **Qualified Accountant Diploma** | ✅ Completed | ![Completed](https://img.shields.io/badge/Completed-10B981?style=flat-square) |
-| **Commercial Excel** | ✅ Completed | ![Completed](https://img.shields.io/badge/Completed-10B981?style=flat-square) |
-| **IFRS Certification** | 📚 In Progress | ![In Progress](https://img.shields.io/badge/In_Progress-F59E0B?style=flat-square) |
+## 📊 Featured Projects
 
-</div>
+### **📈 Power BI Dashboards**
+- **[Sales Performance Dashboard](#)** - Sales trends & customer behavior analysis
+- **[Cost & Profitability Analysis](#)** - Branch-level profit tracking with KPIs
+- **[Inventory Management](#)** - Real-time stock monitoring & alerts
 
-## 📈 Featured Projects
+### **⚡ Excel Automation**
+- **[Financial Reporting Automation](#)** - Monthly reporting with Power Query
+- **[Budget vs Actual Analysis](#)** - Automated variance analysis system
+- **[Financial Modeling Template](#)** - Scenario analysis & cash flow forecasting
 
-### **📊 Power BI Dashboards**
-- **📈 Sales Performance Dashboard** - Interactive analysis of sales trends and customer behavior with dynamic filtering
-- **💰 Cost & Profitability Analysis** - Branch-level profitability tracking with variance analysis and KPI monitoring
-- **📦 Inventory Management Dashboard** - Real-time stock monitoring with reorder point alerts and supplier performance
+*🔗 Demo files available in [portfolio projects section](https://ahmedawaad97.github.io/ahmed-awaad2-portfolio/#projects)*
 
-### **⚡ Excel & Automation**
-- **🤖 Financial Reporting Automation** - Automated monthly reporting with Power Query integration and template generation
-- **📋 Budget vs Actual Analysis** - Comprehensive budget tracking system with automated variance analysis
-- **🎯 Financial Modeling Template** - Advanced modeling with scenario analysis and cash flow forecasting capabilities
-
-## 🛠️ Portfolio Technical Stack
+## 🛠️ Technical Stack
 
 <div align="center">
 
@@ -127,42 +135,26 @@
 
 </div>
 
-## 🌐 Portfolio Sections Overview
+## 📬 Contact
 
 <div align="center">
 
-| Section | Icon | Description |
-|---------|------|-------------|
-| **Home** | 🏠 | Professional introduction with hero section |
-| **About** | 👨‍💼 | Detailed background and professional profile |
-| **Experience** | 💼 | Career journey and role descriptions |
-| **Certifications** | 🎓 | Professional qualifications and development |
-| **Projects** | 🧩 | Interactive work samples and downloads |
-| **Resume** | 📄 | Direct CV download in PDF format |
-| **Contact** | ✉️ | Working contact form and communication |
+### **Get In Touch**
+
+📧 **Email:** [ahmedawwad01097903539@gmail.com](mailto:ahmedawwad01097903539@gmail.com)  
+💼 **LinkedIn:** [Ahmed M. Awaad](https://www.linkedin.com/in/ahmed-m-awaad-59103b167/)  
+🌐 **Portfolio:** [Live Website](https://ahmedawaad97.github.io/ahmed-awaad2-portfolio/)  
+📞 **Phone:** [+966 56 923 7463](tel:+966569237463)
 
 </div>
 
-## 📬 Contact Information
+## 🔗 Quick Navigation
 
 <div align="center">
 
-| Method | Details | Quick Action |
-|--------|---------|--------------|
-| **📧 Email** | [ahmedawwad01097903539@gmail.com](mailto:ahmedawwad01097903539@gmail.com) | [Send Email](mailto:ahmedawwad01097903539@gmail.com) |
-| **💼 LinkedIn** | [Ahmed M. Awaad](https://www.linkedin.com/in/ahmed-m-awaad-59103b167/) | [Connect](https://www.linkedin.com/in/ahmed-m-awaad-59103b167/) |
-| **🌐 Portfolio** | [Live Website](https://ahmedawaad97.github.io/ahmed-awaad2-portfolio/) | [Visit](https://ahmedawaad97.github.io/ahmed-awaad2-portfolio/) |
-| **📞 Phone** | +966 56 923 7463 | [Call](tel:+966569237463) |
-
-</div>
-
-## 🔧 Quick Navigation
-
-<div align="center">
-
-[![View Projects](https://img.shields.io/badge/View_Projects-10B981?style=for-the-badge&logo=github&logoColor=white)](#-featured-projects)
-[![Download CV](https://img.shields.io/badge/Download_CV-8B5CF6?style=for-the-badge&logo=adobeacrobatreader&logoColor=white)](./Ahmed-Mahmoud-Awaad-FlowCV-Resume-20251023_1.pdf)
-[![Contact Me](https://img.shields.io/badge/Contact_Me-EC4899?style=for-the-badge&logo=maildotru&logoColor=white)](#-contact-information)
+[![View Projects](https://img.shields.io/badge/📊_Projects-10B981?style=for-the-badge&logo=github&logoColor=white)](#-featured-projects)
+[![Download CV](https://img.shields.io/badge/📄_CV-8B5CF6?style=for-the-badge&logo=adobeacrobatreader&logoColor=white)](./Ahmed-Mahmoud-Awaad-FlowCV-Resume-20251023_1.pdf)
+[![Contact](https://img.shields.io/badge/✉️_Contact-EC4899?style=for-the-badge&logo=maildotru&logoColor=white)](#-contact)
 
 </div>
 
@@ -172,14 +164,14 @@
 
 ## 🤝 Let's Connect & Collaborate!
 
-I'm always open to discussing new opportunities, collaborations, or professional connections in accounting, financial analysis, and data analytics.
+I'm always open to discussing opportunities in accounting, financial analysis, and data analytics.
 
 **✨ Empowering Business Growth through Data & Finance ✨**
 
-[![LinkedIn Connect](https://img.shields.io/badge/Connect_on_LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ahmed-m-awaad-59103b167/)
-[![Send Email](https://img.shields.io/badge/Send_Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ahmedawwad01097903539@gmail.com)
-[![View Portfolio](https://img.shields.io/badge/View_Portfolio-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white)](https://ahmedawaad97.github.io/ahmed-awaad2-portfolio/)
-[![Call Now](https://img.shields.io/badge/Call_Now-22C55E?style=for-the-badge&logo=whatsapp&logoColor=white)](tel:+966569237463)
+[![LinkedIn](https://img.shields.io/badge/Connect_LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ahmed-m-awaad-59103b167/)
+[![Email](https://img.shields.io/badge/Send_Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ahmedawwad01097903539@gmail.com)
+[![Portfolio](https://img.shields.io/badge/View_Portfolio-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white)](https://ahmedawaad97.github.io/ahmed-awaad2-portfolio/)
+[![Call](https://img.shields.io/badge/Call_Now-22C55E?style=for-the-badge&logo=whatsapp&logoColor=white)](tel:+966569237463)
 
 </div>
 
@@ -189,8 +181,17 @@ I'm always open to discussing new opportunities, collaborations, or professional
 
 **© 2025 Ahmed Mahmoud Awaad** – *All rights reserved.*
 
-*This professional portfolio is hosted for free using GitHub Pages and showcases my expertise in accounting and data analytics.*
+*Professional portfolio showcasing expertise in accounting and data analytics*
 
 ![Profile Views](https://komarev.com/ghpvc/?username=ahmedawaad97&color=blue&style=flat-square)
 
 </div>
+
+<!-- CSS for interactive badges -->
+<style>
+  .badge:hover {
+    opacity: 0.8;
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+  }
+</style>
