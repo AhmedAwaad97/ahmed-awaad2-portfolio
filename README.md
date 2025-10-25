@@ -8,7 +8,7 @@
 <div align="center">
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ahmed-m-awaad-59103b167/)
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ahmedawwad01097903539@gmail.com)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ahmedawaad0109790359@gmail.com)
 [![Portfolio](https://img.shields.io/badge/Portfolio-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white)](https://ahmedawaad97.github.io/ahmed-awaad2-portfolio/)
 [![CV](https://img.shields.io/badge/Download_CV-8B5CF6?style=for-the-badge&logo=adobeacrobatreader&logoColor=white)](./Ahmed-Mahmoud-Awaad-FlowCV-Resume-20251023_1.pdf)
 
@@ -28,9 +28,9 @@
 
 **Senior Accountant** with **5+ years** of experience specializing in financial reporting, auditing, and data analysis. Expert in **Power BI**, **Microsoft Excel**, and **ERP systems** including **Dynamics AX** and **Double Click**. Proven track record in transforming financial data into actionable insights through advanced analytics and automated reporting solutions.
 
-**📍 Current Location:** Al-Faroug, Riyadh, Saudi Arabia 12863  
+**📍 Current Location:** Al-Farouq, Riyadh, Saudi Arabia 12863  
 **📞 Contact:** +966 56 923 7463  
-**📧 Email:** ahmedawwad01097903539@gmail.com
+**📧 Email:** ahmedawaad0109790359@gmail.com
 
 ## 🚀 Live Portfolio
 
@@ -149,7 +149,7 @@
 
 | Method | Details | Quick Action |
 |--------|---------|--------------|
-| **📧 Email** | [ahmedawwad01097903539@gmail.com](mailto:ahmedawwad01097903539@gmail.com) | [Send Email](mailto:ahmedawwad01097903539@gmail.com) |
+| **📧 Email** | [ahmedawaad0109790359@gmail.com](mailto:ahmedawaad0109790359@gmail.com) | [Send Email](mailto:ahmedawaad0109790359@gmail.com) |
 | **💼 LinkedIn** | [Ahmed M. Awaad](https://www.linkedin.com/in/ahmed-m-awaad-59103b167/) | [Connect](https://www.linkedin.com/in/ahmed-m-awaad-59103b167/) |
 | **🌐 Portfolio** | [Live Website](https://ahmedawaad97.github.io/ahmed-awaad2-portfolio/) | [Visit](https://ahmedawaad97.github.io/ahmed-awaad2-portfolio/) |
 | **📞 Phone** | +966 56 923 7463 | [Call](tel:+966569237463) |
@@ -177,7 +177,7 @@ I'm always open to discussing new opportunities, collaborations, or professional
 **✨ Empowering Business Growth through Data & Finance ✨**
 
 [![LinkedIn Connect](https://img.shields.io/badge/Connect_on_LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ahmed-m-awaad-59103b167/)
-[![Send Email](https://img.shields.io/badge/Send_Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ahmedawwad01097903539@gmail.com)
+[![Send Email](https://img.shields.io/badge/Send_Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ahmedawaad0109790359@gmail.com)
 [![View Portfolio](https://img.shields.io/badge/View_Portfolio-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white)](https://ahmedawaad97.github.io/ahmed-awaad2-portfolio/)
 [![Call Now](https://img.shields.io/badge/Call_Now-22C55E?style=for-the-badge&logo=whatsapp&logoColor=white)](tel:+966569237463)
 
