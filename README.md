@@ -73,7 +73,7 @@ Future updates and improvements will be published in this repository.
 
 ---
 
-# 🇪🇬 الموقع الشخصي لأحمد عواد
+# 🇪🇬 الموقع الشخصي لأحمد عواض
 
 <p align="center">
   <img src="https://your-image-link-here.jpg" alt="Ahmed Awaad Logo" width="120" height="120" style="border-radius: 50%;">
