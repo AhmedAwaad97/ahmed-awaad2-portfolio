@@ -657,6 +657,52 @@
     :focus { outline: none; }
     :focus-visible { outline: 3px solid rgba(76,201,240,0.12); border-radius: 6px; }
 
+    /* ===== RTL Specific Styles ===== */
+    body[dir="rtl"] {
+      direction: rtl;
+      text-align: right;
+    }
+
+    body[dir="rtl"] .card::before,
+    body[dir="rtl"] .project-card::before {
+      left: auto;
+      right: 0;
+      border-radius: 0 4px 4px 0;
+    }
+
+    body[dir="rtl"] .card ul,
+    body[dir="rtl"] .experience-header {
+      margin-right: 1rem;
+      margin-left: 0;
+    }
+
+    body[dir="rtl"] .experience-header {
+      flex-direction: row-reverse;
+    }
+
+    body[dir="rtl"] .nav-inner {
+      flex-direction: row-reverse;
+    }
+
+    body[dir="rtl"] .language-switch {
+      margin-left: 1rem;
+      margin-right: auto;
+    }
+
+    body[dir="rtl"] .project-tags,
+    body[dir="rtl"] .project-actions,
+    body[dir="rtl"] .social {
+      flex-direction: row-reverse;
+    }
+
+    body[dir="rtl"] .skills {
+      text-align: center;
+    }
+
+    body[dir="rtl"] .file-info {
+      text-align: left;
+    }
+
     /* ===== Responsive ===== */
     @media (max-width: 900px) {
       header h1 { font-size: 2rem; }
@@ -683,6 +729,25 @@
         flex-direction: column;
       }
       .language-switch {
+        margin-right: 0.5rem;
+      }
+
+      /* RTL mobile fixes */
+      body[dir="rtl"] .nav-links {
+        right: auto;
+        left: 1rem;
+      }
+
+      body[dir="rtl"] .experience-header {
+        align-items: flex-end;
+      }
+
+      body[dir="rtl"] .nav-inner {
+        flex-direction: row;
+      }
+
+      body[dir="rtl"] .language-switch {
+        margin-left: auto;
         margin-right: 0.5rem;
       }
     }
@@ -713,6 +778,15 @@
         max-width: 200px;
         justify-content: center;
       }
+
+      /* RTL mobile form fixes */
+      body[dir="rtl"] .form-group {
+        text-align: right;
+      }
+
+      body[dir="rtl"] .char-counter {
+        text-align: left;
+      }
     }
 
     @media (max-width: 480px) {
@@ -724,6 +798,27 @@
         font-size: 0.9rem;
         padding: 0.625rem;
       }
+
+      /* RTL extra small screen fixes */
+      body[dir="rtl"] header .contact-inline {
+        flex-direction: column-reverse;
+      }
+
+      body[dir="rtl"] .project-actions {
+        align-items: stretch;
+      }
+    }
+
+    /* Prevent horizontal scrolling on mobile */
+    body {
+      overflow-x: hidden;
+      width: 100%;
+    }
+
+    /* Ensure all containers don't exceed viewport */
+    .nav-inner, section, header .hero {
+      max-width: 100%;
+      box-sizing: border-box;
     }
   </style>
 </head>
@@ -1261,7 +1356,7 @@
         "nav.contact": "اتصل بي",
         
         // Header
-        "header.name": "أحمد محمود عواد",
+        "header.name": "أحمد محمود عواض",
         "header.title": "محاسب أول ومحلل بيانات Power BI",
         "header.description": "تحويل البيانات المالية والتشغيلية إلى رؤى واضحة. أصمم تقارير Power BI، وأتمتة التقارير باستخدام Power Query و Excel، وأنتج تحليلات مالية جاهزة للإدارة.",
         
@@ -1372,7 +1467,7 @@
         "contact.note": "أو اتصل بي مباشرة:",
         
         // Footer
-        "footer.copyright": "أحمد محمود عواد | جميع الحقوق محفوظة",
+        "footer.copyright": "أحمد محمود عواض | جميع الحقوق محفوظة",
         "footer.github": "عرض على GitHub"
       }
     };
@@ -1387,17 +1482,10 @@
       document.getElementById('lang-en').classList.toggle('active', lang === 'en');
       document.getElementById('lang-ar').classList.toggle('active', lang === 'ar');
       
-      // Update HTML lang attribute
+      // Update HTML lang attribute and direction
       document.documentElement.lang = lang;
-      
-      // Update direction for Arabic
-      if (lang === 'ar') {
-        document.body.style.direction = 'rtl';
-        document.body.style.textAlign = 'right';
-      } else {
-        document.body.style.direction = 'ltr';
-        document.body.style.textAlign = 'left';
-      }
+      document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+      document.body.dir = lang === 'ar' ? 'rtl' : 'ltr';
       
       // Update all translatable elements
       const elements = document.querySelectorAll('[data-key]');
@@ -1416,6 +1504,11 @@
       
       // Store preference in localStorage
       localStorage.setItem('preferredLang', lang);
+      
+      // Update AOS for RTL if needed
+      if (window.AOS) {
+        AOS.refresh();
+      }
     }
 
     // Initialize AOS when available
