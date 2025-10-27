@@ -88,7 +88,7 @@
       box-shadow: 0 2px 10px rgba(0,0,0,0.2);
     }
     .logo { font-size: 1.25rem; font-weight: 700; color: #4cc9f0; letter-spacing: .2px; }
-    .nav-inner { display:flex; align-items:center; gap:1rem; width:100%; max-width:1100px; margin-inline:auto; }
+    .nav-inner { display:flex; align-items:center; justify-content: space-between; width:100%; max-width:1100px; margin-inline:auto; }
 
     .nav-links {
       display:flex;
@@ -109,33 +109,6 @@
     .nav-links a:hover {
       background: rgba(76,201,240,0.08);
       color: #7de2ff;
-    }
-
-    /* Language Switch */
-    .language-switch {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      margin-left: auto;
-      margin-right: 1rem;
-    }
-    .lang-btn {
-      background: transparent;
-      border: 1px solid #4cc9f0;
-      color: #e6e6e6;
-      padding: 0.3rem 0.7rem;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 0.85rem;
-      font-weight: 500;
-      transition: all 0.3s ease;
-    }
-    .lang-btn.active {
-      background: #4cc9f0;
-      color: #16213e;
-    }
-    .lang-btn:hover:not(.active) {
-      background: rgba(76, 201, 240, 0.1);
     }
 
     /* Mobile menu */
@@ -657,86 +630,6 @@
     :focus { outline: none; }
     :focus-visible { outline: 3px solid rgba(76,201,240,0.12); border-radius: 6px; }
 
-    /* ===== RTL-specific styles ===== */
-    body[dir="rtl"] {
-      text-align: right;
-    }
-    
-    body[dir="rtl"] .nav-inner {
-      flex-direction: row-reverse;
-    }
-    
-    body[dir="rtl"] .language-switch {
-      margin-left: 1rem;
-      margin-right: auto;
-    }
-    
-    body[dir="rtl"] .nav-links {
-      flex-direction: row-reverse;
-    }
-    
-    body[dir="rtl"] .card::before {
-      left: auto;
-      right: 0;
-      border-radius: 0 4px 4px 0;
-    }
-    
-    body[dir="rtl"] .project-card::before {
-      left: auto;
-      right: 0;
-      border-radius: 0 4px 4px 0;
-    }
-    
-    body[dir="rtl"] .skill::after {
-      left: auto;
-      right: 0;
-    }
-    
-    body[dir="rtl"] .card ul {
-      margin: .4rem 1rem 0 0;
-    }
-    
-    body[dir="rtl"] .experience-header {
-      flex-direction: row-reverse;
-    }
-    
-    body[dir="rtl"] .contact-inline {
-      flex-direction: row-reverse;
-    }
-    
-    body[dir="rtl"] .social {
-      flex-direction: row-reverse;
-    }
-    
-    body[dir="rtl"] .project-tags {
-      flex-direction: row-reverse;
-    }
-    
-    body[dir="rtl"] .project-actions {
-      flex-direction: row-reverse;
-    }
-    
-    body[dir="rtl"] .char-counter {
-      text-align: left;
-    }
-    
-    body[dir="rtl"] .form-status {
-      border-left: none;
-      border-right: 4px solid transparent;
-    }
-    
-    body[dir="rtl"] .form-success {
-      border-right-color: #10b981;
-    }
-    
-    body[dir="rtl"] .form-error {
-      border-right-color: #ef4444;
-    }
-    
-    body[dir="rtl"] .form-info {
-      border-right-color: #4cc9f0;
-    }
-
     /* ===== Responsive ===== */
     @media (max-width: 900px) {
       header h1 { font-size: 2rem; }
@@ -760,24 +653,6 @@
         grid-template-columns: 1fr;
       }
       .project-actions {
-        flex-direction: column;
-      }
-      .language-switch {
-        margin-right: 0.5rem;
-      }
-      
-      /* RTL mobile adjustments */
-      body[dir="rtl"] .nav-links {
-        right: auto;
-        left: 1rem;
-      }
-      
-      body[dir="rtl"] .experience-header {
-        flex-direction: column;
-        align-items: flex-end;
-      }
-      
-      body[dir="rtl"] .project-actions {
         flex-direction: column;
       }
     }
@@ -808,11 +683,6 @@
         max-width: 200px;
         justify-content: center;
       }
-      
-      /* RTL mobile adjustments */
-      body[dir="rtl"] .social {
-        flex-direction: column;
-      }
     }
 
     @media (max-width: 480px) {
@@ -836,26 +706,20 @@
     <div class="nav-inner" style="width:100%;">
       <div class="logo">Ahmed Awaad</div>
 
-      <!-- Language Switch -->
-      <div class="language-switch">
-        <button class="lang-btn active" id="lang-en" aria-label="Switch to English">EN</button>
-        <button class="lang-btn" id="lang-ar" aria-label="Switch to Arabic">عربي</button>
-      </div>
-
       <button class="menu-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Toggle navigation" id="menuToggle">
         <i class="fa fa-bars" aria-hidden="true"></i>
         <span class="sr-only">Menu</span>
       </button>
 
       <ul class="nav-links" id="primary-navigation">
-        <li><a href="#home" data-key="nav.home">Home</a></li>
-        <li><a href="#about" data-key="nav.about">About</a></li>
-        <li><a href="#skills" data-key="nav.skills">Skills</a></li>
-        <li><a href="#experience" data-key="nav.experience">Experience</a></li>
-        <li><a href="#certifications" data-key="nav.certifications">Certifications</a></li>
-        <li><a href="#projects" data-key="nav.projects">Projects</a></li>
-        <li><a href="#resume" data-key="nav.resume">Resume</a></li>
-        <li><a href="#contact" data-key="nav.contact">Contact</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
   </nav>
@@ -864,9 +728,9 @@
     <!-- Header / Hero -->
     <header id="home" data-aos="fade-up">
       <div class="hero">
-        <h1 data-key="header.name">Ahmed Mahmoud Awaad</h1>
-        <h2 data-key="header.title">Senior Accountant & Power BI Data Analyst</h2>
-        <p data-key="header.description">Transforming financial and operational data into clear insights. I design Power BI reports, automate reporting with Power Query & Excel, and produce management-ready financial analysis.</p>
+        <h1>Ahmed Mahmoud Awaad</h1>
+        <h2>Senior Accountant & Power BI Data Analyst</h2>
+        <p>Transforming financial and operational data into clear insights. I design Power BI reports, automate reporting with Power Query & Excel, and produce management-ready financial analysis.</p>
 
         <div class="contact-inline" aria-hidden="false">
           <span><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:Ahmedawwad01097903539@gmail.com">Ahmedawwad01097903539@gmail.com</a></span>
@@ -877,127 +741,127 @@
 
     <!-- About -->
     <section id="about" data-aos="fade-up" aria-labelledby="about-heading">
-      <h2 id="about-heading" data-key="about.heading">About Me</h2>
-      <p data-key="about.description">I am a Senior Accountant with 5+ years (2019‑present) of experience in accounting, financial reporting and data analytics. I combine accounting best practices with Power BI, DAX, Power Query and advanced Excel to build automated reporting, KPI dashboards and profitability analyses that support strategic decisions.</p>
+      <h2 id="about-heading">About Me</h2>
+      <p>I am a Senior Accountant with 5+ years (2019‑present) of experience in accounting, financial reporting and data analytics. I combine accounting best practices with Power BI, DAX, Power Query and advanced Excel to build automated reporting, KPI dashboards and profitability analyses that support strategic decisions.</p>
     </section>
 
     <!-- Skills -->
     <section id="skills" data-aos="fade-up" aria-labelledby="skills-heading">
-      <h2 id="skills-heading" data-key="skills.heading">Skills</h2>
+      <h2 id="skills-heading">Skills</h2>
       <div class="skills" role="list">
-        <div class="skill" role="listitem" tabindex="0"><i class="fa-solid fa-chart-column" aria-hidden="true"></i><p data-key="skills.powerbi">Power BI (Dashboarding)</p></div>
-        <div class="skill" role="listitem" tabindex="0"><i class="fa-solid fa-table" aria-hidden="true"></i><p data-key="skills.excel">Advanced Excel</p></div>
-        <div class="skill" role="listitem" tabindex="0"><i class="fa-solid fa-code" aria-hidden="true"></i><p data-key="skills.dax">DAX & Power Query</p></div>
-        <div class="skill" role="listitem" tabindex="0"><i class="fa-solid fa-calculator" aria-hidden="true"></i><p data-key="skills.financial">Financial Analysis</p></div>
-        <div class="skill" role="listitem" tabindex="0"><i class="fa-solid fa-database" aria-hidden="true"></i><p data-key="skills.modeling">Data Modeling & ETL</p></div>
-        <div class="skill" role="listitem" tabindex="0"><i class="fa-solid fa-file-invoice" aria-hidden="true"></i><p data-key="skills.accounting">Accounting & Reporting</p></div>
+        <div class="skill" role="listitem" tabindex="0"><i class="fa-solid fa-chart-column" aria-hidden="true"></i><p>Power BI (Dashboarding)</p></div>
+        <div class="skill" role="listitem" tabindex="0"><i class="fa-solid fa-table" aria-hidden="true"></i><p>Advanced Excel</p></div>
+        <div class="skill" role="listitem" tabindex="0"><i class="fa-solid fa-code" aria-hidden="true"></i><p>DAX & Power Query</p></div>
+        <div class="skill" role="listitem" tabindex="0"><i class="fa-solid fa-calculator" aria-hidden="true"></i><p>Financial Analysis</p></div>
+        <div class="skill" role="listitem" tabindex="0"><i class="fa-solid fa-database" aria-hidden="true"></i><p>Data Modeling & ETL</p></div>
+        <div class="skill" role="listitem" tabindex="0"><i class="fa-solid fa-file-invoice" aria-hidden="true"></i><p>Accounting & Reporting</p></div>
         <div class="skill" role="listitem" tabindex="0">
           <i class="fa-solid fa-server" aria-hidden="true"></i>
-          <p data-key="skills.erp">ERP Systems</p>
-          <div class="skill-detail" data-key="skills.erpDetail">Dynamics 365, Dynamics AX, Double Click</div>
+          <p>ERP Systems</p>
+          <div class="skill-detail">Dynamics 365, Dynamics AX, Double Click</div>
         </div>
       </div>
     </section>
 
     <!-- Experience -->
     <section id="experience" data-aos="fade-up" aria-labelledby="experience-heading">
-      <h2 id="experience-heading" data-key="experience.heading">Experience</h2>
+      <h2 id="experience-heading">Experience</h2>
 
       <div class="card" role="article" aria-labelledby="exp1-title">
         <div class="experience-header">
-          <h3 id="exp1-title" class="experience-title" data-key="experience.exp1.title">Senior Accountant</h3>
+          <h3 id="exp1-title" class="experience-title">Senior Accountant</h3>
           <span class="experience-period">03/2025 – Present</span>
         </div>
         <p class="experience-company">Deraah Trading Company</p>
-        <p class="experience-industry" data-key="experience.exp1.industry">Perfumes, Cosmetics & Accessories - KSA</p>
+        <p class="experience-industry">Perfumes, Cosmetics & Accessories - KSA</p>
         <ul>
-          <li data-key="experience.exp1.item1">Manage bank operations and reconcile daily/monthly statements</li>
-          <li data-key="experience.exp1.item2">Match showroom deposits with accounting records and prepare reconciliation reports</li>
-          <li data-key="experience.exp1.item3">Reconcile installment reports from Tamara and Tabby platforms</li>
-          <li data-key="experience.exp1.item4">Record journal entries and manage accounts receivable/payable using ERP systems</li>
-          <li data-key="experience.exp1.item5">Collaborate with procurement and operations departments for financial accuracy</li>
+          <li>Manage bank operations and reconcile daily/monthly statements</li>
+          <li>Match showroom deposits with accounting records and prepare reconciliation reports</li>
+          <li>Reconcile installment reports from Tamara and Tabby platforms</li>
+          <li>Record journal entries and manage accounts receivable/payable using ERP systems</li>
+          <li>Collaborate with procurement and operations departments for financial accuracy</li>
         </ul>
       </div>
 
       <div class="card" role="article" aria-labelledby="exp2-title">
         <div class="experience-header">
-          <h3 id="exp2-title" class="experience-title" data-key="experience.exp2.title">Senior Accountant</h3>
+          <h3 id="exp2-title" class="experience-title">Senior Accountant</h3>
           <span class="experience-period">12/2022 – 03/2025</span>
         </div>
         <p class="experience-company">Integrated Technics</p>
-        <p class="experience-industry" data-key="experience.exp2.industry">System Integrator (Security & ICT solutions)</p>
+        <p class="experience-industry">System Integrator (Security & ICT solutions)</p>
         <ul>
-          <li data-key="experience.exp2.item1">Updated accounts payable and established accounting program database</li>
-          <li data-key="experience.exp2.item2">Managed project follow-ups with suppliers, customers, and cross-functional teams</li>
-          <li data-key="experience.exp2.item3">Assisted with audits, tax preparations, and financial report analysis</li>
-          <li data-key="experience.exp2.item4">Prepared financial reports for regulatory bodies and shareholders</li>
-          <li data-key="experience.exp2.item5">Supported month-end and year-end closings and general ledger management</li>
+          <li>Updated accounts payable and established accounting program database</li>
+          <li>Managed project follow-ups with suppliers, customers, and cross-functional teams</li>
+          <li>Assisted with audits, tax preparations, and financial report analysis</li>
+          <li>Prepared financial reports for regulatory bodies and shareholders</li>
+          <li>Supported month-end and year-end closings and general ledger management</li>
         </ul>
       </div>
 
       <div class="card" role="article" aria-labelledby="exp3-title">
         <div class="experience-header">
-          <h3 id="exp3-title" class="experience-title" data-key="experience.exp3.title">Senior Accountant</h3>
+          <h3 id="exp3-title" class="experience-title">Senior Accountant</h3>
           <span class="experience-period">02/2020 – 06/2021</span>
         </div>
         <p class="experience-company">Tawreda.com</p>
-        <p class="experience-industry" data-key="experience.exp3.industry">HORECA Food Supply - Cairo, Egypt</p>
+        <p class="experience-industry">HORECA Food Supply - Cairo, Egypt</p>
         <ul>
-          <li data-key="experience.exp3.item1">Maintained daily accounts and prepared month-end close</li>
-          <li data-key="experience.exp3.item2">Prepared monthly financial performance reports and management information</li>
-          <li data-key="experience.exp3.item3">Conducted credit control, debt collection, and accounts receivable/payable oversight</li>
-          <li data-key="experience.exp3.item4">Reviewed expenses, payroll records, and updated financial data</li>
-          <li data-key="experience.exp3.item5">Facilitated month-end closing process and transaction reconciliation</li>
+          <li>Maintained daily accounts and prepared month-end close</li>
+          <li>Prepared monthly financial performance reports and management information</li>
+          <li>Conducted credit control, debt collection, and accounts receivable/payable oversight</li>
+          <li>Reviewed expenses, payroll records, and updated financial data</li>
+          <li>Facilitated month-end closing process and transaction reconciliation</li>
         </ul>
       </div>
 
       <div class="card" role="article" aria-labelledby="exp4-title">
         <div class="experience-header">
-          <h3 id="exp4-title" class="experience-title" data-key="experience.exp4.title">General Accountant</h3>
+          <h3 id="exp4-title" class="experience-title">General Accountant</h3>
           <span class="experience-period">07/2019 – 02/2020</span>
         </div>
         <p class="experience-company">Cattelya For Chemical Co</p>
         <ul>
-          <li data-key="experience.exp4.item1">Prepared and recorded journal entries and assisted with expense reviews</li>
-          <li data-key="experience.exp4.item2">Aided in financial statement preparation and bank reconciliation</li>
-          <li data-key="experience.exp4.item3">Maintained fixed assets register and calculated depreciation</li>
-          <li data-key="experience.exp4.item4">Managed online banking transactions and monitored daily cash balances</li>
+          <li>Prepared and recorded journal entries and assisted with expense reviews</li>
+          <li>Aided in financial statement preparation and bank reconciliation</li>
+          <li>Maintained fixed assets register and calculated depreciation</li>
+          <li>Managed online banking transactions and monitored daily cash balances</li>
         </ul>
       </div>
 
       <div class="card" role="article" aria-labelledby="exp5-title">
         <div class="experience-header">
-          <h3 id="exp5-title" class="experience-title" data-key="experience.exp5.title">Accountant</h3>
+          <h3 id="exp5-title" class="experience-title">Accountant</h3>
           <span class="experience-period">07/2019 – 02/2020</span>
         </div>
         <p class="experience-company">Elmotaheda for Trade and Finance</p>
         <ul>
-          <li data-key="experience.exp5.item1">Prepared and recorded journal entries, handled cash management as Treasurer</li>
-          <li data-key="experience.exp5.item2">Processed payments and controlled expenses through invoice verification</li>
-          <li data-key="experience.exp5.item3">Distributed checks after matching invoices to payments</li>
+          <li>Prepared and recorded journal entries, handled cash management as Treasurer</li>
+          <li>Processed payments and controlled expenses through invoice verification</li>
+          <li>Distributed checks after matching invoices to payments</li>
         </ul>
       </div>
     </section>
 
     <!-- Certifications -->
     <section id="certifications" data-aos="fade-up" aria-labelledby="certs-heading">
-      <h2 id="certs-heading" data-key="certifications.heading">Certifications</h2>
+      <h2 id="certs-heading">Certifications</h2>
 
       <div class="card">
-        <h3 data-key="certifications.cert1.title">Power BI & Excel Data Analysis</h3>
-        <p data-key="certifications.cert1.description">Certified in advanced Power BI, Power Query and Excel techniques for financial analysis and reporting.</p>
+        <h3>Power BI & Excel Data Analysis</h3>
+        <p>Certified in advanced Power BI, Power Query and Excel techniques for financial analysis and reporting.</p>
       </div>
 
       <div class="card">
-        <h3 data-key="certifications.cert2.title">Qualified Accountant Diploma</h3>
-        <p data-key="certifications.cert2.description">Professional qualification focused on financial reporting, analysis and accounting standards.</p>
+        <h3>Qualified Accountant Diploma</h3>
+        <p>Professional qualification focused on financial reporting, analysis and accounting standards.</p>
       </div>
     </section>
 
     <!-- Projects -->
     <section id="projects" data-aos="fade-up" aria-labelledby="projects-heading">
-      <h2 id="projects-heading" data-key="projects.heading">Projects</h2>
-      <p data-key="projects.description">Explore my work samples and download project files to see my data analysis and reporting capabilities in action.</p>
+      <h2 id="projects-heading">Projects</h2>
+      <p>Explore my work samples and download project files to see my data analysis and reporting capabilities in action.</p>
       
       <div class="projects">
         <!-- Project 1 -->
@@ -1005,17 +869,17 @@
           <div class="project-icon">
             <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
           </div>
-          <h3 class="project-title" data-key="projects.project1.title">Sales Performance Dashboard</h3>
-          <p class="project-description" data-key="projects.project1.description">Interactive Power BI dashboard analyzing sales trends, customer behavior, and regional performance with dynamic filtering and KPI tracking.</p>
+          <h3 class="project-title">Sales Performance Dashboard</h3>
+          <p class="project-description">Interactive Power BI dashboard analyzing sales trends, customer behavior, and regional performance with dynamic filtering and KPI tracking.</p>
           <div class="project-tags">
-            <span class="project-tag" data-key="projects.tags.powerbi">Power BI</span>
-            <span class="project-tag" data-key="projects.tags.dashboard">Dashboard</span>
-            <span class="project-tag" data-key="projects.tags.sales">Sales Analysis</span>
+            <span class="project-tag">Power BI</span>
+            <span class="project-tag">Dashboard</span>
+            <span class="project-tag">Sales Analysis</span>
           </div>
           <div class="project-actions">
             <a href="./projects/sales-dashboard.pbix" download class="btn-download">
               <i class="fas fa-download" aria-hidden="true"></i>
-              <span data-key="projects.download">Download Project</span>
+              <span>Download Project</span>
             </a>
             <span class="file-info">
               <i class="fas fa-file" aria-hidden="true"></i>
@@ -1029,17 +893,17 @@
           <div class="project-icon">
             <i class="fa-solid fa-file-excel" aria-hidden="true"></i>
           </div>
-          <h3 class="project-title" data-key="projects.project2.title">Financial Reporting Automation</h3>
-          <p class="project-description" data-key="projects.project2.description">Advanced Excel workbook with Power Query integration for automated monthly financial reporting, including P&L analysis and balance sheet reconciliation.</p>
+          <h3 class="project-title">Financial Reporting Automation</h3>
+          <p class="project-description">Advanced Excel workbook with Power Query integration for automated monthly financial reporting, including P&L analysis and balance sheet reconciliation.</p>
           <div class="project-tags">
-            <span class="project-tag" data-key="projects.tags.excel">Excel</span>
-            <span class="project-tag" data-key="projects.tags.powerquery">Power Query</span>
-            <span class="project-tag" data-key="projects.tags.automation">Automation</span>
+            <span class="project-tag">Excel</span>
+            <span class="project-tag">Power Query</span>
+            <span class="project-tag">Automation</span>
           </div>
           <div class="project-actions">
             <a href="./projects/financial-reporting.xlsx" download class="btn-download">
               <i class="fas fa-download" aria-hidden="true"></i>
-              <span data-key="projects.download">Download Project</span>
+              <span>Download Project</span>
             </a>
             <span class="file-info">
               <i class="fas fa-file-excel" aria-hidden="true"></i>
@@ -1053,17 +917,17 @@
           <div class="project-icon">
             <i class="fa-solid fa-chart-pie" aria-hidden="true"></i>
           </div>
-          <h3 class="project-title" data-key="projects.project3.title">Cost & Profitability Analysis</h3>
-          <p class="project-description" data-key="projects.project3.description">Comprehensive cost analysis model with branch-level profitability tracking, variance analysis, and interactive reporting capabilities.</p>
+          <h3 class="project-title">Cost & Profitability Analysis</h3>
+          <p class="project-description">Comprehensive cost analysis model with branch-level profitability tracking, variance analysis, and interactive reporting capabilities.</p>
           <div class="project-tags">
-            <span class="project-tag" data-key="projects.tags.powerbi">Power BI</span>
-            <span class="project-tag" data-key="projects.tags.cost">Cost Analysis</span>
-            <span class="project-tag" data-key="projects.tags.profitability">Profitability</span>
+            <span class="project-tag">Power BI</span>
+            <span class="project-tag">Cost Analysis</span>
+            <span class="project-tag">Profitability</span>
           </div>
           <div class="project-actions">
             <a href="./projects/cost-analysis.pbix" download class="btn-download">
               <i class="fas fa-download" aria-hidden="true"></i>
-              <span data-key="projects.download">Download Project</span>
+              <span>Download Project</span>
             </a>
             <span class="file-info">
               <i class="fas fa-file" aria-hidden="true"></i>
@@ -1077,17 +941,17 @@
           <div class="project-icon">
             <i class="fa-solid fa-table" aria-hidden="true"></i>
           </div>
-          <h3 class="project-title" data-key="projects.project4.title">Budget vs Actual Analysis</h3>
-          <p class="project-description" data-key="projects.project4.description">Excel-based budget tracking system with automated variance analysis, forecasting, and management reporting templates.</p>
+          <h3 class="project-title">Budget vs Actual Analysis</h3>
+          <p class="project-description">Excel-based budget tracking system with automated variance analysis, forecasting, and management reporting templates.</p>
           <div class="project-tags">
-            <span class="project-tag" data-key="projects.tags.excel">Excel</span>
-            <span class="project-tag" data-key="projects.tags.budgeting">Budgeting</span>
-            <span class="project-tag" data-key="projects.tags.variance">Variance Analysis</span>
+            <span class="project-tag">Excel</span>
+            <span class="project-tag">Budgeting</span>
+            <span class="project-tag">Variance Analysis</span>
           </div>
           <div class="project-actions">
             <a href="./projects/budget-analysis.xlsx" download class="btn-download">
               <i class="fas fa-download" aria-hidden="true"></i>
-              <span data-key="projects.download">Download Project</span>
+              <span>Download Project</span>
             </a>
             <span class="file-info">
               <i class="fas fa-file-excel" aria-hidden="true"></i>
@@ -1101,17 +965,17 @@
           <div class="project-icon">
             <i class="fa-solid fa-chart-bar" aria-hidden="true"></i>
           </div>
-          <h3 class="project-title" data-key="projects.project5.title">Inventory Management Dashboard</h3>
-          <p class="project-description" data-key="projects.project5.description">Real-time inventory tracking dashboard with stock level monitoring, reorder point alerts, and supplier performance analysis.</p>
+          <h3 class="project-title">Inventory Management Dashboard</h3>
+          <p class="project-description">Real-time inventory tracking dashboard with stock level monitoring, reorder point alerts, and supplier performance analysis.</p>
           <div class="project-tags">
-            <span class="project-tag" data-key="projects.tags.powerbi">Power BI</span>
-            <span class="project-tag" data-key="projects.tags.inventory">Inventory</span>
-            <span class="project-tag" data-key="projects.tags.supply">Supply Chain</span>
+            <span class="project-tag">Power BI</span>
+            <span class="project-tag">Inventory</span>
+            <span class="project-tag">Supply Chain</span>
           </div>
           <div class="project-actions">
             <a href="./projects/inventory-dashboard.pbix" download class="btn-download">
               <i class="fas fa-download" aria-hidden="true"></i>
-              <span data-key="projects.download">Download Project</span>
+              <span>Download Project</span>
             </a>
             <span class="file-info">
               <i class="fas fa-file" aria-hidden="true"></i>
@@ -1125,17 +989,17 @@
           <div class="project-icon">
             <i class="fa-solid fa-calculator" aria-hidden="true"></i>
           </div>
-          <h3 class="project-title" data-key="projects.project6.title">Financial Modeling Template</h3>
-          <p class="project-description" data-key="projects.project6.description">Comprehensive financial modeling template with scenario analysis, cash flow forecasting, and investment appraisal capabilities.</p>
+          <h3 class="project-title">Financial Modeling Template</h3>
+          <p class="project-description">Comprehensive financial modeling template with scenario analysis, cash flow forecasting, and investment appraisal capabilities.</p>
           <div class="project-tags">
-            <span class="project-tag" data-key="projects.tags.excel">Excel</span>
-            <span class="project-tag" data-key="projects.tags.modeling">Financial Modeling</span>
-            <span class="project-tag" data-key="projects.tags.forecasting">Forecasting</span>
+            <span class="project-tag">Excel</span>
+            <span class="project-tag">Financial Modeling</span>
+            <span class="project-tag">Forecasting</span>
           </div>
           <div class="project-actions">
             <a href="./projects/financial-model.xlsx" download class="btn-download">
               <i class="fas fa-download" aria-hidden="true"></i>
-              <span data-key="projects.download">Download Project</span>
+              <span>Download Project</span>
             </a>
             <span class="file-info">
               <i class="fas fa-file-excel" aria-hidden="true"></i>
@@ -1148,16 +1012,16 @@
 
     <!-- Resume -->
     <section id="resume" data-aos="fade-up" aria-labelledby="resume-heading">
-      <h2 id="resume-heading" data-key="resume.heading">Resume</h2>
-      <p data-key="resume.description">Download my resume (PDF) to learn more about my background, detailed project experience, and contact information.</p>
+      <h2 id="resume-heading">Resume</h2>
+      <p>Download my resume (PDF) to learn more about my background, detailed project experience, and contact information.</p>
 
       <!-- Updated Download CV button with proper relative path -->
-      <a href="./Ahmed-Mahmoud-Awaad-FlowCV-Resume-20251023_1.pdf" download class="btn" aria-label="Download Ahmed Mahmoud Awaad CV (PDF)" data-key="resume.download">📥 Download CV</a>
+      <a href="./Ahmed-Mahmoud-Awaad-FlowCV-Resume-20251023_1.pdf" download class="btn" aria-label="Download Ahmed Mahmoud Awaad CV (PDF)">📥 Download CV</a>
     </section>
 
     <!-- Contact -->
     <section id="contact" data-aos="fade-up" aria-labelledby="contact-heading">
-      <h2 id="contact-heading" data-key="contact.heading">Contact Me</h2>
+      <h2 id="contact-heading">Contact Me</h2>
 
       <!-- Enhanced Form with proper Formspree configuration -->
       <form id="contactForm" action="https://formspree.io/f/xrbynngg" method="POST">
@@ -1165,28 +1029,28 @@
         <input type="hidden" name="_format" value="plain">
         
         <div class="form-group">
-          <label class="sr-only" for="name" data-key="contact.form.name">Your name</label>
-          <input id="name" name="name" type="text" placeholder="Your Name" required autocomplete="name" data-key="contact.form.namePlaceholder">
+          <label class="sr-only" for="name">Your name</label>
+          <input id="name" name="name" type="text" placeholder="Your Name" required autocomplete="name">
         </div>
 
         <div class="form-group">
-          <label class="sr-only" for="email" data-key="contact.form.email">Your email</label>
-          <input id="email" name="email" type="email" placeholder="Your Email" required autocomplete="email" data-key="contact.form.emailPlaceholder">
+          <label class="sr-only" for="email">Your email</label>
+          <input id="email" name="email" type="email" placeholder="Your Email" required autocomplete="email">
         </div>
 
         <div class="form-group">
-          <label class="sr-only" for="message" data-key="contact.form.message">Your message</label>
-          <textarea id="message" name="message" rows="5" placeholder="Your Message" required data-key="contact.form.messagePlaceholder"></textarea>
+          <label class="sr-only" for="message">Your message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
         </div>
 
         <!-- Enhanced honeypot for better spam protection -->
         <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="honeypot">
 
         <button type="submit" id="submitBtn" class="submit-btn">
-          <span id="submitText" data-key="contact.form.submit">Send Message</span>
+          <span id="submitText">Send Message</span>
         </button>
 
-        <p id="contact-note" class="contact-note" data-key="contact.note">
+        <p id="contact-note" class="contact-note">
           Or contact me directly:
           <a href="mailto:Ahmedawwad01097903539@gmail.com">Ahmedawwad01097903539@gmail.com</a>
           • <a href="tel:+966569237463">+966 56 923 7463</a>
@@ -1212,8 +1076,8 @@
 
   <!-- Footer -->
   <footer role="contentinfo">
-    <div id="siteFooter">© <span id="year">2025</span> <span data-key="footer.copyright">Ahmed Mahmoud Awaad | All Rights Reserved</span> | 
-      <a href="https://github.com/AhmedAwaad97/ahmed-awaad2-portfolio" target="_blank" rel="noopener noreferrer" style="color: #4cc9f0;" data-key="footer.github">View on GitHub</a>
+    <div id="siteFooter">© <span id="year">2025</span> Ahmed Mahmoud Awaad | All Rights Reserved | 
+      <a href="https://github.com/AhmedAwaad97/ahmed-awaad2-portfolio" target="_blank" rel="noopener noreferrer" style="color: #4cc9f0;">View on GitHub</a>
     </div>
   </footer>
 
@@ -1221,303 +1085,6 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
 
   <script>
-    // Language translation object
-    const translations = {
-      en: {
-        // Navigation
-        "nav.home": "Home",
-        "nav.about": "About",
-        "nav.skills": "Skills",
-        "nav.experience": "Experience",
-        "nav.certifications": "Certifications",
-        "nav.projects": "Projects",
-        "nav.resume": "Resume",
-        "nav.contact": "Contact",
-        
-        // Header
-        "header.name": "Ahmed Mahmoud Awaad",
-        "header.title": "Senior Accountant & Power BI Data Analyst",
-        "header.description": "Transforming financial and operational data into clear insights. I design Power BI reports, automate reporting with Power Query & Excel, and produce management-ready financial analysis.",
-        
-        // About
-        "about.heading": "About Me",
-        "about.description": "I am a Senior Accountant with 5+ years (2019‑present) of experience in accounting, financial reporting and data analytics. I combine accounting best practices with Power BI, DAX, Power Query and advanced Excel to build automated reporting, KPI dashboards and profitability analyses that support strategic decisions.",
-        
-        // Skills
-        "skills.heading": "Skills",
-        "skills.powerbi": "Power BI (Dashboarding)",
-        "skills.excel": "Advanced Excel",
-        "skills.dax": "DAX & Power Query",
-        "skills.financial": "Financial Analysis",
-        "skills.modeling": "Data Modeling & ETL",
-        "skills.accounting": "Accounting & Reporting",
-        "skills.erp": "ERP Systems",
-        "skills.erpDetail": "Dynamics 365, Dynamics AX, Double Click",
-        
-        // Experience
-        "experience.heading": "Experience",
-        "experience.exp1.title": "Senior Accountant",
-        "experience.exp1.industry": "Perfumes, Cosmetics & Accessories - KSA",
-        "experience.exp1.item1": "Manage bank operations and reconcile daily/monthly statements",
-        "experience.exp1.item2": "Match showroom deposits with accounting records and prepare reconciliation reports",
-        "experience.exp1.item3": "Reconcile installment reports from Tamara and Tabby platforms",
-        "experience.exp1.item4": "Record journal entries and manage accounts receivable/payable using ERP systems",
-        "experience.exp1.item5": "Collaborate with procurement and operations departments for financial accuracy",
-        
-        "experience.exp2.title": "Senior Accountant",
-        "experience.exp2.industry": "System Integrator (Security & ICT solutions)",
-        "experience.exp2.item1": "Updated accounts payable and established accounting program database",
-        "experience.exp2.item2": "Managed project follow-ups with suppliers, customers, and cross-functional teams",
-        "experience.exp2.item3": "Assisted with audits, tax preparations, and financial report analysis",
-        "experience.exp2.item4": "Prepared financial reports for regulatory bodies and shareholders",
-        "experience.exp2.item5": "Supported month-end and year-end closings and general ledger management",
-        
-        "experience.exp3.title": "Senior Accountant",
-        "experience.exp3.industry": "HORECA Food Supply - Cairo, Egypt",
-        "experience.exp3.item1": "Maintained daily accounts and prepared month-end close",
-        "experience.exp3.item2": "Prepared monthly financial performance reports and management information",
-        "experience.exp3.item3": "Conducted credit control, debt collection, and accounts receivable/payable oversight",
-        "experience.exp3.item4": "Reviewed expenses, payroll records, and updated financial data",
-        "experience.exp3.item5": "Facilitated month-end closing process and transaction reconciliation",
-        
-        "experience.exp4.title": "General Accountant",
-        "experience.exp4.item1": "Prepared and recorded journal entries and assisted with expense reviews",
-        "experience.exp4.item2": "Aided in financial statement preparation and bank reconciliation",
-        "experience.exp4.item3": "Maintained fixed assets register and calculated depreciation",
-        "experience.exp4.item4": "Managed online banking transactions and monitored daily cash balances",
-        
-        "experience.exp5.title": "Accountant",
-        "experience.exp5.item1": "Prepared and recorded journal entries, handled cash management as Treasurer",
-        "experience.exp5.item2": "Processed payments and controlled expenses through invoice verification",
-        "experience.exp5.item3": "Distributed checks after matching invoices to payments",
-        
-        // Certifications
-        "certifications.heading": "Certifications",
-        "certifications.cert1.title": "Power BI & Excel Data Analysis",
-        "certifications.cert1.description": "Certified in advanced Power BI, Power Query and Excel techniques for financial analysis and reporting.",
-        "certifications.cert2.title": "Qualified Accountant Diploma",
-        "certifications.cert2.description": "Professional qualification focused on financial reporting, analysis and accounting standards.",
-        
-        // Projects
-        "projects.heading": "Projects",
-        "projects.description": "Explore my work samples and download project files to see my data analysis and reporting capabilities in action.",
-        "projects.project1.title": "Sales Performance Dashboard",
-        "projects.project1.description": "Interactive Power BI dashboard analyzing sales trends, customer behavior, and regional performance with dynamic filtering and KPI tracking.",
-        "projects.project2.title": "Financial Reporting Automation",
-        "projects.project2.description": "Advanced Excel workbook with Power Query integration for automated monthly financial reporting, including P&L analysis and balance sheet reconciliation.",
-        "projects.project3.title": "Cost & Profitability Analysis",
-        "projects.project3.description": "Comprehensive cost analysis model with branch-level profitability tracking, variance analysis, and interactive reporting capabilities.",
-        "projects.project4.title": "Budget vs Actual Analysis",
-        "projects.project4.description": "Excel-based budget tracking system with automated variance analysis, forecasting, and management reporting templates.",
-        "projects.project5.title": "Inventory Management Dashboard",
-        "projects.project5.description": "Real-time inventory tracking dashboard with stock level monitoring, reorder point alerts, and supplier performance analysis.",
-        "projects.project6.title": "Financial Modeling Template",
-        "projects.project6.description": "Comprehensive financial modeling template with scenario analysis, cash flow forecasting, and investment appraisal capabilities.",
-        "projects.tags.powerbi": "Power BI",
-        "projects.tags.dashboard": "Dashboard",
-        "projects.tags.sales": "Sales Analysis",
-        "projects.tags.excel": "Excel",
-        "projects.tags.powerquery": "Power Query",
-        "projects.tags.automation": "Automation",
-        "projects.tags.cost": "Cost Analysis",
-        "projects.tags.profitability": "Profitability",
-        "projects.tags.budgeting": "Budgeting",
-        "projects.tags.variance": "Variance Analysis",
-        "projects.tags.inventory": "Inventory",
-        "projects.tags.supply": "Supply Chain",
-        "projects.tags.modeling": "Financial Modeling",
-        "projects.tags.forecasting": "Forecasting",
-        "projects.download": "Download Project",
-        
-        // Resume
-        "resume.heading": "Resume",
-        "resume.description": "Download my resume (PDF) to learn more about my background, detailed project experience, and contact information.",
-        "resume.download": "📥 Download CV",
-        
-        // Contact
-        "contact.heading": "Contact Me",
-        "contact.form.name": "Your name",
-        "contact.form.namePlaceholder": "Your Name",
-        "contact.form.email": "Your email",
-        "contact.form.emailPlaceholder": "Your Email",
-        "contact.form.message": "Your message",
-        "contact.form.messagePlaceholder": "Your Message",
-        "contact.form.submit": "Send Message",
-        "contact.note": "Or contact me directly:",
-        
-        // Footer
-        "footer.copyright": "Ahmed Mahmoud Awaad | All Rights Reserved",
-        "footer.github": "View on GitHub"
-      },
-      ar: {
-        // Navigation
-        "nav.home": "الرئيسية",
-        "nav.about": "عني",
-        "nav.skills": "المهارات",
-        "nav.experience": "الخبرة",
-        "nav.certifications": "الشهادات",
-        "nav.projects": "المشاريع",
-        "nav.resume": "السيرة الذاتية",
-        "nav.contact": "اتصل بي",
-        
-        // Header
-        "header.name": "أحمد محمود عواض",
-        "header.title": "محاسب أول ومحلل بيانات Power BI",
-        "header.description": "تحويل البيانات المالية والتشغيلية إلى رؤى واضحة. أصمم تقارير Power BI، وأتمتة التقارير باستخدام Power Query و Excel، وأنتج تحليلات مالية جاهزة للإدارة.",
-        
-        // About
-        "about.heading": "عني",
-        "about.description": "أنا محاسب أول مع أكثر من 5 سنوات (2019 حتى الآن) من الخبرة في المحاسبة، التقارير المالية وتحليل البيانات. أجمع بين أفضل ممارسات المحاسبة مع Power BI، DAX، Power Query و Excel المتقدم لبناء تقارير آلية، لوحات تحكم للمؤشرات الرئيسية وتحليلات الربحية التي تدعم القرارات الاستراتيجية.",
-        
-        // Skills
-        "skills.heading": "المهارات",
-        "skills.powerbi": "Power BI (لوحات التحكم)",
-        "skills.excel": "Excel المتقدم",
-        "skills.dax": "DAX و Power Query",
-        "skills.financial": "التحليل المالي",
-        "skills.modeling": "نمذجة البيانات و ETL",
-        "skills.accounting": "المحاسبة والتقارير",
-        "skills.erp": "أنظمة ERP",
-        "skills.erpDetail": "Dynamics 365, Dynamics AX, Double Click",
-        
-        // Experience
-        "experience.heading": "الخبرة",
-        "experience.exp1.title": "محاسب أول",
-        "experience.exp1.industry": "العطور، مستحضرات التجميل والإكسسوارات - السعودية",
-        "experience.exp1.item1": "إدارة العمليات البنكية والمطابقة اليومية/الشهرية للكشوفات",
-        "experience.exp1.item2": "مطابقة ودائع المعارض مع السجلات المحاسبية وإعداد تقارير المطابقة",
-        "experience.exp1.item3": "مطابقة تقارير الأقساط من منصات تمارة وتابي",
-        "experience.exp1.item4": "تسجيل قيود اليومية وإدارة حسابات القبض/الدفع باستخدام أنظمة ERP",
-        "experience.exp1.item5": "التعاون مع أقسام المشتريات والعمليات لضمان الدقة المالية",
-        
-        "experience.exp2.title": "محاسب أول",
-        "experience.exp2.industry": "مزود حلول متكاملة (الأمن وتقنية المعلومات)",
-        "experience.exp2.item1": "تحديث حسابات الدفع وإنشاء قاعدة بيانات البرنامج المحاسبي",
-        "experience.exp2.item2": "إدارة متابعة المشاريع مع الموردين والعملاء والفرق الوظيفية المختلفة",
-        "experience.exp2.item3": "المساعدة في التدقيق، إعداد الضرائب وتحليل التقارير المالية",
-        "experience.exp2.item4": "إعداد التقارير المالية للجهات التنظيمية والمساهمين",
-        "experience.exp2.item5": "دعم إقفالات نهاية الشهر والسنة وإدارة دفتر الأستاذ العام",
-        
-        "experience.exp3.title": "محاسب أول",
-        "experience.exp3.industry": "توريد أغذية للمطاعم والفنادق - القاهرة، مصر",
-        "experience.exp3.item1": "الحفاظ على الحسابات اليومية وإعداد إقفال نهاية الشهر",
-        "experience.exp3.item2": "إعداد تقارير الأداء المالي الشهرية ومعلومات الإدارة",
-        "experience.exp3.item3": "إدارة الرقابة الائتمانية، تحصيل الديون والإشراف على حسابات القبض/الدفع",
-        "experience.exp3.item4": "مراجعة المصروفات، سجلات الرواتب وتحديث البيانات المالية",
-        "experience.exp3.item5": "تسهيل عملية إقفال نهاية الشهر ومطابقة المعاملات",
-        
-        "experience.exp4.title": "محاسب عام",
-        "experience.exp4.item1": "إعداد وتسجيل قيود اليومية والمساعدة في مراجعة المصروفات",
-        "experience.exp4.item2": "المساعدة في إعداد القوائم المالية والمطابقة البنكية",
-        "experience.exp4.item3": "الحفاظ على سجل الأصول الثابتة وحساب الإهلاك",
-        "experience.exp4.item4": "إدارة المعاملات البنكية عبر الإنترنت ومراقبة أرصدة النقد اليومية",
-        
-        "experience.exp5.title": "محاسب",
-        "experience.exp5.item1": "إعداد وتسجيل قيود اليومية، والتعامل مع إدارة النقد كأمين صندوق",
-        "experience.exp5.item2": "معالجة المدفوعات والتحكم في المصروفات من خلال التحقق من الفواتير",
-        "experience.exp5.item3": "توزيع الشيكات بعد مطابقة الفواتير مع المدفوعات",
-        
-        // Certifications
-        "certifications.heading": "الشهادات",
-        "certifications.cert1.title": "تحليل البيانات باستخدام Power BI و Excel",
-        "certifications.cert1.description": "معتمد في تقنيات Power BI المتقدمة، Power Query و Excel للتحليل المالي وإعداد التقارير.",
-        "certifications.cert2.title": "دبلوم محاسب مؤهل",
-        "certifications.cert2.description": "مؤهل مهني يركز على التقارير المالية، التحليل والمعايير المحاسبية.",
-        
-        // Projects
-        "projects.heading": "المشاريع",
-        "projects.description": "استكشف نماذج أعمالي وقم بتنزيل ملفات المشاريع لرؤية قدراتي في تحليل البيانات وإعداد التقارير.",
-        "projects.project1.title": "لوحة متابعة أداء المبيعات",
-        "projects.project1.description": "لوحة تحكم Power BI تفاعلية تحلل اتجاهات المبيعات، سلوك العملاء والأداء الإقليمي مع التصفية الديناميكية ومتابعة المؤشرات الرئيسية.",
-        "projects.project2.title": "أتمتة التقارير المالية",
-        "projects.project2.description": "مصنف Excel متقدم مع تكامل Power Query لإعداد التقارير المالية الشهرية الآلية، بما في ذلك تحليل الأرباح والخسائر ومطابقة الميزانية العمومية.",
-        "projects.project3.title": "تحليل التكاليف والربحية",
-        "projects.project3.description": "نموذج تحليل تكاليف شامل مع تتبع الربحية على مستوى الفروع، تحليل الفروق وقدرات إعداد التقارير التفاعلية.",
-        "projects.project4.title": "تحليل الموازنة مقابل الفعلي",
-        "projects.project4.description": "نظام تتبع الموازنة القائم على Excel مع تحليل الفروق الآلي، التنبؤ وقوالب التقارير الإدارية.",
-        "projects.project5.title": "لوحة متابعة إدارة المخزون",
-        "projects.project5.description": "لوحة تحكم لتتبع المخزون في الوقت الفعلي مع مراقبة مستويات المخزون، تنبيهات نقطة إعادة الطلب وتحليل أداء الموردين.",
-        "projects.project6.title": "قالب النمذجة المالية",
-        "projects.project6.description": "قالب نمذجة مالية شامل مع تحليل السيناريوهات، التنبؤ بالتدفق النقدي وقدرات تقييم الاستثمار.",
-        "projects.tags.powerbi": "Power BI",
-        "projects.tags.dashboard": "لوحة تحكم",
-        "projects.tags.sales": "تحليل المبيعات",
-        "projects.tags.excel": "Excel",
-        "projects.tags.powerquery": "Power Query",
-        "projects.tags.automation": "الأتمتة",
-        "projects.tags.cost": "تحليل التكاليف",
-        "projects.tags.profitability": "الربحية",
-        "projects.tags.budgeting": "الموازنة",
-        "projects.tags.variance": "تحليل الفروق",
-        "projects.tags.inventory": "المخزون",
-        "projects.tags.supply": "سلسلة التوريد",
-        "projects.tags.modeling": "النمذجة المالية",
-        "projects.tags.forecasting": "التنبؤ",
-        "projects.download": "تحميل المشروع",
-        
-        // Resume
-        "resume.heading": "السيرة الذاتية",
-        "resume.description": "قم بتنزيل سيرتي الذاتية (PDF) لمعرفة المزيد عن خلفيتي، خبرة المشاريع التفصيلية ومعلومات الاتصال.",
-        "resume.download": "📥 تحميل السيرة الذاتية",
-        
-        // Contact
-        "contact.heading": "اتصل بي",
-        "contact.form.name": "اسمك",
-        "contact.form.namePlaceholder": "اسمك",
-        "contact.form.email": "بريدك الإلكتروني",
-        "contact.form.emailPlaceholder": "بريدك الإلكتروني",
-        "contact.form.message": "رسالتك",
-        "contact.form.messagePlaceholder": "رسالتك",
-        "contact.form.submit": "إرسال الرسالة",
-        "contact.note": "أو اتصل بي مباشرة:",
-        
-        // Footer
-        "footer.copyright": "أحمد محمود عواض | جميع الحقوق محفوظة",
-        "footer.github": "عرض على GitHub"
-      }
-    };
-
-    // Language switching functionality
-    let currentLang = 'en';
-
-    function switchLanguage(lang) {
-      if (lang === currentLang) return;
-      
-      // Update active button
-      document.getElementById('lang-en').classList.toggle('active', lang === 'en');
-      document.getElementById('lang-ar').classList.toggle('active', lang === 'ar');
-      
-      // Update HTML lang attribute
-      document.documentElement.lang = lang;
-      
-      // Update direction for Arabic
-      if (lang === 'ar') {
-        document.body.dir = 'rtl';
-        document.body.style.textAlign = 'right';
-      } else {
-        document.body.dir = 'ltr';
-        document.body.style.textAlign = 'left';
-      }
-      
-      // Update all translatable elements
-      const elements = document.querySelectorAll('[data-key]');
-      elements.forEach(element => {
-        const key = element.getAttribute('data-key');
-        if (translations[lang] && translations[lang][key]) {
-          if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
-            element.setAttribute('placeholder', translations[lang][key]);
-          } else {
-            element.textContent = translations[lang][key];
-          }
-        }
-      });
-      
-      currentLang = lang;
-      
-      // Store preference in localStorage
-      localStorage.setItem('preferredLang', lang);
-    }
-
     // Initialize AOS when available
     window.addEventListener('load', function () {
       if (window.AOS) {
@@ -1553,16 +1120,6 @@
         }
       });
     })();
-
-    // Language switch event listeners
-    document.getElementById('lang-en').addEventListener('click', () => switchLanguage('en'));
-    document.getElementById('lang-ar').addEventListener('click', () => switchLanguage('ar'));
-
-    // Check for saved language preference
-    const savedLang = localStorage.getItem('preferredLang');
-    if (savedLang && (savedLang === 'en' || savedLang === 'ar')) {
-      switchLanguage(savedLang);
-    }
 
     // Enhanced Form handling with Formspree integration
     (function () {
