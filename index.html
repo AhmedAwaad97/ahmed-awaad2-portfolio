@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <meta name="description" content="Ahmed Mahmoud Awaad — Senior Accountant & Power BI Data Analyst. Power BI dashboards, advanced Excel, financial reporting and data modelling." />
   <title>Ahmed Mahmoud Awaad | Senior Accountant & Power BI Data Analyst</title>
 
@@ -41,6 +41,7 @@
       -moz-osx-font-smoothing:grayscale;
       line-height: 1.6;
       scroll-behavior: smooth;
+      overflow-x: hidden;
     }
     a { color: #4cc9f0; text-decoration: none; transition: color .2s ease; }
     a:hover, a:focus { color: #7de2ff; outline: none; }
@@ -69,7 +70,6 @@
     /* ===== Navbar ===== */
     nav {
       position: fixed;
-      inset: 0 0 auto 0;
       top: 0;
       left: 0;
       width: 100%;
@@ -88,7 +88,14 @@
       box-shadow: 0 2px 10px rgba(0,0,0,0.2);
     }
     .logo { font-size: 1.25rem; font-weight: 700; color: #4cc9f0; letter-spacing: .2px; }
-    .nav-inner { display:flex; align-items:center; gap:1rem; width:100%; max-width:1100px; margin-inline:auto; }
+    .nav-inner { 
+      display:flex; 
+      align-items:center; 
+      gap:1rem; 
+      width:100%; 
+      max-width:1100px; 
+      margin: 0 auto;
+    }
 
     .nav-links {
       display:flex;
@@ -658,48 +665,55 @@
     :focus-visible { outline: 3px solid rgba(76,201,240,0.12); border-radius: 6px; }
 
     /* ===== RTL Specific Styles ===== */
-    body[dir="rtl"] {
+    body.rtl {
       direction: rtl;
       text-align: right;
     }
 
-    body[dir="rtl"] .card::before,
-    body[dir="rtl"] .project-card::before {
+    body.rtl .card::before,
+    body.rtl .project-card::before {
       left: auto;
       right: 0;
       border-radius: 0 4px 4px 0;
     }
 
-    body[dir="rtl"] .card ul,
-    body[dir="rtl"] .experience-header {
-      margin-right: 1rem;
-      margin-left: 0;
+    body.rtl .card ul {
+      margin: .4rem 1rem 0 0;
+      padding: 0;
     }
 
-    body[dir="rtl"] .experience-header {
+    body.rtl .experience-header {
       flex-direction: row-reverse;
     }
 
-    body[dir="rtl"] .nav-inner {
-      flex-direction: row-reverse;
+    body.rtl .nav-inner {
+      flex-direction: row;
     }
 
-    body[dir="rtl"] .language-switch {
+    body.rtl .language-switch {
       margin-left: 1rem;
       margin-right: auto;
     }
 
-    body[dir="rtl"] .project-tags,
-    body[dir="rtl"] .project-actions,
-    body[dir="rtl"] .social {
+    body.rtl .project-tags,
+    body.rtl .project-actions,
+    body.rtl .social {
       flex-direction: row-reverse;
     }
 
-    body[dir="rtl"] .skills {
+    body.rtl .skills {
       text-align: center;
     }
 
-    body[dir="rtl"] .file-info {
+    body.rtl .file-info {
+      text-align: left;
+    }
+
+    body.rtl .form-status {
+      text-align: right;
+    }
+
+    body.rtl .char-counter {
       text-align: left;
     }
 
@@ -707,7 +721,18 @@
     @media (max-width: 900px) {
       header h1 { font-size: 2rem; }
       header h2 { font-size: 1rem; }
-      .nav-links { display: none; position: absolute; top: 64px; right: 1rem; background: rgba(26,26,46,0.98); padding: .75rem; border-radius: 8px; flex-direction: column; width: min(92%, 320px); }
+      .nav-links { 
+        display: none; 
+        position: absolute; 
+        top: 100%; 
+        right: 0;
+        background: rgba(26,26,46,0.98); 
+        padding: .75rem; 
+        border-radius: 8px; 
+        flex-direction: column; 
+        width: 200px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      }
       .nav-links.open { display:flex; }
       .menu-toggle { display: inline-flex; align-items:center; gap: .35rem; }
       nav { padding: .55rem .75rem; }
@@ -733,22 +758,22 @@
       }
 
       /* RTL mobile fixes */
-      body[dir="rtl"] .nav-links {
+      body.rtl .nav-links {
         right: auto;
-        left: 1rem;
+        left: 0;
       }
 
-      body[dir="rtl"] .experience-header {
+      body.rtl .experience-header {
         align-items: flex-end;
       }
 
-      body[dir="rtl"] .nav-inner {
-        flex-direction: row;
-      }
-
-      body[dir="rtl"] .language-switch {
+      body.rtl .language-switch {
         margin-left: auto;
         margin-right: 0.5rem;
+      }
+      
+      body.rtl .project-actions {
+        align-items: stretch;
       }
     }
 
@@ -780,12 +805,8 @@
       }
 
       /* RTL mobile form fixes */
-      body[dir="rtl"] .form-group {
+      body.rtl .form-group {
         text-align: right;
-      }
-
-      body[dir="rtl"] .char-counter {
-        text-align: left;
       }
     }
 
@@ -799,20 +820,25 @@
         padding: 0.625rem;
       }
 
-      /* RTL extra small screen fixes */
-      body[dir="rtl"] header .contact-inline {
-        flex-direction: column-reverse;
+      header h1 {
+        font-size: 1.8rem;
+      }
+      
+      header h2 {
+        font-size: 0.95rem;
       }
 
-      body[dir="rtl"] .project-actions {
-        align-items: stretch;
+      /* RTL extra small screen fixes */
+      body.rtl header .contact-inline {
+        flex-direction: column;
+        gap: 0.5rem;
       }
     }
 
-    /* Prevent horizontal scrolling on mobile */
-    body {
+    /* Prevent horizontal scrolling */
+    html, body {
+      max-width: 100%;
       overflow-x: hidden;
-      width: 100%;
     }
 
     /* Ensure all containers don't exceed viewport */
@@ -828,7 +854,7 @@
 
   <!-- Navbar -->
   <nav role="navigation" aria-label="Main navigation">
-    <div class="nav-inner" style="width:100%;">
+    <div class="nav-inner">
       <div class="logo">Ahmed Awaad</div>
 
       <!-- Language Switch -->
@@ -1482,10 +1508,13 @@
       document.getElementById('lang-en').classList.toggle('active', lang === 'en');
       document.getElementById('lang-ar').classList.toggle('active', lang === 'ar');
       
-      // Update HTML lang attribute and direction
+      // Update HTML lang attribute and body class
       document.documentElement.lang = lang;
-      document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
-      document.body.dir = lang === 'ar' ? 'rtl' : 'ltr';
+      if (lang === 'ar') {
+        document.body.classList.add('rtl');
+      } else {
+        document.body.classList.remove('rtl');
+      }
       
       // Update all translatable elements
       const elements = document.querySelectorAll('[data-key]');
