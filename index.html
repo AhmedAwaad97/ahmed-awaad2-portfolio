@@ -657,6 +657,86 @@
     :focus { outline: none; }
     :focus-visible { outline: 3px solid rgba(76,201,240,0.12); border-radius: 6px; }
 
+    /* ===== RTL-specific styles ===== */
+    body[dir="rtl"] {
+      text-align: right;
+    }
+    
+    body[dir="rtl"] .nav-inner {
+      flex-direction: row-reverse;
+    }
+    
+    body[dir="rtl"] .language-switch {
+      margin-left: 1rem;
+      margin-right: auto;
+    }
+    
+    body[dir="rtl"] .nav-links {
+      flex-direction: row-reverse;
+    }
+    
+    body[dir="rtl"] .card::before {
+      left: auto;
+      right: 0;
+      border-radius: 0 4px 4px 0;
+    }
+    
+    body[dir="rtl"] .project-card::before {
+      left: auto;
+      right: 0;
+      border-radius: 0 4px 4px 0;
+    }
+    
+    body[dir="rtl"] .skill::after {
+      left: auto;
+      right: 0;
+    }
+    
+    body[dir="rtl"] .card ul {
+      margin: .4rem 1rem 0 0;
+    }
+    
+    body[dir="rtl"] .experience-header {
+      flex-direction: row-reverse;
+    }
+    
+    body[dir="rtl"] .contact-inline {
+      flex-direction: row-reverse;
+    }
+    
+    body[dir="rtl"] .social {
+      flex-direction: row-reverse;
+    }
+    
+    body[dir="rtl"] .project-tags {
+      flex-direction: row-reverse;
+    }
+    
+    body[dir="rtl"] .project-actions {
+      flex-direction: row-reverse;
+    }
+    
+    body[dir="rtl"] .char-counter {
+      text-align: left;
+    }
+    
+    body[dir="rtl"] .form-status {
+      border-left: none;
+      border-right: 4px solid transparent;
+    }
+    
+    body[dir="rtl"] .form-success {
+      border-right-color: #10b981;
+    }
+    
+    body[dir="rtl"] .form-error {
+      border-right-color: #ef4444;
+    }
+    
+    body[dir="rtl"] .form-info {
+      border-right-color: #4cc9f0;
+    }
+
     /* ===== Responsive ===== */
     @media (max-width: 900px) {
       header h1 { font-size: 2rem; }
@@ -685,6 +765,21 @@
       .language-switch {
         margin-right: 0.5rem;
       }
+      
+      /* RTL mobile adjustments */
+      body[dir="rtl"] .nav-links {
+        right: auto;
+        left: 1rem;
+      }
+      
+      body[dir="rtl"] .experience-header {
+        flex-direction: column;
+        align-items: flex-end;
+      }
+      
+      body[dir="rtl"] .project-actions {
+        flex-direction: column;
+      }
     }
 
     @media (max-width: 768px) {
@@ -712,6 +807,11 @@
         width: 100%;
         max-width: 200px;
         justify-content: center;
+      }
+      
+      /* RTL mobile adjustments */
+      body[dir="rtl"] .social {
+        flex-direction: column;
       }
     }
 
@@ -1392,10 +1492,10 @@
       
       // Update direction for Arabic
       if (lang === 'ar') {
-        document.body.style.direction = 'rtl';
+        document.body.dir = 'rtl';
         document.body.style.textAlign = 'right';
       } else {
-        document.body.style.direction = 'ltr';
+        document.body.dir = 'ltr';
         document.body.style.textAlign = 'left';
       }
       
