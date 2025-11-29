@@ -1,717 +1,869 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="Ahmed Mahmoud Awaad — Senior Accountant & Power BI Data Analyst. Power BI dashboards, advanced Excel, financial reporting and data modelling." />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ahmed Mahmoud Awaad — Senior Accountant & Power BI Data Analyst. Power BI dashboards, advanced Excel, financial reporting and data modelling.">
   <title>Ahmed Mahmoud Awaad | Senior Accountant & Power BI Data Analyst</title>
-
+  
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-
-  <!-- AOS (Animate On Scroll) -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-  <!-- Font Awesome Icons (kit) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/a2d0d6a9b5.js" crossorigin="anonymous" defer></script>
-
+  
   <style>
-    /* ===== Accessibility helpers ===== */
-    .sr-only {
-      position: absolute !important;
-      height: 1px; width: 1px;
-      overflow: hidden;
-      clip: rect(1px, 1px, 1px, 1px);
-      white-space: nowrap;
-      clip-path: inset(50%);
-      border: 0;
+    /* ===== CSS Reset & Base Styles ===== */
+    * {
+      margin: 0;
       padding: 0;
-      margin: -1px;
+      box-sizing: border-box;
     }
 
-    /* ===== Base Styles ===== */
-    * { box-sizing: border-box; }
-    html,body { height: 100%; }
-    body {
-      margin: 0;
-      font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      background: #1a1a2e;
-      color: #e6e6e6;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      line-height: 1.6;
+    html {
       scroll-behavior: smooth;
     }
-    a { color: #4cc9f0; text-decoration: none; transition: color .2s ease; }
-    a:hover, a:focus { color: #7de2ff; outline: none; }
 
-    /* ===== Skip link ===== */
-    .skip-link {
-      position: absolute;
-      left: -999px;
-      top: auto;
-      width: 1px;
-      height: 1px;
-      overflow: hidden;
-    }
-    .skip-link:focus {
-      left: 1rem;
-      top: 1rem;
-      width: auto;
-      height: auto;
-      padding: .5rem 1rem;
-      background: #4cc9f0;
-      color: #1a1a2e;
-      border-radius: 4px;
-      z-index: 2000;
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+      line-height: 1.6;
+      overflow-x: hidden;
     }
 
-    /* ===== Navbar ===== */
+    /* ===== Utility Classes ===== */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #22d3ee 0%, #3b82f6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .section-padding {
+      padding: 5rem 0;
+    }
+
+    /* ===== Navigation ===== */
     nav {
       position: fixed;
-      inset: 0 0 auto 0;
       top: 0;
       left: 0;
-      width: 100%;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      padding: .7rem 1.25rem;
-      background: rgba(26,26,46,0.95);
-      backdrop-filter: blur(6px);
+      right: 0;
+      background: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(56, 189, 248, 0.1);
       z-index: 1000;
-      gap: 1rem;
       transition: all 0.3s ease;
     }
-    nav.scrolled {
-      padding: .5rem 1.25rem;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    }
-    .logo { font-size: 1.25rem; font-weight: 700; color: #4cc9f0; letter-spacing: .2px; }
-    .nav-inner { display:flex; align-items:center; justify-content: space-between; width:100%; max-width:1100px; margin-inline:auto; }
 
-    .nav-links {
-      display:flex;
-      gap: 1rem;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      align-items: center;
-    }
-    .nav-links a {
-      color: #e6e6e6;
-      font-weight: 500;
-      font-size: .95rem;
-      padding: .35rem .5rem;
-      border-radius: 6px;
-    }
-    .nav-links a:focus-visible,
-    .nav-links a:hover {
-      background: rgba(76,201,240,0.08);
-      color: #7de2ff;
+    .nav-scrolled {
+      background: rgba(15, 23, 42, 0.98);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     }
 
-    /* Mobile menu */
-    .menu-toggle {
-      display: none;
-      background: transparent;
-      border: 0;
-      color: #4cc9f0;
-      font-size: 1.2rem;
-      cursor: pointer;
-      padding: .4rem;
-    }
-
-    /* ===== Header ===== */
-    header {
-      height: 85vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-      background: linear-gradient(180deg,#16213e 0%, #1a1a2e 100%);
-      padding: 0 1rem;
-      margin-top: 64px; /* reserve nav height */
-      position: relative;
-      overflow: hidden;
-    }
-    header::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(76,201,240,0.03)"/></svg>');
-      background-size: cover;
-    }
-    header .hero {
-      max-width: 980px;
-      padding: 2rem 1rem;
-      position: relative;
-      z-index: 1;
-    }
-    header h1 { font-size: 2.4rem; color:#4cc9f0; margin-bottom: .2rem; letter-spacing: .4px; }
-    header h2 { font-size: 1.05rem; color:#e6e6e6; margin-bottom: .5rem; font-weight: 400; }
-    header p { font-size: .98rem; color: #cccccc; max-width: 820px; margin: 0 auto; }
-    header .contact-inline { margin-top: .9rem; color:#b3b3b3; font-size:.95rem; display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; }
-
-    /* ===== Main / Sections ===== */
-    main { padding-top: 1rem; }
-    section { padding: 3rem 1rem; max-width: 1000px; margin: 0 auto; }
-    section h2 {
-      color: #4cc9f0;
-      font-size: 1.6rem;
-      margin-bottom: 1rem;
-      border-bottom: 2px solid #4cc9f0;
-      display: inline-block;
-      padding-bottom: .35rem;
-    }
-
-    /* ===== About ===== */
-    #about p { color: #cccccc; font-size: .95rem; }
-
-    /* ===== Skills ===== */
-    .skills {
-      display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-    .skill {
-      background: #16213e;
-      padding: 1rem;
-      border-radius: 10px;
-      text-align:center;
-      transition: transform .24s ease, box-shadow .24s ease;
-      position: relative;
-      overflow: hidden;
-    }
-    .skill::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 3px;
-      background: #4cc9f0;
-      transform: scaleX(0);
-      transition: transform 0.3s ease;
-    }
-    .skill:focus-within, .skill:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.45);
-    }
-    .skill:focus-within::after, .skill:hover::after {
-      transform: scaleX(1);
-    }
-    .skill i { font-size: 1.6rem; color: #4cc9f0; margin-bottom: .4rem; display:block; }
-    .skill p { margin: 0; color: #e6e6e6; font-weight: 600; font-size: .95rem; }
-    .skill .skill-detail {
-      font-size: 0.8rem;
-      color: #b3b3b3;
-      margin-top: 0.3rem;
-      font-weight: 400;
-      line-height: 1.3;
-    }
-
-    /* ===== Cards ===== */
-    .card {
-      background: #16213e;
-      padding: 1.2rem;
-      border-radius: 10px;
-      margin-bottom: 1rem;
-      transition: transform .24s ease, box-shadow .24s ease;
-      position: relative;
-    }
-    .card::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 4px;
-      height: 100%;
-      background: #4cc9f0;
-      border-radius: 4px 0 0 4px;
-      transform: scaleY(0);
-      transition: transform 0.3s ease;
-    }
-    .card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.45); }
-    .card:hover::before {
-      transform: scaleY(1);
-    }
-    .card h3 { color: #4cc9f0; margin: 0 0 .4rem 0; font-size: 1.05rem; }
-    .card p, .card li { color: #cccccc; font-size: .95rem; }
-    .card ul { margin: .4rem 0 0 1rem; padding: 0; }
-    
-    /* Experience-specific styles */
-    .experience-header {
+    .nav-container {
       display: flex;
       justify-content: space-between;
-      align-items: flex-start;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-bottom: 0.5rem;
-    }
-    .experience-title {
-      color: #4cc9f0;
-      margin: 0;
-      font-size: 1.1rem;
-    }
-    .experience-company {
-      font-weight: 600;
-      margin-bottom: 0.25rem;
-    }
-    .experience-period {
-      color: #b3b3b3;
-      font-size: 0.9rem;
-      white-space: nowrap;
-    }
-    .experience-industry {
-      color: #b3b3b3;
-      font-size: 0.9rem;
-      margin-bottom: 0.75rem;
-      font-style: italic;
+      align-items: center;
+      padding: 1rem 0;
     }
 
-    /* ===== Buttons with Shine Effect ===== */
-    .btn {
-      display:inline-block;
-      position:relative;
-      overflow:hidden;
-      background:#4cc9f0;
-      color:#16213e;
-      padding:.6rem 1rem;
-      border-radius:6px;
-      font-weight:700;
-      transition: background .2s ease, transform .15s ease;
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #22d3ee;
+      text-decoration: none;
     }
-    .btn::before {
-      content:"";
-      position:absolute;
-      top:0; left:-110%;
-      width:60%; height:100%;
-      background: linear-gradient(120deg, transparent, rgba(255,255,255,0.5), transparent);
-      transform: skewX(-12deg);
-      transition: left .55s ease;
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      color: #cbd5e1;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+    }
+
+    .nav-links a:hover {
+      color: #22d3ee;
+      background: rgba(34, 211, 238, 0.1);
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: #22d3ee;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    /* ===== Hero Section ===== */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: 
+        radial-gradient(circle at 20% 80%, rgba(34, 211, 238, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
       pointer-events: none;
     }
-    .btn:hover::before { left: 110%; }
-    .btn:focus { outline: 3px solid rgba(76,201,240,0.2); }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      line-height: 1.1;
+    }
+
+    .hero h2 {
+      font-size: 1.5rem;
+      color: #94a3b8;
+      margin-bottom: 1.5rem;
+      font-weight: 500;
+    }
+
+    .hero p {
+      font-size: 1.125rem;
+      color: #cbd5e1;
+      margin-bottom: 2rem;
+      line-height: 1.7;
+    }
+
+    .hero-contact {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      background: rgba(34, 211, 238, 0.1);
+      border: 1px solid rgba(34, 211, 238, 0.3);
+      border-radius: 12px;
+      color: #e2e8f0;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-weight: 500;
+    }
+
+    .contact-link:hover {
+      background: rgba(34, 211, 238, 0.2);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(34, 211, 238, 0.15);
+    }
+
+    /* ===== Section Styles ===== */
+    section {
+      position: relative;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .section-header h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    /* ===== About Section ===== */
+    .about-content {
+      background: rgba(30, 41, 59, 0.5);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      border-radius: 20px;
+      padding: 3rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .about-content p {
+      font-size: 1.125rem;
+      color: #cbd5e1;
+      line-height: 1.7;
+    }
+
+    /* ===== Skills Section ===== */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .skill-card {
+      background: rgba(30, 41, 59, 0.5);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      border-radius: 16px;
+      padding: 2rem;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(56, 189, 248, 0.4);
+      box-shadow: 0 10px 30px rgba(34, 211, 238, 0.1);
+    }
+
+    .skill-icon {
+      font-size: 2.5rem;
+      color: #22d3ee;
+      margin-bottom: 1rem;
+    }
+
+    .skill-card h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .skill-detail {
+      color: #94a3b8;
+      font-size: 0.9rem;
+    }
+
+    /* ===== Experience Section ===== */
+    .experience-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .experience-card {
+      background: rgba(30, 41, 59, 0.5);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      border-radius: 16px;
+      padding: 2rem;
+      transition: all 0.3s ease;
+    }
+
+    .experience-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(56, 189, 248, 0.4);
+      box-shadow: 0 8px 25px rgba(34, 211, 238, 0.1);
+    }
+
+    .experience-header {
+      display: flex;
+      justify-content: between;
+      align-items: flex-start;
+      margin-bottom: 1rem;
+      gap: 1rem;
+    }
+
+    .experience-title-company {
+      flex: 1;
+    }
+
+    .experience-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #22d3ee;
+      margin-bottom: 0.25rem;
+    }
+
+    .experience-company {
+      font-weight: 600;
+      color: #e2e8f0;
+      margin-bottom: 0.25rem;
+    }
+
+    .experience-industry {
+      color: #94a3b8;
+      font-style: italic;
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .experience-period {
+      color: #22d3ee;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .experience-responsibilities {
+      list-style: none;
+    }
+
+    .experience-responsibilities li {
+      padding: 0.25rem 0;
+      color: #cbd5e1;
+      position: relative;
+      padding-left: 1.5rem;
+    }
+
+    .experience-responsibilities li::before {
+      content: '▹';
+      position: absolute;
+      left: 0;
+      color: #22d3ee;
+    }
+
+    /* ===== Certifications Section ===== */
+    .certifications-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .certification-card {
+      background: rgba(30, 41, 59, 0.5);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      border-radius: 16px;
+      padding: 2rem;
+      transition: all 0.3s ease;
+    }
+
+    .certification-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(56, 189, 248, 0.4);
+      box-shadow: 0 8px 25px rgba(34, 211, 238, 0.1);
+    }
+
+    .certification-icon {
+      font-size: 2rem;
+      color: #22d3ee;
+      margin-bottom: 1rem;
+    }
+
+    .certification-card h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: #22d3ee;
+    }
+
+    .certification-card p {
+      color: #cbd5e1;
+      line-height: 1.6;
+    }
 
     /* ===== Projects Section ===== */
-    .projects {
+    .projects-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.5rem;
-      margin-top: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
     }
 
     .project-card {
-      background: #16213e;
-      padding: 1.5rem;
-      border-radius: 10px;
-      transition: transform .24s ease, box-shadow .24s ease;
-      position: relative;
+      background: rgba(30, 41, 59, 0.5);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      border-radius: 16px;
+      padding: 2rem;
+      transition: all 0.3s ease;
       display: flex;
       flex-direction: column;
       height: 100%;
     }
 
-    .project-card::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 4px;
-      height: 100%;
-      background: #4cc9f0;
-      border-radius: 4px 0 0 4px;
-      transform: scaleY(0);
-      transition: transform 0.3s ease;
-    }
-
     .project-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.45);
-    }
-
-    .project-card:hover::before {
-      transform: scaleY(1);
+      border-color: rgba(56, 189, 248, 0.4);
+      box-shadow: 0 12px 35px rgba(34, 211, 238, 0.15);
     }
 
     .project-icon {
-      font-size: 2rem;
-      color: #4cc9f0;
-      margin-bottom: 1rem;
+      font-size: 2.5rem;
+      color: #22d3ee;
+      margin-bottom: 1.5rem;
     }
 
-    .project-title {
-      color: #4cc9f0;
-      margin: 0 0 0.5rem 0;
-      font-size: 1.2rem;
+    .project-card h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: #e2e8f0;
     }
 
     .project-description {
-      color: #cccccc;
-      margin-bottom: 1rem;
-      flex-grow: 1;
+      color: #cbd5e1;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+      flex: 1;
     }
 
     .project-tags {
       display: flex;
       flex-wrap: wrap;
       gap: 0.5rem;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
     }
 
     .project-tag {
-      background: rgba(76, 201, 240, 0.1);
-      color: #4cc9f0;
-      padding: 0.25rem 0.75rem;
+      background: rgba(34, 211, 238, 0.1);
+      color: #22d3ee;
+      padding: 0.375rem 0.75rem;
       border-radius: 20px;
       font-size: 0.8rem;
       font-weight: 500;
+      border: 1px solid rgba(34, 211, 238, 0.3);
     }
 
     .project-actions {
       display: flex;
-      gap: 0.75rem;
-      margin-top: auto;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
     }
 
     .btn-download {
-      background: #4cc9f0;
-      color: #16213e;
-      border: none;
-      padding: 0.5rem 1rem;
-      border-radius: 6px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      text-decoration: none;
-      display: inline-flex;
+      display: flex;
       align-items: center;
       gap: 0.5rem;
-      font-size: 0.9rem;
+      padding: 0.75rem 1.5rem;
+      background: linear-gradient(135deg, #22d3ee 0%, #3b82f6 100%);
+      color: white;
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      flex: 1;
+      justify-content: center;
     }
 
     .btn-download:hover {
-      background: #7de2ff;
       transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(34, 211, 238, 0.3);
     }
 
     .file-info {
-      color: #b3b3b3;
-      font-size: 0.8rem;
       display: flex;
       align-items: center;
-      gap: 0.25rem;
-    }
-
-    /* ===== Contact Form Enhanced Styles ===== */
-    .form-group {
-      display: flex;
-      flex-direction: column;
       gap: 0.5rem;
+      color: #94a3b8;
+      font-size: 0.875rem;
     }
 
-    #contactForm {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      background: #16213e;
-      padding: 1.5rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* ===== Resume Section ===== */
+    .resume-content {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto;
     }
 
-    #contactForm input,
-    #contactForm textarea {
-      padding: 0.75rem;
-      border: 2px solid #1f2a4e;
-      border-radius: 8px;
-      background: #1f2a4e;
-      color: #ffffff;
-      font-size: 0.95rem;
-      font-family: inherit;
-      resize: vertical;
-      outline: none;
-      transition: all 0.3s ease;
+    .resume-content p {
+      color: #cbd5e1;
+      margin-bottom: 2rem;
+      font-size: 1.125rem;
     }
 
-    #contactForm input:focus,
-    #contactForm textarea:focus {
-      border-color: #4cc9f0;
-      box-shadow: 0 0 0 3px rgba(76, 201, 240, 0.2);
-      background: #253258;
-    }
-
-    #contactForm input:invalid:not(:focus):not(:placeholder-shown),
-    #contactForm textarea:invalid:not(:focus):not(:placeholder-shown) {
-      border-color: #ff6b6b;
-      background: rgba(255, 107, 107, 0.1);
-    }
-
-    .submit-btn {
-      background: #4cc9f0;
-      color: #16213e;
-      border: none;
-      padding: 0.8rem 1.5rem;
-      border-radius: 8px;
-      font-weight: 700;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
-      font-size: 1rem;
-    }
-
-    .submit-btn:hover:not(:disabled) {
-      background: #7de2ff;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(76, 201, 240, 0.3);
-    }
-
-    .submit-btn:disabled {
-      background: #3a9fc5;
-      cursor: not-allowed;
-      transform: none;
-      box-shadow: none;
-    }
-
-    .submit-btn::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: -110%;
-      width: 60%;
-      height: 100%;
-      background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-      transform: skewX(-12deg);
-      transition: left 0.6s ease;
-      pointer-events: none;
-    }
-
-    .submit-btn:hover::before {
-      left: 110%;
-    }
-
-    /* Enhanced loading animation styles */
-    .loading {
-      display: inline-block;
-      width: 18px;
-      height: 18px;
-      border: 2px solid transparent;
-      border-top: 2px solid #16213e;
-      border-radius: 50%;
-      animation: spin 0.8s linear infinite;
-      margin-right: 8px;
-      vertical-align: middle;
-    }
-
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-
-    /* Enhanced success/error message styles */
-    .form-status {
-      color: #cccccc;
-      font-size: 0.95rem;
-      min-height: 24px;
-      margin-top: 0.5rem;
-      padding: 0.75rem;
-      border-radius: 6px;
-      transition: all 0.3s ease;
-      border-left: 4px solid transparent;
-    }
-
-    .form-success {
-      color: #10b981 !important;
-      background: rgba(16, 185, 129, 0.1);
-      border-left-color: #10b981;
-      font-weight: 600;
-    }
-
-    .form-error {
-      color: #ef4444 !important;
-      background: rgba(239, 68, 68, 0.1);
-      border-left-color: #ef4444;
-      font-weight: 600;
-    }
-
-    .form-info {
-      color: #4cc9f0 !important;
-      background: rgba(76, 201, 240, 0.1);
-      border-left-color: #4cc9f0;
-      font-weight: 500;
-    }
-
-    /* Contact note styling */
-    .contact-note {
-      color: #b3b3b3;
-      font-size: 0.9rem;
-      margin-top: 0.5rem;
-      line-height: 1.5;
-    }
-
-    .contact-note a {
-      color: #4cc9f0;
-      text-decoration: none;
-      transition: color 0.2s ease;
-    }
-
-    .contact-note a:hover {
-      color: #7de2ff;
-      text-decoration: underline;
-    }
-
-    /* Honeypot field */
-    .honeypot {
-      position: absolute !important;
-      left: -9999px !important;
-      top: -9999px !important;
-      width: 1px !important;
-      height: 1px !important;
-      overflow: hidden !important;
-      opacity: 0 !important;
-      pointer-events: none !important;
-    }
-
-    /* Social links */
-    .social {
-      display: flex;
-      gap: 0.75rem;
-      justify-content: center;
-      margin-top: 1.5rem;
-      flex-wrap: wrap;
-    }
-
-    .social a {
-      background: #4cc9f0;
-      color: #16213e;
-      padding: 0.6rem 1rem;
-      border-radius: 6px;
-      font-weight: 600;
-      font-size: 0.9rem;
-      transition: all 0.3s ease;
-      text-decoration: none;
+    .btn-resume {
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
+      padding: 1rem 2rem;
+      background: linear-gradient(135deg, #22d3ee 0%, #3b82f6 100%);
+      color: white;
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: 600;
+      transition: all 0.3s ease;
     }
 
-    .social a:hover {
-      background: #7de2ff;
+    .btn-resume:hover {
       transform: translateY(-2px);
-      box-shadow: 0 4px 8px rgba(76, 201, 240, 0.3);
+      box-shadow: 0 8px 25px rgba(34, 211, 238, 0.3);
     }
 
-    /* Character counter */
-    .char-counter {
-      font-size: 0.8rem;
-      color: #b3b3b3;
-      text-align: right;
-      margin-top: 0.25rem;
+    /* ===== Contact Section ===== */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 3rem;
+      margin-top: 2rem;
+    }
+
+    .contact-form {
+      background: rgba(30, 41, 59, 0.5);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      border-radius: 20px;
+      padding: 2.5rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: #e2e8f0;
+      font-weight: 500;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 1rem;
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      border-radius: 12px;
+      color: #e2e8f0;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: #22d3ee;
+      box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.1);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 1rem 2rem;
+      background: linear-gradient(135deg, #22d3ee 0%, #3b82f6 100%);
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(34, 211, 238, 0.3);
+    }
+
+    .submit-btn:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .info-card {
+      background: rgba(30, 41, 59, 0.5);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      border-radius: 16px;
+      padding: 1.5rem;
+    }
+
+    .info-card h3 {
+      color: #22d3ee;
+      margin-bottom: 1rem;
+      font-size: 1.125rem;
+    }
+
+    .contact-method {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 0.75rem 0;
+      color: #cbd5e1;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .contact-method:hover {
+      color: #22d3ee;
+    }
+
+    .contact-method i {
+      color: #22d3ee;
+      font-size: 1.25rem;
+      margin-top: 0.125rem;
+    }
+
+    .social-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .social-link {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.75rem 1rem;
+      background: rgba(34, 211, 238, 0.1);
+      border: 1px solid rgba(34, 211, 238, 0.3);
+      border-radius: 12px;
+      color: #e2e8f0;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .social-link:hover {
+      background: rgba(34, 211, 238, 0.2);
+      transform: translateY(-2px);
+    }
+
+    .form-status {
+      margin-top: 1rem;
+      padding: 1rem;
+      border-radius: 12px;
+      text-align: center;
+      font-weight: 500;
+    }
+
+    .form-success {
+      background: rgba(34, 197, 94, 0.1);
+      border: 1px solid rgba(34, 197, 94, 0.3);
+      color: #4ade80;
+    }
+
+    .form-error {
+      background: rgba(239, 68, 68, 0.1);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+      color: #f87171;
     }
 
     /* ===== Footer ===== */
     footer {
-      text-align:center;
-      padding: 1.25rem;
-      color: #999999;
-      background: #16213e;
-      font-size: .88rem;
-      margin-top: 2rem;
+      background: rgba(15, 23, 42, 0.95);
+      border-top: 1px solid rgba(56, 189, 248, 0.1);
+      padding: 2rem 0;
+      margin-top: 4rem;
     }
 
-    /* ===== Focus-visible for keyboard users ===== */
-    :focus { outline: none; }
-    :focus-visible { outline: 3px solid rgba(76,201,240,0.12); border-radius: 6px; }
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
 
-    /* ===== Responsive ===== */
-    @media (max-width: 900px) {
-      header h1 { font-size: 2rem; }
-      header h2 { font-size: 1rem; }
-      .nav-links { display: none; position: absolute; top: 64px; right: 1rem; background: rgba(26,26,46,0.98); padding: .75rem; border-radius: 8px; flex-direction: column; width: min(92%, 320px); }
-      .nav-links.open { display:flex; }
-      .menu-toggle { display: inline-flex; align-items:center; gap: .35rem; }
-      nav { padding: .55rem .75rem; }
-      header { margin-top: 56px; }
-      .experience-header {
-        flex-direction: column;
-        align-items: flex-start;
+    .footer-content p {
+      color: #94a3b8;
+    }
+
+    .footer-link {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #22d3ee;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .footer-link:hover {
+      color: #38bdf8;
+    }
+
+    /* ===== Responsive Design ===== */
+    @media (max-width: 1024px) {
+      .hero h1 {
+        font-size: 3rem;
       }
-      .experience-period {
-        margin-top: 0.25rem;
-      }
-      .skill .skill-detail {
-        font-size: 0.75rem;
-      }
-      .projects {
+      
+      .contact-grid {
         grid-template-columns: 1fr;
-      }
-      .project-actions {
-        flex-direction: column;
+        gap: 2rem;
       }
     }
 
     @media (max-width: 768px) {
-      #contactForm {
-        padding: 1.25rem;
-        gap: 0.875rem;
+      .nav-links {
+        display: none;
       }
 
-      #contactForm input,
-      #contactForm textarea {
-        padding: 0.875rem;
-        font-size: 16px; /* Prevent zoom on iOS */
+      .mobile-menu-btn {
+        display: block;
       }
 
-      .submit-btn {
-        padding: 0.875rem 1.25rem;
+      .hero h1 {
+        font-size: 2.5rem;
       }
 
-      .social {
+      .hero h2 {
+        font-size: 1.25rem;
+      }
+
+      .section-header h2 {
+        font-size: 2rem;
+      }
+
+      .about-content,
+      .contact-form {
+        padding: 2rem;
+      }
+
+      .projects-grid,
+      .certifications-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .experience-header {
         flex-direction: column;
-        align-items: center;
+        gap: 0.5rem;
       }
 
-      .social a {
+      .project-actions {
+        flex-direction: column;
+      }
+
+      .btn-download {
         width: 100%;
-        max-width: 200px;
-        justify-content: center;
       }
     }
 
     @media (max-width: 480px) {
-      #contactForm {
-        padding: 1rem;
+      .hero h1 {
+        font-size: 2rem;
       }
 
-      .form-status {
-        font-size: 0.9rem;
-        padding: 0.625rem;
+      .hero-contact {
+        flex-direction: column;
+        align-items: center;
       }
+
+      .contact-link {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .about-content,
+      .contact-form {
+        padding: 1.5rem;
+      }
+
+      .skill-card,
+      .experience-card,
+      .certification-card,
+      .project-card {
+        padding: 1.5rem;
+      }
+    }
+
+    /* ===== Mobile Menu ===== */
+    .mobile-menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 80%;
+      max-width: 300px;
+      height: 100vh;
+      background: rgba(15, 23, 42, 0.98);
+      backdrop-filter: blur(20px);
+      border-left: 1px solid rgba(56, 189, 248, 0.2);
+      z-index: 1001;
+      transition: right 0.3s ease;
+      padding: 2rem;
+    }
+
+    .mobile-menu.open {
+      right: 0;
+    }
+
+    .mobile-menu-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+
+    .mobile-menu-links {
+      list-style: none;
+    }
+
+    .mobile-menu-links li {
+      margin-bottom: 1rem;
+    }
+
+    .mobile-menu-links a {
+      display: block;
+      padding: 0.75rem 1rem;
+      color: #e2e8f0;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .mobile-menu-links a:hover {
+      background: rgba(34, 211, 238, 0.1);
+      color: #22d3ee;
+    }
+
+    .menu-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .menu-overlay.open {
+      opacity: 1;
+      visibility: visible;
     }
   </style>
 </head>
-
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-
-  <!-- Navbar -->
-  <nav role="navigation" aria-label="Main navigation">
-    <div class="nav-inner" style="width:100%;">
-      <div class="logo">Ahmed Awaad</div>
-
-      <button class="menu-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Toggle navigation" id="menuToggle">
-        <i class="fa fa-bars" aria-hidden="true"></i>
-        <span class="sr-only">Menu</span>
-      </button>
-
-      <ul class="nav-links" id="primary-navigation">
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="logo">Ahmed Awaad</a>
+      
+      <ul class="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
@@ -721,155 +873,274 @@
         <li><a href="#resume">Resume</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+
+      <button class="mobile-menu-btn" id="mobileMenuBtn">
+        <i class="fas fa-bars"></i>
+      </button>
     </div>
   </nav>
 
-  <main id="main" tabindex="-1">
-    <!-- Header / Hero -->
-    <header id="home" data-aos="fade-up">
-      <div class="hero">
-        <h1>Ahmed Mahmoud Awaad</h1>
-        <h2>Senior Accountant & Power BI Data Analyst</h2>
-        <p>Transforming financial and operational data into clear insights. I design Power BI reports, automate reporting with Power Query & Excel, and produce management-ready financial analysis.</p>
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+      <a href="#home" class="logo">Ahmed Awaad</a>
+      <button class="mobile-menu-btn" id="closeMenuBtn">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <ul class="mobile-menu-links">
+      <li><a href="#home" class="mobile-nav-link">Home</a></li>
+      <li><a href="#about" class="mobile-nav-link">About</a></li>
+      <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
+      <li><a href="#experience" class="mobile-nav-link">Experience</a></li>
+      <li><a href="#certifications" class="mobile-nav-link">Certifications</a></li>
+      <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+      <li><a href="#resume" class="mobile-nav-link">Resume</a></li>
+      <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+    </ul>
+  </div>
 
-        <div class="contact-inline" aria-hidden="false">
-          <span><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:Ahmedawwad01097903539@gmail.com">Ahmedawwad01097903539@gmail.com</a></span>
-          <span><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:+966569237463">+966 56 923 7463</a></span>
-        </div>
-      </div>
-    </header>
+  <div class="menu-overlay" id="menuOverlay"></div>
 
-    <!-- About -->
-    <section id="about" data-aos="fade-up" aria-labelledby="about-heading">
-      <h2 id="about-heading">About Me</h2>
-      <p>I am a Senior Accountant with 5+ years (2019‑present) of experience in accounting, financial reporting and data analytics. I combine accounting best practices with Power BI, DAX, Power Query and advanced Excel to build automated reporting, KPI dashboards and profitability analyses that support strategic decisions.</p>
-    </section>
-
-    <!-- Skills -->
-    <section id="skills" data-aos="fade-up" aria-labelledby="skills-heading">
-      <h2 id="skills-heading">Skills</h2>
-      <div class="skills" role="list">
-        <div class="skill" role="listitem" tabindex="0"><i class="fa-solid fa-chart-column" aria-hidden="true"></i><p>Power BI (Dashboarding)</p></div>
-        <div class="skill" role="listitem" tabindex="0"><i class="fa-solid fa-table" aria-hidden="true"></i><p>Advanced Excel</p></div>
-        <div class="skill" role="listitem" tabindex="0"><i class="fa-solid fa-code" aria-hidden="true"></i><p>DAX & Power Query</p></div>
-        <div class="skill" role="listitem" tabindex="0"><i class="fa-solid fa-calculator" aria-hidden="true"></i><p>Financial Analysis</p></div>
-        <div class="skill" role="listitem" tabindex="0"><i class="fa-solid fa-database" aria-hidden="true"></i><p>Data Modeling & ETL</p></div>
-        <div class="skill" role="listitem" tabindex="0"><i class="fa-solid fa-file-invoice" aria-hidden="true"></i><p>Accounting & Reporting</p></div>
-        <div class="skill" role="listitem" tabindex="0">
-          <i class="fa-solid fa-server" aria-hidden="true"></i>
-          <p>ERP Systems</p>
-          <div class="skill-detail">Dynamics 365, Dynamics AX, Double Click</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Experience -->
-    <section id="experience" data-aos="fade-up" aria-labelledby="experience-heading">
-      <h2 id="experience-heading">Experience</h2>
-
-      <div class="card" role="article" aria-labelledby="exp1-title">
-        <div class="experience-header">
-          <h3 id="exp1-title" class="experience-title">Senior Accountant</h3>
-          <span class="experience-period">03/2025 – Present</span>
-        </div>
-        <p class="experience-company">Deraah Trading Company</p>
-        <p class="experience-industry">Perfumes, Cosmetics & Accessories - KSA</p>
-        <ul>
-          <li>Manage bank operations and reconcile daily/monthly statements</li>
-          <li>Match showroom deposits with accounting records and prepare reconciliation reports</li>
-          <li>Reconcile installment reports from Tamara and Tabby platforms</li>
-          <li>Record journal entries and manage accounts receivable/payable using ERP systems</li>
-          <li>Collaborate with procurement and operations departments for financial accuracy</li>
-        </ul>
-      </div>
-
-      <div class="card" role="article" aria-labelledby="exp2-title">
-        <div class="experience-header">
-          <h3 id="exp2-title" class="experience-title">Senior Accountant</h3>
-          <span class="experience-period">12/2022 – 03/2025</span>
-        </div>
-        <p class="experience-company">Integrated Technics</p>
-        <p class="experience-industry">System Integrator (Security & ICT solutions)</p>
-        <ul>
-          <li>Updated accounts payable and established accounting program database</li>
-          <li>Managed project follow-ups with suppliers, customers, and cross-functional teams</li>
-          <li>Assisted with audits, tax preparations, and financial report analysis</li>
-          <li>Prepared financial reports for regulatory bodies and shareholders</li>
-          <li>Supported month-end and year-end closings and general ledger management</li>
-        </ul>
-      </div>
-
-      <div class="card" role="article" aria-labelledby="exp3-title">
-        <div class="experience-header">
-          <h3 id="exp3-title" class="experience-title">Senior Accountant</h3>
-          <span class="experience-period">02/2020 – 06/2021</span>
-        </div>
-        <p class="experience-company">Tawreda.com</p>
-        <p class="experience-industry">HORECA Food Supply - Cairo, Egypt</p>
-        <ul>
-          <li>Maintained daily accounts and prepared month-end close</li>
-          <li>Prepared monthly financial performance reports and management information</li>
-          <li>Conducted credit control, debt collection, and accounts receivable/payable oversight</li>
-          <li>Reviewed expenses, payroll records, and updated financial data</li>
-          <li>Facilitated month-end closing process and transaction reconciliation</li>
-        </ul>
-      </div>
-
-      <div class="card" role="article" aria-labelledby="exp4-title">
-        <div class="experience-header">
-          <h3 id="exp4-title" class="experience-title">General Accountant</h3>
-          <span class="experience-period">07/2019 – 02/2020</span>
-        </div>
-        <p class="experience-company">Cattelya For Chemical Co</p>
-        <ul>
-          <li>Prepared and recorded journal entries and assisted with expense reviews</li>
-          <li>Aided in financial statement preparation and bank reconciliation</li>
-          <li>Maintained fixed assets register and calculated depreciation</li>
-          <li>Managed online banking transactions and monitored daily cash balances</li>
-        </ul>
-      </div>
-
-      <div class="card" role="article" aria-labelledby="exp5-title">
-        <div class="experience-header">
-          <h3 id="exp5-title" class="experience-title">Accountant</h3>
-          <span class="experience-period">07/2019 – 02/2020</span>
-        </div>
-        <p class="experience-company">Elmotaheda for Trade and Finance</p>
-        <ul>
-          <li>Prepared and recorded journal entries, handled cash management as Treasurer</li>
-          <li>Processed payments and controlled expenses through invoice verification</li>
-          <li>Distributed checks after matching invoices to payments</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Certifications -->
-    <section id="certifications" data-aos="fade-up" aria-labelledby="certs-heading">
-      <h2 id="certs-heading">Certifications</h2>
-
-      <div class="card">
-        <h3>Power BI & Excel Data Analysis</h3>
-        <p>Certified in advanced Power BI, Power Query and Excel techniques for financial analysis and reporting.</p>
-      </div>
-
-      <div class="card">
-        <h3>Qualified Accountant Diploma</h3>
-        <p>Professional qualification focused on financial reporting, analysis and accounting standards.</p>
-      </div>
-    </section>
-
-    <!-- Projects -->
-    <section id="projects" data-aos="fade-up" aria-labelledby="projects-heading">
-      <h2 id="projects-heading">Power BI Projects</h2>
-      <p>Explore my Power BI dashboards and reports that showcase my data analysis and visualization capabilities.</p>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container hero-content">
+      <h1>Ahmed Mahmoud <span class="gradient-text">Awaad</span></h1>
+      <h2>Senior Accountant & Power BI Data Analyst</h2>
+      <p>Transforming financial and operational data into clear insights. I design Power BI reports, automate reporting with Power Query & Excel, and produce management-ready financial analysis.</p>
       
-      <div class="projects">
-        <!-- Project 1: Income Statement Report -->
-        <div class="project-card" role="article">
-          <div class="project-icon">
-            <i class="fa-solid fa-file-invoice-dollar" aria-hidden="true"></i>
+      <div class="hero-contact">
+        <a href="mailto:Ahmedawwad01097903539@gmail.com" class="contact-link">
+          <i class="fas fa-envelope"></i>
+          Ahmedawwad01097903539@gmail.com
+        </a>
+        <a href="tel:+966569237463" class="contact-link">
+          <i class="fas fa-phone"></i>
+          +966 56 923 7463
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section-padding">
+    <div class="container">
+      <div class="section-header">
+        <h2>About <span class="gradient-text">Me</span></h2>
+      </div>
+      <div class="about-content">
+        <p>I am a Senior Accountant with 5+ years (2019‑present) of experience in accounting, financial reporting and data analytics. I combine accounting best practices with Power BI, DAX, Power Query and advanced Excel to build automated reporting, KPI dashboards and profitability analyses that support strategic decisions.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section-padding" style="background: rgba(15, 23, 42, 0.5);">
+    <div class="container">
+      <div class="section-header">
+        <h2>Skills & <span class="gradient-text">Expertise</span></h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-icon">
+            <i class="fas fa-chart-column"></i>
           </div>
-          <h3 class="project-title">Income Statement Report</h3>
+          <h3>Power BI</h3>
+          <p class="skill-detail">Dashboarding</p>
+        </div>
+        
+        <div class="skill-card">
+          <div class="skill-icon">
+            <i class="fas fa-table"></i>
+          </div>
+          <h3>Advanced Excel</h3>
+          <p class="skill-detail">Data Analysis</p>
+        </div>
+        
+        <div class="skill-card">
+          <div class="skill-icon">
+            <i class="fas fa-code"></i>
+          </div>
+          <h3>DAX & Power Query</h3>
+          <p class="skill-detail">Data Transformation</p>
+        </div>
+        
+        <div class="skill-card">
+          <div class="skill-icon">
+            <i class="fas fa-calculator"></i>
+          </div>
+          <h3>Financial Analysis</h3>
+          <p class="skill-detail">Reporting</p>
+        </div>
+        
+        <div class="skill-card">
+          <div class="skill-icon">
+            <i class="fas fa-database"></i>
+          </div>
+          <h3>Data Modeling</h3>
+          <p class="skill-detail">ETL Processes</p>
+        </div>
+        
+        <div class="skill-card">
+          <div class="skill-icon">
+            <i class="fas fa-file-invoice"></i>
+          </div>
+          <h3>Accounting</h3>
+          <p class="skill-detail">Financial Reporting</p>
+        </div>
+        
+        <div class="skill-card">
+          <div class="skill-icon">
+            <i class="fas fa-server"></i>
+          </div>
+          <h3>ERP Systems</h3>
+          <p class="skill-detail">Dynamics 365, AX</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="section-padding">
+    <div class="container">
+      <div class="section-header">
+        <h2>Professional <span class="gradient-text">Experience</span></h2>
+      </div>
+      <div class="experience-grid">
+        <!-- Experience 1 -->
+        <div class="experience-card">
+          <div class="experience-header">
+            <div class="experience-title-company">
+              <h3 class="experience-title">Senior Accountant</h3>
+              <p class="experience-company">Deraah Trading Company</p>
+              <p class="experience-industry">Perfumes, Cosmetics & Accessories - KSA</p>
+            </div>
+            <span class="experience-period">03/2025 – Present</span>
+          </div>
+          <ul class="experience-responsibilities">
+            <li>Manage bank operations and reconcile daily/monthly statements</li>
+            <li>Match showroom deposits with accounting records and prepare reconciliation reports</li>
+            <li>Reconcile installment reports from Tamara and Tabby platforms</li>
+            <li>Record journal entries and manage accounts receivable/payable using ERP systems</li>
+            <li>Collaborate with procurement and operations departments for financial accuracy</li>
+          </ul>
+        </div>
+
+        <!-- Experience 2 -->
+        <div class="experience-card">
+          <div class="experience-header">
+            <div class="experience-title-company">
+              <h3 class="experience-title">Senior Accountant</h3>
+              <p class="experience-company">Integrated Technics</p>
+              <p class="experience-industry">System Integrator (Security & ICT solutions)</p>
+            </div>
+            <span class="experience-period">12/2022 – 03/2025</span>
+          </div>
+          <ul class="experience-responsibilities">
+            <li>Updated accounts payable and established accounting program database</li>
+            <li>Managed project follow-ups with suppliers, customers, and cross-functional teams</li>
+            <li>Assisted with audits, tax preparations, and financial report analysis</li>
+            <li>Prepared financial reports for regulatory bodies and shareholders</li>
+            <li>Supported month-end and year-end closings and general ledger management</li>
+          </ul>
+        </div>
+
+        <!-- Add other experiences following the same pattern -->
+        <!-- Experience 3 -->
+        <div class="experience-card">
+          <div class="experience-header">
+            <div class="experience-title-company">
+              <h3 class="experience-title">Senior Accountant</h3>
+              <p class="experience-company">Tawreda.com</p>
+              <p class="experience-industry">HORECA Food Supply - Cairo, Egypt</p>
+            </div>
+            <span class="experience-period">02/2020 – 06/2021</span>
+          </div>
+          <ul class="experience-responsibilities">
+            <li>Maintained daily accounts and prepared month-end close</li>
+            <li>Prepared monthly financial performance reports and management information</li>
+            <li>Conducted credit control, debt collection, and accounts receivable/payable oversight</li>
+            <li>Reviewed expenses, payroll records, and updated financial data</li>
+            <li>Facilitated month-end closing process and transaction reconciliation</li>
+          </ul>
+        </div>
+
+        <!-- Experience 4 -->
+        <div class="experience-card">
+          <div class="experience-header">
+            <div class="experience-title-company">
+              <h3 class="experience-title">General Accountant</h3>
+              <p class="experience-company">Cattelya For Chemical Co</p>
+            </div>
+            <span class="experience-period">07/2019 – 02/2020</span>
+          </div>
+          <ul class="experience-responsibilities">
+            <li>Prepared and recorded journal entries and assisted with expense reviews</li>
+            <li>Aided in financial statement preparation and bank reconciliation</li>
+            <li>Maintained fixed assets register and calculated depreciation</li>
+            <li>Managed online banking transactions and monitored daily cash balances</li>
+          </ul>
+        </div>
+
+        <!-- Experience 5 -->
+        <div class="experience-card">
+          <div class="experience-header">
+            <div class="experience-title-company">
+              <h3 class="experience-title">Accountant</h3>
+              <p class="experience-company">Elmotaheda for Trade and Finance</p>
+            </div>
+            <span class="experience-period">07/2019 – 02/2020</span>
+          </div>
+          <ul class="experience-responsibilities">
+            <li>Prepared and recorded journal entries, handled cash management as Treasurer</li>
+            <li>Processed payments and controlled expenses through invoice verification</li>
+            <li>Distributed checks after matching invoices to payments</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications Section -->
+  <section id="certifications" class="section-padding" style="background: rgba(15, 23, 42, 0.5);">
+    <div class="container">
+      <div class="section-header">
+        <h2>Certifications & <span class="gradient-text">Qualifications</span></h2>
+      </div>
+      <div class="certifications-grid">
+        <div class="certification-card">
+          <div class="certification-icon">
+            <i class="fas fa-award"></i>
+          </div>
+          <h3>Power BI & Excel Data Analysis</h3>
+          <p>Certified in advanced Power BI, Power Query and Excel techniques for financial analysis and reporting.</p>
+        </div>
+        
+        <div class="certification-card">
+          <div class="certification-icon">
+            <i class="fas fa-award"></i>
+          </div>
+          <h3>Qualified Accountant Diploma</h3>
+          <p>Professional qualification focused on financial reporting, analysis and accounting standards.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section-padding">
+    <div class="container">
+      <div class="section-header">
+        <h2>Power BI <span class="gradient-text">Projects</span></h2>
+        <p style="color: #94a3b8; max-width: 600px; margin: 0 auto;">Explore my Power BI dashboards and reports that showcase my data analysis and visualization capabilities.</p>
+      </div>
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card">
+          <div class="project-icon">
+            <i class="fas fa-file-invoice-dollar"></i>
+          </div>
+          <h3>Income Statement Report</h3>
           <p class="project-description">A comprehensive Power BI income statement report that provides detailed financial performance analysis. Features revenue and expense tracking, profit margin analysis, and period-over-period comparisons for informed financial decision-making.</p>
           <div class="project-tags">
             <span class="project-tag">Power BI</span>
@@ -880,22 +1151,22 @@
           </div>
           <div class="project-actions">
             <a href="https://raw.githubusercontent.com/AhmedAwaad97/ahmed-awaad2-portfolio/main/Income%20Statement%20Report.pbix" download="Income Statement Report.pbix" class="btn-download">
-              <i class="fas fa-download" aria-hidden="true"></i>
-              <span>Download Dashboard</span>
+              <i class="fas fa-download"></i>
+              Download Dashboard
             </a>
             <span class="file-info">
-              <i class="fas fa-file" aria-hidden="true"></i>
+              <i class="fas fa-file"></i>
               .pbix (2.8 MB)
             </span>
           </div>
         </div>
 
-        <!-- Project 2: Car Sales Dashboard -->
-        <div class="project-card" role="article">
+        <!-- Project 2 -->
+        <div class="project-card">
           <div class="project-icon">
-            <i class="fa-solid fa-car" aria-hidden="true"></i>
+            <i class="fas fa-car"></i>
           </div>
-          <h3 class="project-title">Car Sales Dashboard</h3>
+          <h3>Car Sales Dashboard</h3>
           <p class="project-description">A dynamic Power BI dashboard that presents key KPIs such as total sales, average car price, and car sales performance by year and month. It also includes advanced DAX time intelligence measures for deeper insights into sales trends and patterns.</p>
           <div class="project-tags">
             <span class="project-tag">Power BI</span>
@@ -906,22 +1177,22 @@
           </div>
           <div class="project-actions">
             <a href="https://raw.githubusercontent.com/AhmedAwaad97/ahmed-awaad2-portfolio/main/Car%20Sales%20Dashboard.pbix" download="Car Sales Dashboard.pbix" class="btn-download">
-              <i class="fas fa-download" aria-hidden="true"></i>
-              <span>Download Dashboard</span>
+              <i class="fas fa-download"></i>
+              Download Dashboard
             </a>
             <span class="file-info">
-              <i class="fas fa-file" aria-hidden="true"></i>
+              <i class="fas fa-file"></i>
               .pbix (2.5 MB)
             </span>
           </div>
         </div>
 
-        <!-- Project 3: Sales & Profit Dashboard -->
-        <div class="project-card" role="article">
+        <!-- Project 3 -->
+        <div class="project-card">
           <div class="project-icon">
-            <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
+            <i class="fas fa-chart-line"></i>
           </div>
-          <h3 class="project-title">Sales & Profit Dashboard</h3>
+          <h3>Sales & Profit Dashboard</h3>
           <p class="project-description">Comprehensive Power BI dashboard analyzing sales performance, profit margins, and key business metrics. Features interactive filtering, trend analysis, and performance indicators to track business health.</p>
           <div class="project-tags">
             <span class="project-tag">Power BI</span>
@@ -931,22 +1202,22 @@
           </div>
           <div class="project-actions">
             <a href="https://raw.githubusercontent.com/AhmedAwaad97/ahmed-awaad2-portfolio/main/Sales%20%26%20Profit%20Dashboard.pbix" download="Sales & Profit Dashboard.pbix" class="btn-download">
-              <i class="fas fa-download" aria-hidden="true"></i>
-              <span>Download Dashboard</span>
+              <i class="fas fa-download"></i>
+              Download Dashboard
             </a>
             <span class="file-info">
-              <i class="fas fa-file" aria-hidden="true"></i>
+              <i class="fas fa-file"></i>
               .pbix (3.2 MB)
             </span>
           </div>
         </div>
 
-        <!-- Project 4: Sales Performance Dashboard -->
-        <div class="project-card" role="article">
+        <!-- Project 4 -->
+        <div class="project-card">
           <div class="project-icon">
-            <i class="fa-solid fa-chart-bar" aria-hidden="true"></i>
+            <i class="fas fa-chart-bar"></i>
           </div>
-          <h3 class="project-title">Sales Performance Dashboard</h3>
+          <h3>Sales Performance Dashboard</h3>
           <p class="project-description">Interactive Power BI dashboard tracking sales performance metrics, regional comparisons, and sales team productivity. Includes drill-down capabilities and time-series analysis for detailed insights.</p>
           <div class="project-tags">
             <span class="project-tag">Power BI</span>
@@ -956,366 +1227,260 @@
           </div>
           <div class="project-actions">
             <a href="https://raw.githubusercontent.com/AhmedAwaad97/ahmed-awaad2-portfolio/main/Sales%20Performance%20Dashboard.pbix" download="Sales Performance Dashboard.pbix" class="btn-download">
-              <i class="fas fa-download" aria-hidden="true"></i>
-              <span>Download Dashboard</span>
+              <i class="fas fa-download"></i>
+              Download Dashboard
             </a>
             <span class="file-info">
-              <i class="fas fa-file" aria-hidden="true"></i>
+              <i class="fas fa-file"></i>
               .pbix (2.8 MB)
             </span>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Resume -->
-    <section id="resume" data-aos="fade-up" aria-labelledby="resume-heading">
-      <h2 id="resume-heading">Resume</h2>
-      <p>Download my resume (PDF) to learn more about my background, detailed project experience, and contact information.</p>
-
-      <!-- Updated Download CV button with proper relative path -->
-      <a href="./Ahmed-Mahmoud-Awaad-FlowCV-Resume-20251023_1.pdf" download class="btn" aria-label="Download Ahmed Mahmoud Awaad CV (PDF)">📥 Download CV</a>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" data-aos="fade-up" aria-labelledby="contact-heading">
-      <h2 id="contact-heading">Contact Me</h2>
-
-      <!-- Enhanced Form with proper Formspree configuration -->
-      <form id="contactForm" action="https://formspree.io/f/xrbynngg" method="POST">
-        <input type="hidden" name="_subject" value="New Portfolio Contact Form Submission">
-        <input type="hidden" name="_format" value="plain">
-        
-        <div class="form-group">
-          <label class="sr-only" for="name">Your name</label>
-          <input id="name" name="name" type="text" placeholder="Your Name" required autocomplete="name">
-        </div>
-
-        <div class="form-group">
-          <label class="sr-only" for="email">Your email</label>
-          <input id="email" name="email" type="email" placeholder="Your Email" required autocomplete="email">
-        </div>
-
-        <div class="form-group">
-          <label class="sr-only" for="message">Your message</label>
-          <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
-        </div>
-
-        <!-- Enhanced honeypot for better spam protection -->
-        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="honeypot">
-
-        <button type="submit" id="submitBtn" class="submit-btn">
-          <span id="submitText">Send Message</span>
-        </button>
-
-        <p id="contact-note" class="contact-note">
-          Or contact me directly:
-          <a href="mailto:Ahmedawwad01097903539@gmail.com">Ahmedawwad01097903539@gmail.com</a>
-          • <a href="tel:+966569237463">+966 56 923 7463</a>
-          • <a href="tel:+0201097903539">+20 0109 790 3539</a>
-        </p>
-
-        <div id="formStatus" aria-live="polite" class="form-status"></div>
-      </form>
-
-      <div class="social" aria-label="Social links">
-        <a href="https://www.linkedin.com/in/ahmed-m-awaad-59103b167/" target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn
-        </a>
-        <a href="https://github.com/AhmedAwaad97/ahmed-awaad2-portfolio" target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-github" aria-hidden="true"></i> GitHub
-        </a>
-        <a href="mailto:Ahmedawwad01097903539@gmail.com">
-          <i class="fas fa-envelope" aria-hidden="true"></i> Email
+  <!-- Resume Section -->
+  <section id="resume" class="section-padding" style="background: rgba(15, 23, 42, 0.5);">
+    <div class="container">
+      <div class="section-header">
+        <h2>Resume</h2>
+      </div>
+      <div class="resume-content">
+        <p>Download my resume (PDF) to learn more about my background, detailed project experience, and contact information.</p>
+        <a href="./Ahmed-Mahmoud-Awaad-FlowCV-Resume-20251023_1.pdf" download class="btn-resume">
+          <i class="fas fa-download"></i>
+          Download CV
         </a>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section-padding">
+    <div class="container">
+      <div class="section-header">
+        <h2>Get In <span class="gradient-text">Touch</span></h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-form">
+          <form id="contactForm" action="https://formspree.io/f/xrbynngg" method="POST">
+            <input type="hidden" name="_subject" value="New Portfolio Contact Form Submission">
+            <input type="hidden" name="_format" value="plain">
+            
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+            
+            <!-- Honeypot field -->
+            <input type="text" name="_gotcha" style="display: none;">
+            
+            <button type="submit" class="submit-btn" id="submitBtn">
+              <span id="submitText">Send Message</span>
+            </button>
+            
+            <div id="formStatus" class="form-status" style="display: none;"></div>
+          </form>
+        </div>
+        
+        <div class="contact-info">
+          <div class="info-card">
+            <h3>Contact Information</h3>
+            <a href="mailto:Ahmedawwad01097903539@gmail.com" class="contact-method">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <div style="font-weight: 600;">Email</div>
+                <div>Ahmedawwad01097903539@gmail.com</div>
+              </div>
+            </a>
+            
+            <a href="tel:+966569237463" class="contact-method">
+              <i class="fas fa-phone"></i>
+              <div>
+                <div style="font-weight: 600;">Phone (KSA)</div>
+                <div>+966 56 923 7463</div>
+              </div>
+            </a>
+            
+            <a href="tel:+0201097903539" class="contact-method">
+              <i class="fas fa-phone"></i>
+              <div>
+                <div style="font-weight: 600;">Phone (Egypt)</div>
+                <div>+20 0109 790 3539</div>
+              </div>
+            </a>
+          </div>
+          
+          <div class="info-card">
+            <h3>Connect With Me</h3>
+            <div class="social-links">
+              <a href="https://www.linkedin.com/in/ahmed-m-awaad-59103b167/" target="_blank" rel="noopener noreferrer" class="social-link">
+                <i class="fab fa-linkedin"></i>
+                <span>LinkedIn</span>
+              </a>
+              
+              <a href="https://github.com/AhmedAwaad97/ahmed-awaad2-portfolio" target="_blank" rel="noopener noreferrer" class="social-link">
+                <i class="fab fa-github"></i>
+                <span>GitHub</span>
+              </a>
+              
+              <a href="mailto:Ahmedawwad01097903539@gmail.com" class="social-link">
+                <i class="fas fa-envelope"></i>
+                <span>Email</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Footer -->
-  <footer role="contentinfo">
-    <div id="siteFooter">© <span id="year">2025</span> Ahmed Mahmoud Awaad | All Rights Reserved | 
-      <a href="https://github.com/AhmedAwaad97/ahmed-awaad2-portfolio" target="_blank" rel="noopener noreferrer" style="color: #4cc9f0;">View on GitHub</a>
+  <footer>
+    <div class="container footer-content">
+      <p>&copy; <span id="currentYear">2025</span> Ahmed Mahmoud Awaad. All Rights Reserved.</p>
+      <a href="https://github.com/AhmedAwaad97/ahmed-awaad2-portfolio" target="_blank" rel="noopener noreferrer" class="footer-link">
+        <i class="fab fa-github"></i>
+        View on GitHub
+      </a>
     </div>
   </footer>
 
-  <!-- AOS JS (deferred) -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
-
   <script>
-    // Initialize AOS when available
-    window.addEventListener('load', function () {
-      if (window.AOS) {
-        AOS.init({ duration: 900, once: true, mirror: false });
-      }
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const closeMenuBtn = document.getElementById('closeMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuOverlay = document.getElementById('menuOverlay');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+    function openMobileMenu() {
+      mobileMenu.classList.add('open');
+      menuOverlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMobileMenu() {
+      mobileMenu.classList.remove('open');
+      menuOverlay.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    mobileMenuBtn.addEventListener('click', openMobileMenu);
+    closeMenuBtn.addEventListener('click', closeMobileMenu);
+    menuOverlay.addEventListener('click', closeMobileMenu);
+
+    mobileNavLinks.forEach(link => {
+      link.addEventListener('click', closeMobileMenu);
     });
 
-    // Nav scroll effect
-    window.addEventListener('scroll', function() {
-      const nav = document.querySelector('nav');
-      if (window.scrollY > 50) {
-        nav.classList.add('scrolled');
+    // Navbar Scroll Effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        navbar.classList.add('nav-scrolled');
       } else {
-        nav.classList.remove('scrolled');
+        navbar.classList.remove('nav-scrolled');
       }
     });
 
-    // Mobile nav toggle
-    (function () {
-      const menuToggle = document.getElementById('menuToggle');
-      const nav = document.getElementById('primary-navigation');
+    // Current Year for Footer
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-      menuToggle.addEventListener('click', function () {
-        const isOpen = nav.classList.toggle('open');
-        menuToggle.setAttribute('aria-expanded', String(isOpen));
-      });
+    // Form Handling
+    const contactForm = document.getElementById('contactForm');
+    const formStatus = document.getElementById('formStatus');
+    const submitBtn = document.getElementById('submitBtn');
+    const submitText = document.getElementById('submitText');
 
-      // close menu when a link is clicked (mobile)
-      nav.addEventListener('click', function (e) {
-        if (e.target.tagName === 'A' && nav.classList.contains('open')) {
-          nav.classList.remove('open');
-          menuToggle.setAttribute('aria-expanded', 'false');
-        }
-      });
-    })();
-
-    // Enhanced Form handling with Formspree integration
-    (function () {
-      const form = document.getElementById('contactForm');
-      const status = document.getElementById('formStatus');
-      const submitBtn = document.getElementById('submitBtn');
-      const submitText = document.getElementById('submitText');
-
-      // Enhanced email validation
-      function isValidEmail(email) {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return emailRegex.test(email);
-      }
-
-      // Show status message
-      function showStatus(message, type = 'info') {
-        status.textContent = message;
-        status.className = `form-status form-${type}`;
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      // Show loading state
+      submitBtn.disabled = true;
+      submitText.textContent = 'Sending...';
+      
+      try {
+        const formData = new FormData(contactForm);
         
-        // Add ARIA attributes for accessibility
-        status.setAttribute('aria-live', 'polite');
-        status.setAttribute('aria-atomic', 'true');
+        const response = await fetch(contactForm.action, {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
         
-        if (type === 'error') {
-          status.setAttribute('role', 'alert');
+        if (response.ok) {
+          formStatus.textContent = '✅ Thank you! Your message has been sent successfully. I will reply to you shortly.';
+          formStatus.className = 'form-status form-success';
+          formStatus.style.display = 'block';
+          contactForm.reset();
+          
+          // Hide success message after 5 seconds
+          setTimeout(() => {
+            formStatus.style.display = 'none';
+          }, 5000);
         } else {
-          status.removeAttribute('role');
+          throw new Error('Form submission failed');
         }
+      } catch (error) {
+        formStatus.textContent = '❌ Sorry, there was an error sending your message. Please try again or contact me directly.';
+        formStatus.className = 'form-status form-error';
+        formStatus.style.display = 'block';
+      } finally {
+        submitBtn.disabled = false;
+        submitText.textContent = 'Send Message';
       }
+    });
 
-      // Clear status message
-      function clearStatus() {
-        status.textContent = '';
-        status.className = 'form-status';
-        status.removeAttribute('role');
-      }
-
-      // Validate form fields
-      function validateForm() {
-        const name = form.name.value.trim();
-        const email = form.email.value.trim();
-        const message = form.message.value.trim();
-
-        // Clear previous status
-        clearStatus();
-
-        // Validate name
-        if (!name) {
-          showStatus('❌ Please enter your name.', 'error');
-          form.name.focus();
-          return false;
-        }
-
-        if (name.length < 2) {
-          showStatus('❌ Please enter a valid name (at least 2 characters).', 'error');
-          form.name.focus();
-          return false;
-        }
-
-        // Validate email
-        if (!email) {
-          showStatus('❌ Please enter your email address.', 'error');
-          form.email.focus();
-          return false;
-        }
-
-        if (!isValidEmail(email)) {
-          showStatus('❌ Please enter a valid email address.', 'error');
-          form.email.focus();
-          return false;
-        }
-
-        // Validate message
-        if (!message) {
-          showStatus('❌ Please enter your message.', 'error');
-          form.message.focus();
-          return false;
-        }
-
-        if (message.length < 10) {
-          showStatus('❌ Please write a more detailed message (at least 10 characters).', 'error');
-          form.message.focus();
-          return false;
-        }
-
-        if (message.length > 1000) {
-          showStatus('❌ Message is too long (maximum 1000 characters).', 'error');
-          form.message.focus();
-          return false;
-        }
-
-        return true;
-      }
-
-      // Form submission handler
-      form.addEventListener('submit', async function (e) {
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
         e.preventDefault();
-
-        // Honeypot check
-        const honeypot = form._gotcha.value;
-        if (honeypot) {
-          showStatus('Thank you for your message!', 'success');
-          form.reset();
-          return;
-        }
-
-        // Validate form
-        if (!validateForm()) {
-          return;
-        }
-
-        // Show loading state
-        submitBtn.disabled = true;
-        submitText.innerHTML = '<span class="loading"></span> Sending...';
-        showStatus('Sending your message...', 'info');
-
-        try {
-          // Create FormData object
-          const formData = new FormData(form);
-          
-          // Enhanced Formspree submission with timeout
-          const controller = new AbortController();
-          const timeoutId = setTimeout(() => controller.abort(), 15000); // 15 second timeout
-
-          const response = await fetch(form.action, {
-            method: 'POST',
-            body: formData,
-            headers: {
-              'Accept': 'application/json'
-            },
-            signal: controller.signal
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
           });
-
-          clearTimeout(timeoutId);
-
-          // Enhanced response handling for Formspree
-          if (response.status >= 200 && response.status < 400) {
-            showStatus('✅ Thank you! Your message has been sent successfully. I will reply to you shortly.', 'success');
-            form.reset();
-            
-            // Auto-clear success message after 10 seconds
-            setTimeout(() => {
-              if (status.textContent.includes('successfully')) {
-                clearStatus();
-              }
-            }, 10000);
-            
-          } else {
-            // Enhanced error parsing
-            let errorMessage = 'Form submission failed. Please try again.';
-            
-            try {
-              const errorData = await response.json();
-              errorMessage = errorData.error || errorMessage;
-              
-              // Handle specific Formspree errors
-              if (errorData.errors) {
-                errorMessage = errorData.errors.map(err => err.message).join(', ');
-              }
-            } catch (jsonError) {
-              errorMessage = `Server error (${response.status}). Please try again.`;
-            }
-            
-            throw new Error(errorMessage);
-          }
-        } catch (error) {
-          console.error('Form submission error:', error);
-          
-          if (error.name === 'AbortError') {
-            showStatus('❌ Request timeout. Please check your connection and try again.', 'error');
-          } else if (error.message.includes('Failed to fetch')) {
-            showStatus('❌ Network error. Please check your internet connection and try again.', 'error');
-          } else {
-            showStatus(`❌ ${error.message}`, 'error');
-          }
-        } finally {
-          // Reset button state
-          submitBtn.disabled = false;
-          submitText.textContent = 'Send Message';
         }
       });
+    });
 
-      // Enhanced input clearing - clear status when user starts typing
-      const formInputs = form.querySelectorAll('input, textarea');
-      formInputs.forEach(input => {
-        input.addEventListener('input', function() {
-          if (status.textContent && !status.textContent.includes('successfully')) {
-            clearStatus();
-          }
-        });
-        
-        // Real-time validation for better UX
-        input.addEventListener('blur', function() {
-          if (this.value.trim() && !validateForm()) {
-            // Keep the error message if validation fails
-          }
-        });
-      });
+    // Add fade-in animation on scroll
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
 
-      // Character counter for message field
-      const messageField = document.getElementById('message');
-      const charCounter = document.createElement('div');
-      charCounter.className = 'char-counter';
-      messageField.parentNode.appendChild(charCounter);
-
-      messageField.addEventListener('input', function() {
-        const length = this.value.length;
-        charCounter.textContent = `${length}/1000 characters`;
-        
-        if (length > 900) {
-          charCounter.style.color = '#ffb4a2';
-        } else if (length > 800) {
-          charCounter.style.color = '#4cc9f0';
-        } else {
-          charCounter.style.color = '#b3b3b3';
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
         }
       });
+    }, observerOptions);
 
-      // Initialize character counter
-      messageField.dispatchEvent(new Event('input'));
-
-      // Enhanced form reset handling
-      form.addEventListener('reset', function() {
-        clearStatus();
-        messageField.dispatchEvent(new Event('input'));
-      });
-
-      // Prevent form resubmission on page refresh
-      if (window.history.replaceState) {
-        window.history.replaceState(null, null, window.location.href);
-      }
-    })();
-
-    // Footer year update
-    (function () {
-      const y = new Date().getFullYear();
-      document.getElementById('year').textContent = y;
-    })();
+    // Observe all sections for fade-in effect
+    document.querySelectorAll('section').forEach(section => {
+      section.style.opacity = '0';
+      section.style.transform = 'translateY(20px)';
+      section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(section);
+    });
   </script>
 </body>
 </html>
