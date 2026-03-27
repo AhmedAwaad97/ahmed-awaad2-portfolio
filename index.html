@@ -1,721 +1,544 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="Ahmed Mahmoud Awaad — Senior Accountant & Power BI Data Analyst. Power BI dashboards, advanced Excel, financial reporting and data modelling." />
-  <title>Ahmed Mahmoud Awaad | Senior Accountant & Power BI Data Analyst</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="Ahmed Mahmoud Awaad — Senior Accountant & Power BI Data Analyst. Over 5 years of experience in financial operations, ERP systems (Dynamics 365, AX, Double Click), and Power BI dashboards. Based in Saudi Arabia." />
+  <meta name="author" content="Ahmed Mahmoud Awaad" />
+  <title>Ahmed Awaad | Senior Accountant & Power BI Analyst</title>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Google Fonts + Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <!-- AOS (Animate On Scroll) -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
-  <!-- Font Awesome Icons (kit) -->
-  <script src="https://kit.fontawesome.com/a2d0d6a9b5.js" crossorigin="anonymous" defer></script>
+  <!-- Font Awesome 6 (free CDN, more reliable than kit) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 
   <style>
-    /* ===== Accessibility helpers ===== */
-    .sr-only {
-      position: absolute !important;
-      height: 1px; width: 1px;
-      overflow: hidden;
-      clip: rect(1px, 1px, 1px, 1px);
-      white-space: nowrap;
-      clip-path: inset(50%);
-      border: 0;
+    /* ---------- RESET & GLOBAL ---------- */
+    * {
+      margin: 0;
       padding: 0;
-      margin: -1px;
+      box-sizing: border-box;
     }
 
-    /* ===== Base Styles ===== */
-    * { box-sizing: border-box; }
-    html,body { height: 100%; }
-    body {
-      margin: 0;
-      font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      background: #1a1a2e;
-      color: #e6e6e6;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      line-height: 1.6;
+    html, body {
+      height: 100%;
       scroll-behavior: smooth;
     }
-    a { color: #4cc9f0; text-decoration: none; transition: color .2s ease; }
-    a:hover, a:focus { color: #7de2ff; outline: none; }
 
-    /* ===== Skip link ===== */
-    .skip-link {
+    body {
+      font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+      background: #0f0f1a;
+      color: #eef2ff;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: #4cc9f0;
+      text-decoration: none;
+      transition: color 0.2s ease, transform 0.2s ease;
+    }
+
+    a:hover, a:focus-visible {
+      color: #a2e3ff;
+      text-decoration: underline;
+    }
+
+    .sr-only {
       position: absolute;
-      left: -999px;
-      top: auto;
       width: 1px;
       height: 1px;
+      padding: 0;
+      margin: -1px;
       overflow: hidden;
-    }
-    .skip-link:focus {
-      left: 1rem;
-      top: 1rem;
-      width: auto;
-      height: auto;
-      padding: .5rem 1rem;
-      background: #4cc9f0;
-      color: #1a1a2e;
-      border-radius: 4px;
-      z-index: 2000;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border-width: 0;
     }
 
-    /* ===== Navbar ===== */
+    /* skip link */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: #4cc9f0;
+      color: #0f0f1a;
+      padding: 8px 16px;
+      z-index: 2000;
+      border-radius: 0 0 8px 0;
+      font-weight: 600;
+      transition: top 0.2s;
+    }
+
+    .skip-link:focus {
+      top: 0;
+    }
+
+    /* ---------- NAVBAR ---------- */
     nav {
       position: fixed;
-      inset: 0 0 auto 0;
       top: 0;
       left: 0;
       width: 100%;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      padding: .7rem 1.25rem;
-      background: rgba(26,26,46,0.95);
-      backdrop-filter: blur(6px);
+      background: rgba(15, 15, 26, 0.92);
+      backdrop-filter: blur(12px);
       z-index: 1000;
-      gap: 1rem;
-      transition: all 0.3s ease;
+      padding: 0.8rem 2rem;
+      transition: all 0.25s ease;
+      border-bottom: 1px solid rgba(76, 201, 240, 0.2);
     }
+
     nav.scrolled {
-      padding: .5rem 1.25rem;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+      padding: 0.5rem 2rem;
+      background: rgba(15, 15, 26, 0.98);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
     }
-    .logo { font-size: 1.25rem; font-weight: 700; color: #4cc9f0; letter-spacing: .2px; }
-    .nav-inner { display:flex; align-items:center; justify-content: space-between; width:100%; max-width:1100px; margin-inline:auto; }
+
+    .nav-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #4cc9f0, #b089ff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      letter-spacing: -0.3px;
+    }
 
     .nav-links {
-      display:flex;
-      gap: 1rem;
+      display: flex;
+      gap: 1.5rem;
       list-style: none;
-      margin: 0;
-      padding: 0;
-      align-items: center;
-    }
-    .nav-links a {
-      color: #e6e6e6;
-      font-weight: 500;
-      font-size: .95rem;
-      padding: .35rem .5rem;
-      border-radius: 6px;
-    }
-    .nav-links a:focus-visible,
-    .nav-links a:hover {
-      background: rgba(76,201,240,0.08);
-      color: #7de2ff;
     }
 
-    /* Mobile menu */
+    .nav-links a {
+      color: #e2e8f0;
+      font-weight: 500;
+      font-size: 0.95rem;
+      padding: 0.5rem 0;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover, .nav-links a:focus-visible {
+      color: #4cc9f0;
+      border-bottom: 2px solid #4cc9f0;
+    }
+
     .menu-toggle {
       display: none;
-      background: transparent;
-      border: 0;
-      color: #4cc9f0;
-      font-size: 1.2rem;
-      cursor: pointer;
-      padding: .4rem;
-    }
-
-    /* ===== Header ===== */
-    header {
-      height: 85vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-      background: linear-gradient(180deg,#16213e 0%, #1a1a2e 100%);
-      padding: 0 1rem;
-      margin-top: 64px; /* reserve nav height */
-      position: relative;
-      overflow: hidden;
-    }
-    header::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(76,201,240,0.03)"/></svg>');
-      background-size: cover;
-    }
-    header .hero {
-      max-width: 980px;
-      padding: 2rem 1rem;
-      position: relative;
-      z-index: 1;
-    }
-    header h1 { font-size: 2.4rem; color:#4cc9f0; margin-bottom: .2rem; letter-spacing: .4px; }
-    header h2 { font-size: 1.05rem; color:#e6e6e6; margin-bottom: .5rem; font-weight: 400; }
-    header p { font-size: .98rem; color: #cccccc; max-width: 820px; margin: 0 auto; }
-    header .contact-inline { margin-top: .9rem; color:#b3b3b3; font-size:.95rem; display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; }
-
-    /* ===== Main / Sections ===== */
-    main { padding-top: 1rem; }
-    section { padding: 3rem 1rem; max-width: 1000px; margin: 0 auto; }
-    section h2 {
-      color: #4cc9f0;
+      background: none;
+      border: none;
       font-size: 1.6rem;
-      margin-bottom: 1rem;
-      border-bottom: 2px solid #4cc9f0;
-      display: inline-block;
-      padding-bottom: .35rem;
+      color: #4cc9f0;
+      cursor: pointer;
     }
 
-    /* ===== About ===== */
-    #about p { color: #cccccc; font-size: .95rem; }
-
-    /* ===== Skills ===== */
-    .skills {
-      display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-    .skill {
-      background: #16213e;
-      padding: 1rem;
-      border-radius: 10px;
-      text-align:center;
-      transition: transform .24s ease, box-shadow .24s ease;
-      position: relative;
-      overflow: hidden;
-    }
-    .skill::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 3px;
-      background: #4cc9f0;
-      transform: scaleX(0);
-      transition: transform 0.3s ease;
-    }
-    .skill:focus-within, .skill:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.45);
-    }
-    .skill:focus-within::after, .skill:hover::after {
-      transform: scaleX(1);
-    }
-    .skill i { font-size: 1.6rem; color: #4cc9f0; margin-bottom: .4rem; display:block; }
-    .skill p { margin: 0; color: #e6e6e6; font-weight: 600; font-size: .95rem; }
-    .skill .skill-detail {
-      font-size: 0.8rem;
-      color: #b3b3b3;
-      margin-top: 0.3rem;
-      font-weight: 400;
-      line-height: 1.3;
-    }
-
-    /* ===== Cards ===== */
-    .card {
-      background: #16213e;
-      padding: 1.2rem;
-      border-radius: 10px;
-      margin-bottom: 1rem;
-      transition: transform .24s ease, box-shadow .24s ease;
-      position: relative;
-    }
-    .card::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 4px;
-      height: 100%;
-      background: #4cc9f0;
-      border-radius: 4px 0 0 4px;
-      transform: scaleY(0);
-      transition: transform 0.3s ease;
-    }
-    .card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.45); }
-    .card:hover::before {
-      transform: scaleY(1);
-    }
-    .card h3 { color: #4cc9f0; margin: 0 0 .4rem 0; font-size: 1.05rem; }
-    .card p, .card li { color: #cccccc; font-size: .95rem; }
-    .card ul { margin: .4rem 0 0 1rem; padding: 0; }
-    
-    /* Experience-specific styles */
-    .experience-header {
+    /* ---------- HEADER / HERO ---------- */
+    header {
+      min-height: 85vh;
       display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      flex-wrap: wrap;
-      gap: 0.5rem;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: linear-gradient(145deg, #0b0b18 0%, #14142b 100%);
+      padding: 6rem 1.5rem 3rem;
+      margin-top: 60px;
+      position: relative;
+    }
+
+    .hero {
+      max-width: 1000px;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      background: linear-gradient(to right, #fff, #4cc9f0);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
       margin-bottom: 0.5rem;
     }
-    .experience-title {
+
+    .hero h2 {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: #cbd5e6;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1rem;
+      max-width: 780px;
+      margin: 1rem auto;
+      color: #b9c3dc;
+    }
+
+    .contact-inline {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 1.2rem;
+      font-size: 0.9rem;
+    }
+
+    .contact-inline i {
+      margin-right: 6px;
       color: #4cc9f0;
-      margin: 0;
-      font-size: 1.1rem;
-    }
-    .experience-company {
-      font-weight: 600;
-      margin-bottom: 0.25rem;
-    }
-    .experience-period {
-      color: #b3b3b3;
-      font-size: 0.9rem;
-      white-space: nowrap;
-    }
-    .experience-industry {
-      color: #b3b3b3;
-      font-size: 0.9rem;
-      margin-bottom: 0.75rem;
-      font-style: italic;
     }
 
-    /* ===== Buttons with Shine Effect ===== */
-    .btn {
-      display:inline-block;
-      position:relative;
-      overflow:hidden;
-      background:#4cc9f0;
-      color:#16213e;
-      padding:.6rem 1rem;
-      border-radius:6px;
-      font-weight:700;
-      transition: background .2s ease, transform .15s ease;
+    /* ---------- SECTIONS ---------- */
+    section {
+      padding: 4rem 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
     }
-    .btn::before {
-      content:"";
-      position:absolute;
-      top:0; left:-110%;
-      width:60%; height:100%;
-      background: linear-gradient(120deg, transparent, rgba(255,255,255,0.5), transparent);
-      transform: skewX(-12deg);
-      transition: left .55s ease;
-      pointer-events: none;
-    }
-    .btn:hover::before { left: 110%; }
-    .btn:focus { outline: 3px solid rgba(76,201,240,0.2); }
 
-    /* ===== Projects Section ===== */
-    .projects {
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #4cc9f0;
+      border-left: 4px solid #4cc9f0;
+      padding-left: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    /* Cards & Skills grid */
+    .skills-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
       gap: 1.5rem;
       margin-top: 1rem;
     }
 
-    .project-card {
-      background: #16213e;
-      padding: 1.5rem;
-      border-radius: 10px;
-      transition: transform .24s ease, box-shadow .24s ease;
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      height: 100%;
+    .skill-card {
+      background: #1a1a2e;
+      border-radius: 1rem;
+      padding: 1.2rem;
+      text-align: center;
+      transition: all 0.3s ease;
+      border: 1px solid #2a2a44;
     }
 
-    .project-card::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 4px;
-      height: 100%;
-      background: #4cc9f0;
-      border-radius: 4px 0 0 4px;
-      transform: scaleY(0);
-      transition: transform 0.3s ease;
+    .skill-card:hover {
+      transform: translateY(-6px);
+      border-color: #4cc9f0;
+      box-shadow: 0 12px 24px -12px rgba(76, 201, 240, 0.2);
+    }
+
+    .skill-card i {
+      font-size: 2rem;
+      color: #4cc9f0;
+      margin-bottom: 0.6rem;
+    }
+
+    .skill-card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .skill-card p {
+      font-size: 0.8rem;
+      color: #b9c3dc;
+    }
+
+    /* Experience cards */
+    .exp-card, .cert-card, .edu-card {
+      background: #14142b;
+      border-radius: 1rem;
+      padding: 1.4rem;
+      margin-bottom: 1.6rem;
+      transition: 0.25s ease;
+      border-left: 4px solid #4cc9f0;
+    }
+
+    .exp-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.6rem;
+    }
+
+    .exp-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #4cc9f0;
+    }
+
+    .exp-date {
+      color: #94a3b8;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+
+    .exp-company {
+      font-weight: 600;
+      margin: 0.2rem 0 0.4rem;
+      color: #cbd5e6;
+    }
+
+    .exp-location {
+      font-size: 0.8rem;
+      color: #7e8aa8;
+      margin-bottom: 0.8rem;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .exp-list {
+      padding-left: 1.2rem;
+      color: #cbd5e6;
+      font-size: 0.9rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+
+    /* certifications grid */
+    .certs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.2rem;
+    }
+
+    .cert-item {
+      background: #1a1a2e;
+      border-radius: 0.8rem;
+      padding: 1rem;
+      transition: 0.2s;
+    }
+
+    .cert-item i {
+      color: #4cc9f0;
+      margin-right: 8px;
+    }
+
+    /* projects */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .project-card {
+      background: #14142b;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      transition: all 0.3s;
+      border: 1px solid #25253f;
+      display: flex;
+      flex-direction: column;
     }
 
     .project-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.45);
-    }
-
-    .project-card:hover::before {
-      transform: scaleY(1);
+      border-color: #4cc9f0;
     }
 
     .project-icon {
       font-size: 2rem;
       color: #4cc9f0;
-      margin-bottom: 1rem;
-    }
-
-    .project-title {
-      color: #4cc9f0;
-      margin: 0 0 0.5rem 0;
-      font-size: 1.2rem;
-    }
-
-    .project-description {
-      color: #cccccc;
-      margin-bottom: 1rem;
-      flex-grow: 1;
+      margin-bottom: 0.8rem;
     }
 
     .project-tags {
       display: flex;
       flex-wrap: wrap;
       gap: 0.5rem;
-      margin-bottom: 1rem;
+      margin: 0.8rem 0;
     }
 
-    .project-tag {
-      background: rgba(76, 201, 240, 0.1);
-      color: #4cc9f0;
-      padding: 0.25rem 0.75rem;
+    .tag {
+      background: rgba(76, 201, 240, 0.12);
+      color: #90e0ff;
+      padding: 0.2rem 0.7rem;
       border-radius: 20px;
-      font-size: 0.8rem;
-      font-weight: 500;
-    }
-
-    .project-actions {
-      display: flex;
-      gap: 0.75rem;
-      margin-top: auto;
+      font-size: 0.7rem;
     }
 
     .btn-download {
       background: #4cc9f0;
-      color: #16213e;
-      border: none;
+      color: #0f0f1a;
       padding: 0.5rem 1rem;
-      border-radius: 6px;
+      border-radius: 2rem;
       font-weight: 600;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      text-decoration: none;
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      font-size: 0.9rem;
+      width: fit-content;
+      transition: all 0.2s;
+      margin-top: 0.8rem;
     }
 
     .btn-download:hover {
       background: #7de2ff;
-      transform: translateY(-2px);
+      transform: scale(0.98);
+      text-decoration: none;
     }
 
-    .file-info {
-      color: #b3b3b3;
-      font-size: 0.8rem;
-      display: flex;
-      align-items: center;
-      gap: 0.25rem;
+    /* contact form */
+    .contact-form {
+      background: #14142b;
+      padding: 2rem;
+      border-radius: 1.5rem;
+      margin-top: 1rem;
     }
 
-    /* ===== Contact Form Enhanced Styles ===== */
     .form-group {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
+      margin-bottom: 1.2rem;
     }
 
-    #contactForm {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      background: #16213e;
-      padding: 1.5rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    #contactForm input,
-    #contactForm textarea {
-      padding: 0.75rem;
-      border: 2px solid #1f2a4e;
-      border-radius: 8px;
-      background: #1f2a4e;
-      color: #ffffff;
-      font-size: 0.95rem;
+    input, textarea {
+      width: 100%;
+      padding: 0.9rem 1rem;
+      background: #1e1e32;
+      border: 1px solid #2f2f4a;
+      border-radius: 1rem;
+      color: white;
       font-family: inherit;
-      resize: vertical;
+      transition: 0.2s;
+    }
+
+    input:focus, textarea:focus {
       outline: none;
-      transition: all 0.3s ease;
-    }
-
-    #contactForm input:focus,
-    #contactForm textarea:focus {
       border-color: #4cc9f0;
-      box-shadow: 0 0 0 3px rgba(76, 201, 240, 0.2);
-      background: #253258;
-    }
-
-    #contactForm input:invalid:not(:focus):not(:placeholder-shown),
-    #contactForm textarea:invalid:not(:focus):not(:placeholder-shown) {
-      border-color: #ff6b6b;
-      background: rgba(255, 107, 107, 0.1);
+      box-shadow: 0 0 0 3px rgba(76,201,240,0.2);
     }
 
     .submit-btn {
       background: #4cc9f0;
-      color: #16213e;
-      border: none;
-      padding: 0.8rem 1.5rem;
-      border-radius: 8px;
+      color: #0f0f1a;
       font-weight: 700;
+      padding: 0.8rem 1.6rem;
+      border: none;
+      border-radius: 2rem;
       cursor: pointer;
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
-      font-size: 1rem;
+      transition: 0.2s;
     }
 
     .submit-btn:hover:not(:disabled) {
       background: #7de2ff;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(76, 201, 240, 0.3);
+      transform: scale(1.02);
     }
 
-    .submit-btn:disabled {
-      background: #3a9fc5;
-      cursor: not-allowed;
-      transform: none;
-      box-shadow: none;
-    }
-
-    .submit-btn::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: -110%;
-      width: 60%;
-      height: 100%;
-      background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-      transform: skewX(-12deg);
-      transition: left 0.6s ease;
-      pointer-events: none;
-    }
-
-    .submit-btn:hover::before {
-      left: 110%;
-    }
-
-    /* Enhanced loading animation styles */
-    .loading {
-      display: inline-block;
-      width: 18px;
-      height: 18px;
-      border: 2px solid transparent;
-      border-top: 2px solid #16213e;
-      border-radius: 50%;
-      animation: spin 0.8s linear infinite;
-      margin-right: 8px;
-      vertical-align: middle;
-    }
-
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-
-    /* Enhanced success/error message styles */
-    .form-status {
-      color: #cccccc;
-      font-size: 0.95rem;
-      min-height: 24px;
-      margin-top: 0.5rem;
-      padding: 0.75rem;
-      border-radius: 6px;
-      transition: all 0.3s ease;
-      border-left: 4px solid transparent;
-    }
-
-    .form-success {
-      color: #10b981 !important;
-      background: rgba(16, 185, 129, 0.1);
-      border-left-color: #10b981;
-      font-weight: 600;
-    }
-
-    .form-error {
-      color: #ef4444 !important;
-      background: rgba(239, 68, 68, 0.1);
-      border-left-color: #ef4444;
-      font-weight: 600;
-    }
-
-    .form-info {
-      color: #4cc9f0 !important;
-      background: rgba(76, 201, 240, 0.1);
-      border-left-color: #4cc9f0;
-      font-weight: 500;
-    }
-
-    /* Contact note styling */
-    .contact-note {
-      color: #b3b3b3;
-      font-size: 0.9rem;
-      margin-top: 0.5rem;
-      line-height: 1.5;
-    }
-
-    .contact-note a {
-      color: #4cc9f0;
-      text-decoration: none;
-      transition: color 0.2s ease;
-    }
-
-    .contact-note a:hover {
-      color: #7de2ff;
-      text-decoration: underline;
-    }
-
-    /* Honeypot field */
     .honeypot {
-      position: absolute !important;
-      left: -9999px !important;
-      top: -9999px !important;
-      width: 1px !important;
-      height: 1px !important;
-      overflow: hidden !important;
-      opacity: 0 !important;
-      pointer-events: none !important;
+      position: absolute;
+      left: -9999px;
+      opacity: 0;
     }
 
-    /* Social links */
-    .social {
+    .form-status {
+      margin-top: 1rem;
+      padding: 0.7rem;
+      border-radius: 1rem;
+    }
+
+    .social-links {
       display: flex;
-      gap: 0.75rem;
+      gap: 1rem;
       justify-content: center;
-      margin-top: 1.5rem;
+      margin-top: 2rem;
       flex-wrap: wrap;
     }
 
-    .social a {
-      background: #4cc9f0;
-      color: #16213e;
-      padding: 0.6rem 1rem;
-      border-radius: 6px;
-      font-weight: 600;
-      font-size: 0.9rem;
-      transition: all 0.3s ease;
-      text-decoration: none;
+    .social-btn {
+      background: #1e1e32;
+      padding: 0.6rem 1.2rem;
+      border-radius: 2rem;
+      color: #e2e8f0;
+      transition: 0.2s;
       display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 0.6rem;
     }
 
-    .social a:hover {
-      background: #7de2ff;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 8px rgba(76, 201, 240, 0.3);
+    .social-btn:hover {
+      background: #4cc9f0;
+      color: #0f0f1a;
+      text-decoration: none;
     }
 
-    /* Character counter */
-    .char-counter {
-      font-size: 0.8rem;
-      color: #b3b3b3;
-      text-align: right;
-      margin-top: 0.25rem;
-    }
-
-    /* ===== Footer ===== */
     footer {
-      text-align:center;
-      padding: 1.25rem;
-      color: #999999;
-      background: #16213e;
-      font-size: .88rem;
-      margin-top: 2rem;
+      text-align: center;
+      padding: 2rem;
+      background: #0b0b18;
+      border-top: 1px solid #25253f;
+      font-size: 0.85rem;
     }
 
-    /* ===== Focus-visible for keyboard users ===== */
-    :focus { outline: none; }
-    :focus-visible { outline: 3px solid rgba(76,201,240,0.12); border-radius: 6px; }
-
-    /* ===== Responsive ===== */
-    @media (max-width: 900px) {
-      header h1 { font-size: 2rem; }
-      header h2 { font-size: 1rem; }
-      .nav-links { display: none; position: absolute; top: 64px; right: 1rem; background: rgba(26,26,46,0.98); padding: .75rem; border-radius: 8px; flex-direction: column; width: min(92%, 320px); }
-      .nav-links.open { display:flex; }
-      .menu-toggle { display: inline-flex; align-items:center; gap: .35rem; }
-      nav { padding: .55rem .75rem; }
-      header { margin-top: 56px; }
-      .experience-header {
+    /* responsive */
+    @media (max-width: 860px) {
+      .nav-links {
+        position: fixed;
+        top: 70px;
+        right: -100%;
         flex-direction: column;
-        align-items: flex-start;
+        background: #0f0f1ae6;
+        backdrop-filter: blur(16px);
+        width: 70%;
+        padding: 2rem;
+        border-radius: 1.5rem;
+        transition: 0.3s;
+        gap: 1.2rem;
+        border: 1px solid #4cc9f030;
       }
-      .experience-period {
-        margin-top: 0.25rem;
+      .nav-links.open {
+        right: 1rem;
       }
-      .skill .skill-detail {
-        font-size: 0.75rem;
+      .menu-toggle {
+        display: block;
       }
-      .projects {
-        grid-template-columns: 1fr;
+      .hero h1 {
+        font-size: 2rem;
       }
-      .project-actions {
-        flex-direction: column;
-      }
-    }
-
-    @media (max-width: 768px) {
-      #contactForm {
-        padding: 1.25rem;
-        gap: 0.875rem;
-      }
-
-      #contactForm input,
-      #contactForm textarea {
-        padding: 0.875rem;
-        font-size: 16px; /* Prevent zoom on iOS */
-      }
-
-      .submit-btn {
-        padding: 0.875rem 1.25rem;
-      }
-
-      .social {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .social a {
-        width: 100%;
-        max-width: 200px;
-        justify-content: center;
+      .section-title {
+        font-size: 1.6rem;
       }
     }
 
     @media (max-width: 480px) {
-      #contactForm {
-        padding: 1rem;
+      section {
+        padding: 2.5rem 1rem;
       }
-
-      .form-status {
-        font-size: 0.9rem;
-        padding: 0.625rem;
+      .exp-header {
+        flex-direction: column;
+        gap: 0.2rem;
       }
     }
   </style>
 </head>
-
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <!-- Navbar -->
-  <nav role="navigation" aria-label="Main navigation">
-    <div class="nav-inner" style="width:100%;">
+  <nav role="navigation" aria-label="Main">
+    <div class="nav-inner">
       <div class="logo">Ahmed Awaad</div>
-
-      <button class="menu-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Toggle navigation" id="menuToggle">
-        <i class="fa fa-bars" aria-hidden="true"></i>
-        <span class="sr-only">Menu</span>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu" aria-expanded="false">
+        <i class="fas fa-bars"></i>
       </button>
-
-      <ul class="nav-links" id="primary-navigation">
+      <ul class="nav-links" id="navLinks">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
         <li><a href="#certifications">Certifications</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#resume">Resume</a></li>
@@ -724,598 +547,275 @@
     </div>
   </nav>
 
-  <main id="main" tabindex="-1">
-    <!-- Header / Hero -->
+  <main id="main-content" tabindex="-1">
+    <!-- Hero Section -->
     <header id="home" data-aos="fade-up">
       <div class="hero">
         <h1>Ahmed Mahmoud Awaad</h1>
         <h2>Senior Accountant & Power BI Data Analyst</h2>
-        <p>Transforming financial and operational data into clear insights. I design Power BI reports, automate reporting with Power Query & Excel, and produce management-ready financial analysis.</p>
-
-        <div class="contact-inline" aria-hidden="false">
-          <span><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:Ahmedawwad01097903539@gmail.com">Ahmedawwad01097903539@gmail.com</a></span>
-          <span><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:+966569237463">+966 56 923 7463</a></span>
+        <p>📍 Riyadh, KSA | 5+ years of expertise in financial operations, ERP systems (Dynamics 365, AX, Double Click), and data-driven dashboards.</p>
+        <div class="contact-inline">
+          <span><i class="fas fa-envelope"></i> <a href="mailto:Ahmedawwad01097903539@gmail.com">Ahmedawwad01097903539@gmail.com</a></span>
+          <span><i class="fas fa-phone-alt"></i> <a href="tel:+966569237463">+966 56 923 7463</a></span>
+          <span><i class="fas fa-phone-alt"></i> <a href="tel:+0201097903539">+20 109 790 3539</a></span>
         </div>
       </div>
     </header>
 
     <!-- About -->
-    <section id="about" data-aos="fade-up" aria-labelledby="about-heading">
-      <h2 id="about-heading">About Me</h2>
-      <p>I am a Senior Accountant with 5+ years (2019‑present) of experience in accounting, financial reporting and data analytics. I combine accounting best practices with Power BI, DAX, Power Query and advanced Excel to build automated reporting, KPI dashboards and profitability analyses that support strategic decisions.</p>
+    <section id="about" data-aos="fade-up">
+      <h2 class="section-title">About Me</h2>
+      <p>Senior Accountant based in Saudi Arabia with over 5 years of diverse experience across Egypt and KSA. I combine deep accounting knowledge with Power BI, advanced Excel (Power Query, Pivot Tables), and ERP systems to deliver automated reporting, insightful dashboards, and accurate financial analysis. Passionate about transforming complex data into strategic business intelligence that drives performance and compliance.</p>
     </section>
 
-    <!-- Skills -->
-    <section id="skills" data-aos="fade-up" aria-labelledby="skills-heading">
-      <h2 id="skills-heading">Skills</h2>
-      <div class="skills" role="list">
-        <div class="skill" role="listitem" tabindex="0"><i class="fa-solid fa-chart-column" aria-hidden="true"></i><p>Power BI (Dashboarding)</p></div>
-        <div class="skill" role="listitem" tabindex="0"><i class="fa-solid fa-table" aria-hidden="true"></i><p>Advanced Excel</p></div>
-        <div class="skill" role="listitem" tabindex="0"><i class="fa-solid fa-code" aria-hidden="true"></i><p>DAX & Power Query</p></div>
-        <div class="skill" role="listitem" tabindex="0"><i class="fa-solid fa-calculator" aria-hidden="true"></i><p>Financial Analysis</p></div>
-        <div class="skill" role="listitem" tabindex="0"><i class="fa-solid fa-database" aria-hidden="true"></i><p>Data Modeling & ETL</p></div>
-        <div class="skill" role="listitem" tabindex="0"><i class="fa-solid fa-file-invoice" aria-hidden="true"></i><p>Accounting & Reporting</p></div>
-        <div class="skill" role="listitem" tabindex="0">
-          <i class="fa-solid fa-server" aria-hidden="true"></i>
-          <p>ERP Systems</p>
-          <div class="skill-detail">Dynamics 365, Dynamics AX, Double Click</div>
-        </div>
+    <!-- Skills (Enhanced with ERP & soft skills) -->
+    <section id="skills" data-aos="fade-up">
+      <h2 class="section-title">Core Competencies</h2>
+      <div class="skills-grid">
+        <div class="skill-card"><i class="fas fa-chart-line"></i><h3>Power BI & DAX</h3><p>Dashboards, Data Modeling, Time Intelligence</p></div>
+        <div class="skill-card"><i class="fas fa-file-excel"></i><h3>Advanced Excel</h3><p>Power Query, Pivot, Automation</p></div>
+        <div class="skill-card"><i class="fas fa-database"></i><h3>ERP Systems</h3><p>Dynamics 365, Dynamics AX, Double Click</p></div>
+        <div class="skill-card"><i class="fas fa-chart-pie"></i><h3>Financial Analysis</h3><p>P&L, Variance, Profitability</p></div>
+        <div class="skill-card"><i class="fas fa-balance-scale"></i><h3>Accounting & Reporting</h3><p>Month-end close, reconciliations, compliance</p></div>
+        <div class="skill-card"><i class="fas fa-users"></i><h3>Team Collaboration</h3><p>Cross-dept coordination, insolvency cases</p></div>
       </div>
     </section>
 
-    <!-- Experience -->
-    <section id="experience" data-aos="fade-up" aria-labelledby="experience-heading">
-      <h2 id="experience-heading">Experience</h2>
+    <!-- Experience - fully updated from CV -->
+    <section id="experience" data-aos="fade-up">
+      <h2 class="section-title">Professional Experience</h2>
 
-      <div class="card" role="article" aria-labelledby="exp1-title">
-        <div class="experience-header">
-          <h3 id="exp1-title" class="experience-title">Senior Accountant</h3>
-          <span class="experience-period">03/2025 – Present</span>
-        </div>
-        <p class="experience-company">Deraah Trading Company</p>
-        <p class="experience-industry">Perfumes, Cosmetics & Accessories - KSA</p>
-        <ul>
-          <li>Manage bank operations and reconcile daily/monthly statements</li>
-          <li>Match showroom deposits with accounting records and prepare reconciliation reports</li>
-          <li>Reconcile installment reports from Tamara and Tabby platforms</li>
-          <li>Record journal entries and manage accounts receivable/payable using ERP systems</li>
-          <li>Collaborate with procurement and operations departments for financial accuracy</li>
+      <div class="exp-card">
+        <div class="exp-header"><span class="exp-title">Senior Accountant</span><span class="exp-date">03/2025 – Present</span></div>
+        <div class="exp-company">Deraah Trading Company (Perfumes, Cosmetics & Accessories) – Riyadh, KSA</div>
+        <ul class="exp-list">
+          <li>Manage bank operations, reconcile daily & monthly statements, match showroom deposits with records.</li>
+          <li>Prepare showroom reconciliation reports to track shortages/overages and perform adjustments.</li>
+          <li>Reconcile installment reports from Tamara & Tabby platforms; ensure accurate journal entries.</li>
+          <li>Manage AR/AP using ERP systems; collaborate with procurement & operations for financial accuracy.</li>
         </ul>
       </div>
 
-      <div class="card" role="article" aria-labelledby="exp2-title">
-        <div class="experience-header">
-          <h3 id="exp2-title" class="experience-title">Senior Accountant</h3>
-          <span class="experience-period">12/2022 – 03/2025</span>
-        </div>
-        <p class="experience-company">Integrated Technics</p>
-        <p class="experience-industry">System Integrator (Security & ICT solutions)</p>
-        <ul>
-          <li>Updated accounts payable and established accounting program database</li>
-          <li>Managed project follow-ups with suppliers, customers, and cross-functional teams</li>
-          <li>Assisted with audits, tax preparations, and financial report analysis</li>
-          <li>Prepared financial reports for regulatory bodies and shareholders</li>
-          <li>Supported month-end and year-end closings and general ledger management</li>
+      <div class="exp-card">
+        <div class="exp-header"><span class="exp-title">Senior Accountant</span><span class="exp-date">12/2022 – 03/2025</span></div>
+        <div class="exp-company">Integrated Technics – Cairo, Egypt (System Integrator, Security & ICT)</div>
+        <ul class="exp-list">
+          <li>Updated accounts payable, established database for accounting program, managed project follow-ups.</li>
+          <li>Assisted with audits, tax preparations, and analyzed financial reports for regulatory bodies.</li>
+          <li>Supported month-end/year-end closing, general ledger, and collaborated with accounting manager.</li>
+          <li>Prepared financial reports for shareholders and assisted in balancing sheets & income statements.</li>
         </ul>
       </div>
 
-      <div class="card" role="article" aria-labelledby="exp3-title">
-        <div class="experience-header">
-          <h3 id="exp3-title" class="experience-title">Senior Accountant</h3>
-          <span class="experience-period">02/2020 – 06/2021</span>
-        </div>
-        <p class="experience-company">Tawreda.com</p>
-        <p class="experience-industry">HORECA Food Supply - Cairo, Egypt</p>
-        <ul>
-          <li>Maintained daily accounts and prepared month-end close</li>
-          <li>Prepared monthly financial performance reports and management information</li>
-          <li>Conducted credit control, debt collection, and accounts receivable/payable oversight</li>
-          <li>Reviewed expenses, payroll records, and updated financial data</li>
-          <li>Facilitated month-end closing process and transaction reconciliation</li>
+      <div class="exp-card">
+        <div class="exp-header"><span class="exp-title">Account Supervisor (Part-time / Hybrid)</span><span class="exp-date">12/2022 – 03/2025</span></div>
+        <div class="exp-company">Tawreda.com (HORECA Food Supply) – Cairo, Egypt</div>
+        <ul class="exp-list">
+          <li>Prepared financial statements (Income Statement, Statement of Financial Position) with accuracy.</li>
+          <li>Recorded adjusting entries, payroll entries, and prepared VAT returns with external auditors.</li>
+          <li>Developed management reports (sales, profitability analysis) to support decision-making.</li>
+          <li>Supervised accounting team to ensure timely month-end close and compliance.</li>
         </ul>
       </div>
 
-      <div class="card" role="article" aria-labelledby="exp4-title">
-        <div class="experience-header">
-          <h3 id="exp4-title" class="experience-title">General Accountant</h3>
-          <span class="experience-period">07/2019 – 02/2020</span>
-        </div>
-        <p class="experience-company">Cattelya For Chemical Co</p>
-        <ul>
-          <li>Prepared and recorded journal entries and assisted with expense reviews</li>
-          <li>Aided in financial statement preparation and bank reconciliation</li>
-          <li>Maintained fixed assets register and calculated depreciation</li>
-          <li>Managed online banking transactions and monitored daily cash balances</li>
+      <div class="exp-card">
+        <div class="exp-header"><span class="exp-title">Senior Accountant</span><span class="exp-date">06/2021 – 12/2022</span></div>
+        <div class="exp-company">Tawreda.com (HORECA Food Supply) – Cairo, Egypt</div>
+        <ul class="exp-list">
+          <li>Maintained daily accounts, month-end close, and prepared financial performance reports.</li>
+          <li>Oversaw AR/AP, reviewed expenses, payroll records, and updated financial databases.</li>
+          <li>Facilitated month-end closing, corrected journal entries, reconciled transactions & cash flow.</li>
         </ul>
       </div>
 
-      <div class="card" role="article" aria-labelledby="exp5-title">
-        <div class="experience-header">
-          <h3 id="exp5-title" class="experience-title">Accountant</h3>
-          <span class="experience-period">07/2019 – 02/2020</span>
-        </div>
-        <p class="experience-company">Elmotaheda for Trade and Finance</p>
-        <ul>
-          <li>Prepared and recorded journal entries, handled cash management as Treasurer</li>
-          <li>Processed payments and controlled expenses through invoice verification</li>
-          <li>Distributed checks after matching invoices to payments</li>
+      <div class="exp-card">
+        <div class="exp-header"><span class="exp-title">General Accountant</span><span class="exp-date">07/2019 – 02/2020</span></div>
+        <div class="exp-company">Cattelya For Chemical Co – Alexandria, Egypt</div>
+        <ul class="exp-list">
+          <li>Prepared journal entries, assisted financial statements, bank reconciliation, fixed assets register.</li>
+          <li>Managed online banking, daily cash balances, and payroll accruals.</li>
+        </ul>
+      </div>
+
+      <div class="exp-card">
+        <div class="exp-header"><span class="exp-title">Accountant</span><span class="exp-date">07/2019 – 02/2020</span></div>
+        <div class="exp-company">Elmotaheda for Trade and Finance – Tanta, Egypt</div>
+        <ul class="exp-list">
+          <li>Handled cash management, journal entries, invoice verification, and payment distribution.</li>
+          <li>Processed payments and controlled expenses by matching invoices.</li>
         </ul>
       </div>
     </section>
 
-    <!-- Certifications -->
-    <section id="certifications" data-aos="fade-up" aria-labelledby="certs-heading">
-      <h2 id="certs-heading">Certifications</h2>
-
-      <div class="card">
-        <h3>Power BI & Excel Data Analysis</h3>
-        <p>Certified in advanced Power BI, Power Query and Excel techniques for financial analysis and reporting.</p>
-      </div>
-
-      <div class="card">
-        <h3>Qualified Accountant Diploma</h3>
-        <p>Professional qualification focused on financial reporting, analysis and accounting standards.</p>
+    <!-- Education -->
+    <section id="education" data-aos="fade-up">
+      <h2 class="section-title">Education</h2>
+      <div class="edu-card">
+        <h3 style="color:#4cc9f0;">Bachelor of Commerce, English Section – Accounting Department</h3>
+        <p><strong>Tanta University</strong> | 2015 – 2019 | Grade: Good</p>
       </div>
     </section>
 
-    <!-- Projects -->
-    <section id="projects" data-aos="fade-up" aria-labelledby="projects-heading">
-      <h2 id="projects-heading">Power BI Projects</h2>
-      <p>Explore my Power BI dashboards and reports that showcase my data analysis and visualization capabilities.</p>
-      
-      <div class="projects">
-        <!-- Project 1: Income Statement Report -->
-        <div class="project-card" role="article">
-          <div class="project-icon">
-            <i class="fa-solid fa-file-invoice-dollar" aria-hidden="true"></i>
-          </div>
-          <h3 class="project-title">Income Statement Report</h3>
-          <p class="project-description">A comprehensive Power BI income statement report that provides detailed financial performance analysis. Features revenue and expense tracking, profit margin analysis, and period-over-period comparisons for informed financial decision-making.</p>
-          <div class="project-tags">
-            <span class="project-tag">Power BI</span>
-            <span class="project-tag">Financial Reporting</span>
-            <span class="project-tag">Income Statement</span>
-            <span class="project-tag">Profit & Loss</span>
-            <span class="project-tag">DAX</span>
-          </div>
-          <div class="project-actions">
-            <a href="https://raw.githubusercontent.com/AhmedAwaad97/ahmed-awaad2-portfolio/main/Income%20Statement%20Report.pbix" download="Income Statement Report.pbix" class="btn-download">
-              <i class="fas fa-download" aria-hidden="true"></i>
-              <span>Download Dashboard</span>
-            </a>
-            <span class="file-info">
-              <i class="fas fa-file" aria-hidden="true"></i>
-              .pbix (2.8 MB)
-            </span>
-          </div>
-        </div>
+    <!-- Certifications & Training (full list from CV) -->
+    <section id="certifications" data-aos="fade-up">
+      <h2 class="section-title">Certifications & Professional Development</h2>
+      <div class="certs-grid">
+        <div class="cert-item"><i class="fas fa-certificate"></i> Data Analysis Diploma (Excel & Power BI) – Data Visualization</div>
+        <div class="cert-item"><i class="fas fa-graduation-cap"></i> IFRS Course – Ongoing (2025)</div>
+        <div class="cert-item"><i class="fas fa-chart-simple"></i> Commercial Excel – EAAC, Egypt (Dec 2020)</div>
+        <div class="cert-item"><i class="fas fa-chart-line"></i> Excel Basics for Data Analysis – Coursera (Jan 2022)</div>
+        <div class="cert-item"><i class="fas fa-file-invoice"></i> Qualified Accountant Diploma (QAD) – EAAC (Feb 2020)</div>
+        <div class="cert-item"><i class="fas fa-chart-pie"></i> Professional Financial Accountant (PFA) Workshop (Mar 2019)</div>
+        <div class="cert-item"><i class="fas fa-microsoft"></i> Microsoft Office Specialist Master (Feb 27, 2018)</div>
+        <div class="cert-item"><i class="fas fa-landmark"></i> Financial Services & Banking Training Program</div>
+        <div class="cert-item"><i class="fas fa-chart-line"></i> Strategic Marketing for Financial Services Program</div>
+      </div>
+    </section>
 
-        <!-- Project 2: Car Sales Dashboard -->
-        <div class="project-card" role="article">
-          <div class="project-icon">
-            <i class="fa-solid fa-car" aria-hidden="true"></i>
-          </div>
-          <h3 class="project-title">Car Sales Dashboard</h3>
-          <p class="project-description">A dynamic Power BI dashboard that presents key KPIs such as total sales, average car price, and car sales performance by year and month. It also includes advanced DAX time intelligence measures for deeper insights into sales trends and patterns.</p>
-          <div class="project-tags">
-            <span class="project-tag">Power BI</span>
-            <span class="project-tag">Dashboard</span>
-            <span class="project-tag">Sales Analysis</span>
-            <span class="project-tag">DAX</span>
-            <span class="project-tag">Time Intelligence</span>
-          </div>
-          <div class="project-actions">
-            <a href="https://raw.githubusercontent.com/AhmedAwaad97/ahmed-awaad2-portfolio/main/Car%20Sales%20Dashboard.pbix" download="Car Sales Dashboard.pbix" class="btn-download">
-              <i class="fas fa-download" aria-hidden="true"></i>
-              <span>Download Dashboard</span>
-            </a>
-            <span class="file-info">
-              <i class="fas fa-file" aria-hidden="true"></i>
-              .pbix (2.5 MB)
-            </span>
-          </div>
+    <!-- Power BI Projects -->
+    <section id="projects" data-aos="fade-up">
+      <h2 class="section-title">Power BI Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+          <h3>Income Statement Report</h3>
+          <p>Interactive P&L with revenue breakdown, margin analysis, and period-over-period comparisons.</p>
+          <div class="project-tags"><span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">Finance</span></div>
+          <a href="https://raw.githubusercontent.com/AhmedAwaad97/ahmed-awaad2-portfolio/main/Income%20Statement%20Report.pbix" download class="btn-download"><i class="fas fa-download"></i> Download .pbix</a>
         </div>
-
-        <!-- Project 3: Sales & Profit Dashboard -->
-        <div class="project-card" role="article">
-          <div class="project-icon">
-            <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
-          </div>
-          <h3 class="project-title">Sales & Profit Dashboard</h3>
-          <p class="project-description">Comprehensive Power BI dashboard analyzing sales performance, profit margins, and key business metrics. Features interactive filtering, trend analysis, and performance indicators to track business health.</p>
-          <div class="project-tags">
-            <span class="project-tag">Power BI</span>
-            <span class="project-tag">Dashboard</span>
-            <span class="project-tag">Sales Analysis</span>
-            <span class="project-tag">Profitability</span>
-          </div>
-          <div class="project-actions">
-            <a href="https://raw.githubusercontent.com/AhmedAwaad97/ahmed-awaad2-portfolio/main/Sales%20%26%20Profit%20Dashboard.pbix" download="Sales & Profit Dashboard.pbix" class="btn-download">
-              <i class="fas fa-download" aria-hidden="true"></i>
-              <span>Download Dashboard</span>
-            </a>
-            <span class="file-info">
-              <i class="fas fa-file" aria-hidden="true"></i>
-              .pbix (3.2 MB)
-            </span>
-          </div>
+        <div class="project-card">
+          <div class="project-icon"><i class="fas fa-car"></i></div>
+          <h3>Car Sales Dashboard</h3>
+          <p>KPIs: total sales, avg price, YoY trends, and time intelligence metrics.</p>
+          <div class="project-tags"><span class="tag">Sales Analysis</span><span class="tag">Time Intelligence</span></div>
+          <a href="https://raw.githubusercontent.com/AhmedAwaad97/ahmed-awaad2-portfolio/main/Car%20Sales%20Dashboard.pbix" download class="btn-download"><i class="fas fa-download"></i> Download .pbix</a>
         </div>
-
-        <!-- Project 4: Sales Performance Dashboard -->
-        <div class="project-card" role="article">
-          <div class="project-icon">
-            <i class="fa-solid fa-chart-bar" aria-hidden="true"></i>
-          </div>
-          <h3 class="project-title">Sales Performance Dashboard</h3>
-          <p class="project-description">Interactive Power BI dashboard tracking sales performance metrics, regional comparisons, and sales team productivity. Includes drill-down capabilities and time-series analysis for detailed insights.</p>
-          <div class="project-tags">
-            <span class="project-tag">Power BI</span>
-            <span class="project-tag">Dashboard</span>
-            <span class="project-tag">Performance</span>
-            <span class="project-tag">Regional Analysis</span>
-          </div>
-          <div class="project-actions">
-            <a href="https://raw.githubusercontent.com/AhmedAwaad97/ahmed-awaad2-portfolio/main/Sales%20Performance%20Dashboard.pbix" download="Sales Performance Dashboard.pbix" class="btn-download">
-              <i class="fas fa-download" aria-hidden="true"></i>
-              <span>Download Dashboard</span>
-            </a>
-            <span class="file-info">
-              <i class="fas fa-file" aria-hidden="true"></i>
-              .pbix (2.8 MB)
-            </span>
-          </div>
+        <div class="project-card">
+          <div class="project-icon"><i class="fas fa-chart-line"></i></div>
+          <h3>Sales & Profit Dashboard</h3>
+          <p>Interactive filtering, profit margins, and business health indicators.</p>
+          <div class="project-tags"><span class="tag">Profitability</span><span class="tag">Dashboard</span></div>
+          <a href="https://raw.githubusercontent.com/AhmedAwaad97/ahmed-awaad2-portfolio/main/Sales%20%26%20Profit%20Dashboard.pbix" download class="btn-download"><i class="fas fa-download"></i> Download .pbix</a>
+        </div>
+        <div class="project-card">
+          <div class="project-icon"><i class="fas fa-chart-bar"></i></div>
+          <h3>Sales Performance Dashboard</h3>
+          <p>Regional analysis, team productivity, drill-down capabilities.</p>
+          <div class="project-tags"><span class="tag">Performance</span><span class="tag">Drill-through</span></div>
+          <a href="https://raw.githubusercontent.com/AhmedAwaad97/ahmed-awaad2-portfolio/main/Sales%20Performance%20Dashboard.pbix" download class="btn-download"><i class="fas fa-download"></i> Download .pbix</a>
         </div>
       </div>
     </section>
 
-    <!-- Resume -->
-    <section id="resume" data-aos="fade-up" aria-labelledby="resume-heading">
-      <h2 id="resume-heading">Resume</h2>
-      <p>Download my resume (PDF) to learn more about my background, detailed project experience, and contact information.</p>
-
-      <!-- Updated Download CV button with proper relative path -->
-      <a href="./Ahmed-Mahmoud-Awaad-FlowCV-Resume-20251023_1.pdf" download class="btn" aria-label="Download Ahmed Mahmoud Awaad CV (PDF)">📥 Download CV</a>
+    <!-- Resume Download -->
+    <section id="resume" data-aos="fade-up">
+      <h2 class="section-title">Resume</h2>
+      <p>Download my detailed CV in PDF format for a complete overview of my experience, skills, and achievements.</p>
+      <a href="./Ahmed-Mahmoud-Awaad-FlowCV-Resume-20251023_1.pdf" download class="btn-download" style="background:#4cc9f0; margin-top:0.8rem;"><i class="fas fa-file-pdf"></i> Download CV (PDF)</a>
     </section>
 
-    <!-- Contact -->
-    <section id="contact" data-aos="fade-up" aria-labelledby="contact-heading">
-      <h2 id="contact-heading">Contact Me</h2>
-
-      <!-- Enhanced Form with proper Formspree configuration -->
-      <form id="contactForm" action="https://formspree.io/f/xrbynngg" method="POST">
-        <input type="hidden" name="_subject" value="New Portfolio Contact Form Submission">
-        <input type="hidden" name="_format" value="plain">
-        
-        <div class="form-group">
-          <label class="sr-only" for="name">Your name</label>
-          <input id="name" name="name" type="text" placeholder="Your Name" required autocomplete="name">
+    <!-- Contact (Formspree with robust validation) -->
+    <section id="contact" data-aos="fade-up">
+      <h2 class="section-title">Get in Touch</h2>
+      <div class="contact-form">
+        <form id="contactForm" action="https://formspree.io/f/xrbynngg" method="POST">
+          <input type="hidden" name="_subject" value="Portfolio contact from Ahmed's site">
+          <div class="form-group">
+            <input type="text" name="name" placeholder="Your Name" required autocomplete="name">
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" placeholder="Email Address" required autocomplete="email">
+          </div>
+          <div class="form-group">
+            <textarea name="message" rows="4" placeholder="Your message..." required></textarea>
+          </div>
+          <input type="text" name="_gotcha" class="honeypot" autocomplete="off">
+          <button type="submit" class="submit-btn" id="submitBtn">Send Message <i class="fas fa-paper-plane"></i></button>
+          <div id="formStatus" class="form-status" aria-live="polite"></div>
+        </form>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/ahmed-m-awaad-59103b167/" target="_blank" rel="noopener" class="social-btn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+          <a href="https://github.com/AhmedAwaad97/ahmed-awaad2-portfolio" target="_blank" rel="noopener" class="social-btn"><i class="fab fa-github"></i> GitHub</a>
+          <a href="mailto:Ahmedawwad01097903539@gmail.com" class="social-btn"><i class="fas fa-envelope"></i> Email</a>
         </div>
-
-        <div class="form-group">
-          <label class="sr-only" for="email">Your email</label>
-          <input id="email" name="email" type="email" placeholder="Your Email" required autocomplete="email">
-        </div>
-
-        <div class="form-group">
-          <label class="sr-only" for="message">Your message</label>
-          <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
-        </div>
-
-        <!-- Enhanced honeypot for better spam protection -->
-        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="honeypot">
-
-        <button type="submit" id="submitBtn" class="submit-btn">
-          <span id="submitText">Send Message</span>
-        </button>
-
-        <p id="contact-note" class="contact-note">
-          Or contact me directly:
-          <a href="mailto:Ahmedawwad01097903539@gmail.com">Ahmedawwad01097903539@gmail.com</a>
-          • <a href="tel:+966569237463">+966 56 923 7463</a>
-          • <a href="tel:+0201097903539">+20 0109 790 3539</a>
-        </p>
-
-        <div id="formStatus" aria-live="polite" class="form-status"></div>
-      </form>
-
-      <div class="social" aria-label="Social links">
-        <a href="https://www.linkedin.com/in/ahmed-m-awaad-59103b167/" target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn
-        </a>
-        <a href="https://github.com/AhmedAwaad97/ahmed-awaad2-portfolio" target="_blank" rel="noopener noreferrer">
-          <i class="fab fa-github" aria-hidden="true"></i> GitHub
-        </a>
-        <a href="mailto:Ahmedawwad01097903539@gmail.com">
-          <i class="fas fa-envelope" aria-hidden="true"></i> Email
-        </a>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer role="contentinfo">
-    <div id="siteFooter">© <span id="year">2025</span> Ahmed Mahmoud Awaad | All Rights Reserved | 
-      <a href="https://github.com/AhmedAwaad97/ahmed-awaad2-portfolio" target="_blank" rel="noopener noreferrer" style="color: #4cc9f0;">View on GitHub</a>
-    </div>
+  <footer>
+    <p>© <span id="currentYear"></span> Ahmed Mahmoud Awaad | All Rights Reserved | <a href="https://github.com/AhmedAwaad97/ahmed-awaad2-portfolio" target="_blank">Source Code</a></p>
   </footer>
 
-  <!-- AOS JS (deferred) -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
-
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    // Initialize AOS when available
-    window.addEventListener('load', function () {
-      if (window.AOS) {
-        AOS.init({ duration: 900, once: true, mirror: false });
-      }
+    // AOS init
+    AOS.init({ duration: 700, once: true, offset: 20 });
+
+    // Dynamic year
+    document.getElementById('currentYear').innerText = new Date().getFullYear();
+
+    // Navbar scroll effect & mobile toggle
+    const nav = document.querySelector('nav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 30) nav.classList.add('scrolled');
+      else nav.classList.remove('scrolled');
     });
 
-    // Nav scroll effect
-    window.addEventListener('scroll', function() {
-      const nav = document.querySelector('nav');
-      if (window.scrollY > 50) {
-        nav.classList.add('scrolled');
-      } else {
-        nav.classList.remove('scrolled');
-      }
+    const menuBtn = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    menuBtn.addEventListener('click', () => {
+      const expanded = navLinks.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', expanded);
+    });
+    document.querySelectorAll('#navLinks a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded', 'false');
+      });
     });
 
-    // Mobile nav toggle
-    (function () {
-      const menuToggle = document.getElementById('menuToggle');
-      const nav = document.getElementById('primary-navigation');
+    // Contact Form Enhanced
+    const form = document.getElementById('contactForm');
+    const statusDiv = document.getElementById('formStatus');
+    const submitBtn = document.getElementById('submitBtn');
 
-      menuToggle.addEventListener('click', function () {
-        const isOpen = nav.classList.toggle('open');
-        menuToggle.setAttribute('aria-expanded', String(isOpen));
-      });
-
-      // close menu when a link is clicked (mobile)
-      nav.addEventListener('click', function (e) {
-        if (e.target.tagName === 'A' && nav.classList.contains('open')) {
-          nav.classList.remove('open');
-          menuToggle.setAttribute('aria-expanded', 'false');
-        }
-      });
-    })();
-
-    // Enhanced Form handling with Formspree integration
-    (function () {
-      const form = document.getElementById('contactForm');
-      const status = document.getElementById('formStatus');
-      const submitBtn = document.getElementById('submitBtn');
-      const submitText = document.getElementById('submitText');
-
-      // Enhanced email validation
-      function isValidEmail(email) {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return emailRegex.test(email);
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const honeypot = form.querySelector('input[name="_gotcha"]').value;
+      if (honeypot) {
+        statusDiv.innerHTML = '✅ Message received (test mode).';
+        statusDiv.style.color = '#10b981';
+        form.reset();
+        return;
       }
 
-      // Show status message
-      function showStatus(message, type = 'info') {
-        status.textContent = message;
-        status.className = `form-status form-${type}`;
-        
-        // Add ARIA attributes for accessibility
-        status.setAttribute('aria-live', 'polite');
-        status.setAttribute('aria-atomic', 'true');
-        
-        if (type === 'error') {
-          status.setAttribute('role', 'alert');
-        } else {
-          status.removeAttribute('role');
-        }
-      }
+      const formData = new FormData(form);
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = 'Sending... <i class="fas fa-spinner fa-spin"></i>';
+      statusDiv.innerHTML = '';
 
-      // Clear status message
-      function clearStatus() {
-        status.textContent = '';
-        status.className = 'form-status';
-        status.removeAttribute('role');
-      }
-
-      // Validate form fields
-      function validateForm() {
-        const name = form.name.value.trim();
-        const email = form.email.value.trim();
-        const message = form.message.value.trim();
-
-        // Clear previous status
-        clearStatus();
-
-        // Validate name
-        if (!name) {
-          showStatus('❌ Please enter your name.', 'error');
-          form.name.focus();
-          return false;
-        }
-
-        if (name.length < 2) {
-          showStatus('❌ Please enter a valid name (at least 2 characters).', 'error');
-          form.name.focus();
-          return false;
-        }
-
-        // Validate email
-        if (!email) {
-          showStatus('❌ Please enter your email address.', 'error');
-          form.email.focus();
-          return false;
-        }
-
-        if (!isValidEmail(email)) {
-          showStatus('❌ Please enter a valid email address.', 'error');
-          form.email.focus();
-          return false;
-        }
-
-        // Validate message
-        if (!message) {
-          showStatus('❌ Please enter your message.', 'error');
-          form.message.focus();
-          return false;
-        }
-
-        if (message.length < 10) {
-          showStatus('❌ Please write a more detailed message (at least 10 characters).', 'error');
-          form.message.focus();
-          return false;
-        }
-
-        if (message.length > 1000) {
-          showStatus('❌ Message is too long (maximum 1000 characters).', 'error');
-          form.message.focus();
-          return false;
-        }
-
-        return true;
-      }
-
-      // Form submission handler
-      form.addEventListener('submit', async function (e) {
-        e.preventDefault();
-
-        // Honeypot check
-        const honeypot = form._gotcha.value;
-        if (honeypot) {
-          showStatus('Thank you for your message!', 'success');
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) {
+          statusDiv.innerHTML = '✅ Thanks! Your message has been sent. I will reply shortly.';
+          statusDiv.style.color = '#10b981';
           form.reset();
-          return;
-        }
-
-        // Validate form
-        if (!validateForm()) {
-          return;
-        }
-
-        // Show loading state
-        submitBtn.disabled = true;
-        submitText.innerHTML = '<span class="loading"></span> Sending...';
-        showStatus('Sending your message...', 'info');
-
-        try {
-          // Create FormData object
-          const formData = new FormData(form);
-          
-          // Enhanced Formspree submission with timeout
-          const controller = new AbortController();
-          const timeoutId = setTimeout(() => controller.abort(), 15000); // 15 second timeout
-
-          const response = await fetch(form.action, {
-            method: 'POST',
-            body: formData,
-            headers: {
-              'Accept': 'application/json'
-            },
-            signal: controller.signal
-          });
-
-          clearTimeout(timeoutId);
-
-          // Enhanced response handling for Formspree
-          if (response.status >= 200 && response.status < 400) {
-            showStatus('✅ Thank you! Your message has been sent successfully. I will reply to you shortly.', 'success');
-            form.reset();
-            
-            // Auto-clear success message after 10 seconds
-            setTimeout(() => {
-              if (status.textContent.includes('successfully')) {
-                clearStatus();
-              }
-            }, 10000);
-            
-          } else {
-            // Enhanced error parsing
-            let errorMessage = 'Form submission failed. Please try again.';
-            
-            try {
-              const errorData = await response.json();
-              errorMessage = errorData.error || errorMessage;
-              
-              // Handle specific Formspree errors
-              if (errorData.errors) {
-                errorMessage = errorData.errors.map(err => err.message).join(', ');
-              }
-            } catch (jsonError) {
-              errorMessage = `Server error (${response.status}). Please try again.`;
-            }
-            
-            throw new Error(errorMessage);
-          }
-        } catch (error) {
-          console.error('Form submission error:', error);
-          
-          if (error.name === 'AbortError') {
-            showStatus('❌ Request timeout. Please check your connection and try again.', 'error');
-          } else if (error.message.includes('Failed to fetch')) {
-            showStatus('❌ Network error. Please check your internet connection and try again.', 'error');
-          } else {
-            showStatus(`❌ ${error.message}`, 'error');
-          }
-        } finally {
-          // Reset button state
-          submitBtn.disabled = false;
-          submitText.textContent = 'Send Message';
-        }
-      });
-
-      // Enhanced input clearing - clear status when user starts typing
-      const formInputs = form.querySelectorAll('input, textarea');
-      formInputs.forEach(input => {
-        input.addEventListener('input', function() {
-          if (status.textContent && !status.textContent.includes('successfully')) {
-            clearStatus();
-          }
-        });
-        
-        // Real-time validation for better UX
-        input.addEventListener('blur', function() {
-          if (this.value.trim() && !validateForm()) {
-            // Keep the error message if validation fails
-          }
-        });
-      });
-
-      // Character counter for message field
-      const messageField = document.getElementById('message');
-      const charCounter = document.createElement('div');
-      charCounter.className = 'char-counter';
-      messageField.parentNode.appendChild(charCounter);
-
-      messageField.addEventListener('input', function() {
-        const length = this.value.length;
-        charCounter.textContent = `${length}/1000 characters`;
-        
-        if (length > 900) {
-          charCounter.style.color = '#ffb4a2';
-        } else if (length > 800) {
-          charCounter.style.color = '#4cc9f0';
         } else {
-          charCounter.style.color = '#b3b3b3';
+          throw new Error('Server error');
         }
-      });
-
-      // Initialize character counter
-      messageField.dispatchEvent(new Event('input'));
-
-      // Enhanced form reset handling
-      form.addEventListener('reset', function() {
-        clearStatus();
-        messageField.dispatchEvent(new Event('input'));
-      });
-
-      // Prevent form resubmission on page refresh
-      if (window.history.replaceState) {
-        window.history.replaceState(null, null, window.location.href);
+      } catch (err) {
+        statusDiv.innerHTML = '❌ Oops! Something went wrong. Please email me directly.';
+        statusDiv.style.color = '#ff9b7c';
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = 'Send Message <i class="fas fa-paper-plane"></i>';
+        setTimeout(() => { if (statusDiv.innerHTML) statusDiv.innerHTML = ''; }, 8000);
       }
-    })();
-
-    // Footer year update
-    (function () {
-      const y = new Date().getFullYear();
-      document.getElementById('year').textContent = y;
-    })();
+    });
   </script>
 </body>
 </html>
