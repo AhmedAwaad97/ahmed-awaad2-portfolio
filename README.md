@@ -1,10 +1,7 @@
-
-
 <h1 align="center">Ahmed Mahmoud Awaad</h1>
 <h3 align="center">Senior Accountant | Financial Reporting Specialist | Power BI & Excel Expert</h3>
 
-<!-- SEO Description -->
-<p align="center"><em>Senior Accountant & Financial Data Analyst specializing in Power BI, Excel automation, and financial reporting with 5+ years experience in KSA market</em></p>
+<p align="center"><em>Senior Accountant & Financial Data Analyst specializing in Power BI, Excel automation, and financial reporting with 5+ years experience in KSA and Egyptian markets.</em></p>
 
 <div align="center">
 
@@ -17,104 +14,101 @@
 
 ---
 
-## 👋 Professional Profile
-
-<div align="center">
-  
-![Professional Banner](https://raw.githubusercontent.com/ahmedawaad97/ahmed-awaad2-portfolio/main/assets/images/logo-github.jpeg)
-
-</div>
-
 ## 👨‍💼 Professional Summary
 
 **Senior Accountant** with **5+ years** of experience transforming financial data into actionable insights through **Power BI**, **Excel automation**, and **ERP systems**. Specialized in financial reporting, data analysis, and process optimization for business growth.
 
-**📍 Location:** Al-Farouq, Riyadh, Saudi Arabia  
-**📞 Phone:** +966 56 923 7463  
+**📍 Location:** Riyadh, Saudi Arabia  
+**📞 Phone:** +966 56 923 7463 | +20 109 790 3539  
 **📧 Email:** ahmedawwad01097903539@gmail.com
 
+---
 
 ## 💡 Core Competencies
 
-### **📈 Accounting & Finance**
-- 💼 Financial Reporting & Analysis
-- 📋 GAAP/IFRS Compliance
-- 🔍 Auditing & Controls
-- 💰 Budgeting & Forecasting
-- 📊 Financial Modeling
+### 📈 Accounting & Finance
+- Financial Reporting & Analysis (GAAP/IFRS)
+- Auditing & Internal Controls
+- Budgeting & Forecasting
+- Month-end Close & Reconciliations
 
-### **🛠️ Technical Skills**
-<div align="center">
+### 🛠️ Technical Skills
+- **Power BI** (DAX, Data Modeling, Dashboards)
+- **Advanced Excel** (Power Query, Pivot Tables, Automation)
+- **ERP Systems:** Dynamics 365, Dynamics AX, Double Click
+- **Web Technologies:** HTML5, CSS3, JavaScript, Git, GitHub Pages
 
-**Data Analytics & ERP**
-• ![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=flat-square&logo=powerbi&logoColor=black)
-• ![Excel](https://img.shields.io/badge/Excel-217346?style=flat-square&logo=microsoftexcel&logoColor=white)
-• ![Power Query](https://img.shields.io/badge/Power_Query-00BCF2?style=flat-square&logo=powerquery&logoColor=white)
-• ![Dynamics AX](https://img.shields.io/badge/Dynamics_AX-008272?style=flat-square&logo=microsoft&logoColor=white)
-• ![Dynamics 365](https://img.shields.io/badge/Dynamics_365-008272?style=flat-square&logo=microsoft&logoColor=white)
-• ![Double Click](https://img.shields.io/badge/Double_Click-4285F4?style=flat-square&logo=google&logoColor=white)
-
-**Web Technologies**
-• ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
-• ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
-• ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
-• ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
-
-</div>
+---
 
 ## 💼 Professional Experience
 
-### **💼 Senior Accountant** | Deraah Trading Company
-**📍 Riyadh, KSA** | **📅 03/2025 – Present**  
-*Perfumes & Cosmetics Retail*
-- Bank operations & reconciliation management
-- ERP system journal entries and account management
-- Tamara/Tabby platform installment reporting
+### **Senior Accountant** | Deraah Trading Company  
+**Riyadh, KSA** | 03/2025 – Present  
+*Perfumes, Cosmetics & Accessories Retail*
+- Manage bank operations, daily/monthly reconciliations, showroom deposit matching.
+- Reconcile installment reports from Tamara & Tabby platforms; maintain accurate journal entries.
+- Oversee AR/AP using ERP; collaborate with procurement & operations.
 
-### **🔧 Senior Accountant** | Integrated Technics  
-**📍 Egypt** | **📅 12/2022 – 03/2025**  
+### **Senior Accountant** | Integrated Technics  
+**Cairo, Egypt** | 12/2022 – 03/2025  
 *Security & ICT Solutions*
-- Accounts payable and database management
-- Cross-functional project coordination
-- Audit preparation and financial reporting
+- Updated accounts payable, established database for accounting program, managed project follow-ups.
+- Assisted with audits, tax preparations, prepared financial reports for stakeholders.
+- Supported month-end/year-end closings and general ledger activities.
 
-### **🚀 Senior Accountant** | Tawreda.com
-**📍 Cairo, Egypt** | **📅 02/2020 – 06/2021**  
+### **Account Supervisor (Part‑time)** | Tawreda.com  
+**Cairo, Egypt** | 12/2022 – 03/2025  
 *HORECA Food Supply*
-- Month-end close and financial reporting
-- Credit control and debt collection
-- Expense analysis and payroll oversight
+- Prepared financial statements, adjusting entries, VAT returns.
+- Developed management reports (sales, profitability) to support decision-making.
+- Supervised accounting team for timely month-end close.
 
-*📖 Full details available in [portfolio](https://ahmedawaad97.github.io/ahmed-awaad2-portfolio/)*
+### **Senior Accountant** | Tawreda.com  
+**Cairo, Egypt** | 06/2021 – 12/2022  
+- Maintained daily accounts, month-end close, prepared financial performance reports.
+- Oversaw AR/AP, reviewed expenses, payroll records, reconciled cash flow.
+
+### **General Accountant** | Cattelya For Chemical Co  
+**Alexandria, Egypt** | 07/2019 – 02/2020  
+- Prepared journal entries, bank reconciliation, fixed assets register, payroll accruals.
+
+### **Accountant** | Elmotaheda for Trade and Finance  
+**Tanta, Egypt** | 07/2019 – 02/2020  
+- Cash management, journal entries, invoice verification, payment processing.
+
+---
 
 ## 🎓 Education & Certifications
 
-### **📚 Education**
-- **🎓 B.Com. in Accounting** - Tanta University (2015–2019)
+### Education
+- **Bachelor of Commerce, Accounting Department** – Tanta University (2015–2019) | Grade: Good
 
-### **🏆 Certifications**
-- ✅ **Power BI & Excel Data Analysis** - Completed
-- ✅ **Qualified Accountant Diploma** - Completed  
-- ✅ **Commercial Excel** - Completed
-- 📚 **IFRS Certification** - In Progress
+### Certifications
+- Data Analysis Diploma (Excel & Power BI)
+- IFRS Course – Ongoing (2025)
+- Commercial Excel – EAAC (Dec 2020)
+- Excel Basics for Data Analysis – Coursera (Jan 2022)
+- Qualified Accountant Diploma (QAD) – EAAC (Feb 2020)
+- Professional Financial Accountant (PFA) Workshop (Mar 2019)
+- Microsoft Office Specialist Master (Feb 2018)
+- Financial Services & Banking Training Program
+- Strategic Marketing for Financial Services Program
+
+---
 
 ## 📊 Featured Projects
 
-### **📈 Power BI Dashboards**
-- **[Sales Performance Dashboard](#)** - Sales trends & customer behavior analysis
-- **[Cost & Profitability Analysis](#)** - Branch-level profit tracking with KPIs
-- **[Inventory Management](#)** - Real-time stock monitoring & alerts
+### Power BI Dashboards
+- **Income Statement Report** – Interactive P&L with margin analysis and period‑over‑period comparisons.
+- **Car Sales Dashboard** – KPIs: total sales, average price, YoY trends, time intelligence.
+- **Sales & Profit Dashboard** – Profit margins, business health indicators, interactive filtering.
+- **Sales Performance Dashboard** – Regional analysis, team productivity, drill‑down capabilities.
 
-### **⚡ Excel Automation**
-- **[Financial Reporting Automation](#)** - Monthly reporting with Power Query
-- **[Budget vs Actual Analysis](#)** - Automated variance analysis system
-- **[Financial Modeling Template](#)** - Scenario analysis & cash flow forecasting
+> All dashboards are available for download in the [portfolio website](https://ahmedawaad97.github.io/ahmed-awaad2-portfolio/#projects).
 
-*🔗 Demo files available in [portfolio projects section](https://ahmedawaad97.github.io/ahmed-awaad2-portfolio/#projects)*
+---
 
 ## 🛠️ Technical Stack
-
-<div align="center">
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
@@ -122,30 +116,14 @@
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-222222?style=for-the-badge&logo=githubpages&logoColor=white)
 
-</div>
+---
 
 ## 📬 Contact
 
-<div align="center">
-
-### **Get In Touch**
-
-📧 **Email:** [ahmedawwad01097903539@gmail.com](mailto:ahmedawwad01097903539@gmail.com)  
-💼 **LinkedIn:** [Ahmed M. Awaad](https://www.linkedin.com/in/ahmed-m-awaad-59103b167/)  
-🌐 **Portfolio:** [Live Website](https://ahmedawaad97.github.io/ahmed-awaad2-portfolio/)  
-📞 **Phone:** [+966 56 923 7463](tel:+966569237463)
-
-</div>
-
-## 🔗 Quick Navigation
-
-<div align="center">
-
-[![View Projects](https://img.shields.io/badge/📊_Projects-10B981?style=for-the-badge&logo=github&logoColor=white)](#-featured-projects)
-[![Download CV](https://img.shields.io/badge/📄_CV-8B5CF6?style=for-the-badge&logo=adobeacrobatreader&logoColor=white)](./Ahmed-Mahmoud-Awaad-FlowCV-Resume-20251023_1.pdf)
-[![Contact](https://img.shields.io/badge/✉️_Contact-EC4899?style=for-the-badge&logo=maildotru&logoColor=white)](#-contact)
-
-</div>
+- **Email:** [ahmedawwad01097903539@gmail.com](mailto:ahmedawwad01097903539@gmail.com)
+- **LinkedIn:** [Ahmed M. Awaad](https://www.linkedin.com/in/ahmed-m-awaad-59103b167/)
+- **Portfolio:** [Live Website](https://ahmedawaad97.github.io/ahmed-awaad2-portfolio/)
+- **Phone:** [+966 56 923 7463](tel:+966569237463) | [+20 109 790 3539](tel:+201097903539)
 
 ---
 
@@ -175,12 +153,3 @@ I'm always open to discussing opportunities in accounting, financial analysis, a
 ![Profile Views](https://komarev.com/ghpvc/?username=ahmedawaad97&color=blue&style=flat-square)
 
 </div>
-
-<!-- CSS for interactive badges -->
-<style>
-  .badge:hover {
-    opacity: 0.8;
-    transform: translateY(-2px);
-    transition: all 0.3s ease;
-  }
-</style>
