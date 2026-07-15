@@ -3,14 +3,19 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="description" content="Ahmed Mahmoud Awaad — Senior Accountant & Power BI Data Analyst with 6+ years of experience in retail, FMCG, and ICT sectors. Expertise in ERP (Dynamics 365, AX), ZATCA compliance, BNPL reconciliation, and Power BI. Based in Riyadh, Saudi Arabia." />
+  <meta name="description" content="Ahmed Mahmoud Awaad, DipIFR — Senior Accountant & Power BI Data Analyst | Aspiring Chief Accountant. 6+ years in retail, FMCG, chemical & ICT. ERP (D365, AX), ZATCA/VAT, BNPL reconciliation, Power BI dashboards. Based in Riyadh, KSA." />
   <meta name="author" content="Ahmed Mahmoud Awaad" />
-  <title>Ahmed Awaad | Senior Accountant & Power BI Analyst</title>
+  <title>Ahmed Awaad, DipIFR | Senior Accountant &amp; Power BI Analyst</title>
 
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- AOS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <!-- Font Awesome 6 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 
   <style>
@@ -111,6 +116,15 @@
       -webkit-background-clip: text; background-clip: text; color: transparent;
       margin-bottom: 0.7rem;
     }
+    .hero h1 small {
+      font-size: 1.4rem;
+      font-weight: 600;
+      background: none;
+      -webkit-background-clip: unset;
+      background-clip: unset;
+      color: #94a3b8;
+      display: block;
+    }
     .hero h2 {
       font-size: 1.15rem; font-weight: 500; color: #94a3b8;
       margin-bottom: 1.4rem;
@@ -131,6 +145,11 @@
       display: inline-flex; align-items: center; gap: 0.4rem;
     }
     .badge i { color: #4cc9f0; font-size: 0.7rem; }
+    .badge-dipifr {
+      background: rgba(76,201,240,0.12);
+      border-color: #4cc9f0;
+      color: #4cc9f0;
+    }
     .contact-inline {
       display: flex; gap: 1.4rem; justify-content: center;
       flex-wrap: wrap; font-size: 0.88rem; color: #94a3b8;
@@ -191,7 +210,8 @@
       display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; align-content: start;
     }
     .stat-box {
-      background: #12122a;
+      background: rgba(18, 18, 42, 0.7);
+      backdrop-filter: blur(4px);
       border: 1px solid #1e1e38;
       border-radius: 1rem; padding: 1.2rem;
       text-align: center; transition: border-color 0.2s;
@@ -204,6 +224,26 @@
     }
     .stat-label { font-size: 0.75rem; color: #64748b; margin-top: 0.2rem; }
 
+    /* ---------- HIGHLIGHTS ---------- */
+    .highlights-grid {
+      display: flex; flex-wrap: wrap; gap: 0.8rem 1.2rem;
+      justify-content: center; margin-top: 0.5rem;
+    }
+    .highlight-badge {
+      background: rgba(76,201,240,0.06);
+      border: 1px solid rgba(76,201,240,0.2);
+      backdrop-filter: blur(4px);
+      padding: 0.4rem 1.2rem;
+      border-radius: 40px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: #e8eeff;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .highlight-badge i { color: #4cc9f0; }
+
     /* ---------- SKILLS ---------- */
     .skills-grid {
       display: grid;
@@ -211,7 +251,9 @@
       gap: 1.2rem; margin-top: 0.5rem;
     }
     .skill-card {
-      background: #12122a; border-radius: 1rem; padding: 1.3rem;
+      background: rgba(18, 18, 42, 0.7);
+      backdrop-filter: blur(4px);
+      border-radius: 1rem; padding: 1.3rem;
       text-align: center; transition: all 0.3s ease;
       border: 1px solid #1e1e38;
     }
@@ -226,13 +268,14 @@
 
     /* ---------- EXPERIENCE ---------- */
     .exp-card {
-      background: #0e0e22;
+      background: rgba(14, 14, 34, 0.8);
+      backdrop-filter: blur(4px);
       border-radius: 1rem; padding: 1.5rem 1.6rem;
       margin-bottom: 1.4rem;
       border-left: 3px solid #4cc9f0;
-      transition: box-shadow 0.25s;
+      transition: box-shadow 0.25s, transform 0.2s;
     }
-    .exp-card:hover { box-shadow: 0 6px 32px -8px rgba(76,201,240,0.12); }
+    .exp-card:hover { box-shadow: 0 6px 32px -8px rgba(76,201,240,0.15); transform: translateX(4px); }
     .exp-header {
       display: flex; flex-wrap: wrap;
       justify-content: space-between; align-items: baseline;
@@ -255,9 +298,10 @@
     .exp-list li { line-height: 1.6; }
     .highlight { color: #e8eeff; font-weight: 500; }
 
-    /* ---------- EDUCATION ---------- */
-    .edu-card {
-      background: #0e0e22;
+    /* ---------- EDUCATION & LANGUAGES ---------- */
+    .edu-card, .lang-card {
+      background: rgba(14, 14, 34, 0.8);
+      backdrop-filter: blur(4px);
       border-radius: 1rem; padding: 1.5rem 1.6rem;
       border-left: 3px solid #b089ff;
       display: flex; align-items: flex-start; gap: 1.2rem;
@@ -266,29 +310,90 @@
     .edu-card h3 { font-size: 1.05rem; font-weight: 700; color: #e8eeff; margin-bottom: 0.3rem; }
     .edu-card p { font-size: 0.88rem; color: #64748b; }
 
-    /* ---------- CERTIFICATIONS ---------- */
+    .lang-items {
+      display: flex; flex-wrap: wrap; gap: 1rem 2rem;
+    }
+    .lang-item {
+      display: flex; align-items: center; gap: 0.6rem;
+      color: #cbd5e6;
+    }
+    .lang-item i { color: #4cc9f0; width: 1.2rem; }
+
+    /* ---------- CERTIFICATIONS (CARDS) ---------- */
     .certs-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
-      gap: 1rem; margin-top: 0.5rem;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 0.5rem;
     }
-    .cert-item {
-      background: #0e0e22; border-radius: 0.75rem;
-      padding: 0.9rem 1.1rem; font-size: 0.88rem; color: #b9c3dc;
-      display: flex; align-items: center; gap: 0.75rem;
-      border: 1px solid #1e1e38; transition: border-color 0.2s;
+    .cert-card {
+      background: rgba(14, 14, 34, 0.8);
+      backdrop-filter: blur(4px);
+      border-radius: 1.2rem;
+      padding: 1.5rem;
+      border: 1px solid #1e1e38;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
     }
-    .cert-item:hover { border-color: rgba(76,201,240,0.3); }
-    .cert-item i { color: #4cc9f0; font-size: 1rem; flex-shrink: 0; }
+    .cert-card:hover {
+      transform: translateY(-4px);
+      border-color: #4cc9f0;
+      box-shadow: 0 12px 28px -10px rgba(76,201,240,0.15);
+    }
+    .cert-card .cert-icon {
+      font-size: 2.2rem;
+      color: #4cc9f0;
+      margin-bottom: 0.5rem;
+    }
+    .cert-card h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #e8eeff;
+      margin-bottom: 0.2rem;
+    }
+    .cert-card .issuer {
+      color: #94a3b8;
+      font-size: 0.85rem;
+      margin-bottom: 0.4rem;
+    }
+    .cert-card .desc {
+      font-size: 0.88rem;
+      color: #b9c3dc;
+      flex: 1;
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+    .btn-download {
+      background: rgba(76,201,240,0.12);
+      color: #4cc9f0;
+      border: 1px solid rgba(76,201,240,0.3);
+      padding: 0.45rem 1rem;
+      border-radius: 2rem;
+      font-weight: 600;
+      font-size: 0.82rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      width: fit-content;
+      transition: all 0.2s;
+    }
+    .btn-download:hover {
+      background: rgba(76,201,240,0.2);
+      text-decoration: none;
+      color: #4cc9f0;
+    }
 
     /* ---------- PROJECTS ---------- */
     .projects-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 1.4rem; margin-top: 0.5rem;
     }
     .project-card {
-      background: #0e0e22; border-radius: 1rem; padding: 1.5rem;
+      background: rgba(14, 14, 34, 0.8);
+      backdrop-filter: blur(4px);
+      border-radius: 1rem; padding: 1.5rem;
       border: 1px solid #1e1e38;
       display: flex; flex-direction: column;
       transition: all 0.3s;
@@ -303,19 +408,12 @@
       color: #7dd3f7; padding: 0.2rem 0.65rem;
       border-radius: 20px; font-size: 0.7rem; font-weight: 500;
     }
-    .btn-download {
-      background: rgba(76,201,240,0.12); color: #4cc9f0;
-      border: 1px solid rgba(76,201,240,0.3);
-      padding: 0.45rem 1rem; border-radius: 2rem;
-      font-weight: 600; font-size: 0.82rem;
-      display: inline-flex; align-items: center; gap: 0.5rem;
-      width: fit-content; transition: all 0.2s; margin-top: 0.6rem;
-    }
-    .btn-download:hover { background: rgba(76,201,240,0.2); text-decoration: none; }
 
     /* ---------- RESUME ---------- */
     .resume-box {
-      background: #0e0e22; border-radius: 1rem; padding: 2rem;
+      background: rgba(14, 14, 34, 0.8);
+      backdrop-filter: blur(4px);
+      border-radius: 1rem; padding: 2rem;
       border: 1px solid #1e1e38;
       display: flex; align-items: center; justify-content: space-between;
       flex-wrap: wrap; gap: 1.5rem;
@@ -324,13 +422,15 @@
 
     /* ---------- CONTACT ---------- */
     .contact-form {
-      background: #0e0e22; padding: 2rem; border-radius: 1.2rem;
+      background: rgba(14, 14, 34, 0.8);
+      backdrop-filter: blur(4px);
+      padding: 2rem; border-radius: 1.2rem;
       border: 1px solid #1e1e38;
     }
     .form-group { margin-bottom: 1.1rem; }
     input, textarea {
       width: 100%; padding: 0.85rem 1rem;
-      background: #12122a;
+      background: rgba(18, 18, 42, 0.7);
       border: 1px solid #2a2a44;
       border-radius: 0.75rem; color: #e8eeff;
       font-family: inherit; font-size: 0.9rem; transition: 0.2s;
@@ -354,7 +454,8 @@
       margin-top: 1.8rem; flex-wrap: wrap;
     }
     .social-btn {
-      background: #12122a; padding: 0.6rem 1.3rem;
+      background: rgba(18, 18, 42, 0.7);
+      padding: 0.6rem 1.3rem;
       border-radius: 2rem; color: #cbd5e6;
       border: 1px solid #1e1e38;
       transition: 0.2s; display: inline-flex; align-items: center; gap: 0.6rem;
@@ -416,6 +517,7 @@
       <ul class="nav-links" id="navLinks">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
+        <li><a href="#highlights">Highlights</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#projects">Projects</a></li>
@@ -431,30 +533,36 @@
     <!-- ===== HERO ===== -->
     <header id="home" data-aos="fade-up">
       <div class="hero">
-        <div class="hero-eyebrow">Open to Senior & Chief Accountant Roles · Riyadh, KSA</div>
-        <h1>Ahmed Mahmoud Awaad</h1>
+        <div class="hero-eyebrow"><i class="fas fa-certificate"></i> DipIFR (ACCA) · Aspiring Chief Accountant</div>
+        <h1>
+          Ahmed Mahmoud Awaad
+          <small>DipIFR</small>
+        </h1>
         <h2>Senior Accountant &amp; Power BI Data Analyst</h2>
         <p class="hero-summary">
-          6+ years of progressive experience across retail, FMCG, chemical, and ICT sectors in Egypt and Saudi Arabia.
-          Currently leading the commissions &amp; bank reconciliation section at <strong style="color:#e8eeff;">Deraah Trading Co.</strong>
-          (Perfumes &amp; Cosmetics). Expert in Dynamics 365, ZATCA compliance, BNPL reconciliation, and building
-          Power BI dashboards that drive faster, evidence-based decisions.
+          <strong>6+ years</strong> of progressive experience across retail, FMCG, chemical, and ICT sectors in Egypt and Saudi Arabia.
+          Currently leading the <strong>Commissions Section</strong> at <strong style="color:#e8eeff;">Deraah Trading Co.</strong>
+          (Perfumes &amp; Cosmetics). Expert in ERP (Dynamics 365 &amp; AX), ZATCA/VAT compliance, BNPL reconciliation,
+          and Power BI dashboards. Passionate about automation, fraud detection, and financial process optimisation.
         </p>
         <div class="hero-badges">
+          <span class="badge badge-dipifr"><i class="fas fa-certificate"></i> DipIFR (ACCA)</span>
           <span class="badge"><i class="fas fa-circle-check"></i> Dynamics 365 &amp; AX</span>
-          <span class="badge"><i class="fas fa-circle-check"></i> ZATCA / VAT Compliance</span>
-          <span class="badge"><i class="fas fa-circle-check"></i> BNPL Reconciliation</span>
+          <span class="badge"><i class="fas fa-circle-check"></i> ZATCA / VAT</span>
+          <span class="badge"><i class="fas fa-circle-check"></i> BNPL (Tamara &amp; Tabby)</span>
           <span class="badge"><i class="fas fa-circle-check"></i> Power BI &amp; Power Query</span>
           <span class="badge"><i class="fas fa-circle-check"></i> Fraud Detection</span>
-          <span class="badge"><i class="fas fa-circle-check"></i> IFRS (Ongoing)</span>
+          <span class="badge"><i class="fas fa-circle-check"></i> IFRS</span>
         </div>
         <div class="contact-inline">
-          <span><i class="fas fa-envelope"></i><a href="mailto:Ahmedawwad01097903539@gmail.com">Ahmedawwad01097903539@gmail.com</a></span>
+          <span><i class="fas fa-envelope"></i><a href="mailto:ahmed.m.awaad1@outlook.com">ahmed.m.awaad1@outlook.com</a></span>
           <span><i class="fas fa-phone-alt"></i><a href="tel:+966569237463">+966 56 923 7463</a></span>
-          <span><i class="fab fa-linkedin"></i><a href="https://linkedin.com/in/ahmed-m-awaad-59103b167/" target="_blank" rel="noopener">LinkedIn Profile</a></span>
+          <span><i class="fab fa-linkedin"></i><a href="https://linkedin.com/in/ahmed-m-awaad-59103b167/" target="_blank" rel="noopener">LinkedIn</a></span>
+          <span><i class="fas fa-globe"></i><a href="https://ahmedawaad97.github.io/ahmed-awaad2-portfolio/" target="_blank" rel="noopener">Portfolio</a></span>
         </div>
         <div class="hero-cta">
-          <a href="./Ahmed-Mahmoud-Awaad-FlowCV-Resume.pdf" download class="btn-primary"><i class="fas fa-file-pdf"></i> Download CV</a>
+          <a href="./assets/files/Ahmed_Mahmoud_Awaad_DipIFR_CV_2026.pdf" download class="btn-primary"><i class="fas fa-file-pdf"></i> Download CV</a>
+          <a href="#projects" class="btn-outline"><i class="fas fa-chart-bar"></i> View Projects</a>
           <a href="#contact" class="btn-outline"><i class="fas fa-paper-plane"></i> Get in Touch</a>
         </div>
       </div>
@@ -469,15 +577,10 @@
       <div class="about-grid">
         <div class="about-text">
           <p>
-            I'm a Senior Accountant based in Riyadh with a track record of combining rigorous financial controls with modern data tools.
-            At Deraah Trading Co., I manage end-to-end bank operations, commissions calculations, and BNPL reconciliation across a large
-            multi-branch retail network — while building the Power BI dashboards that surface the insights behind the numbers.
+            I'm a <strong>Senior Accountant, DipIFR</strong>, based in Riyadh with a proven track record of combining rigorous financial controls with modern data tools. At Deraah Trading Co., I lead the Commissions Section while also managing banking operations and collections across a large multi‑branch retail network. I build Power BI dashboards that surface insights, detect fraud, and save hours of manual effort.
           </p>
           <p>
-            My background spans retail (perfumes &amp; cosmetics), FMCG, chemical manufacturing, and ICT — giving me a broad
-            understanding of how different business models drive different accounting challenges.
-            I'm currently pursuing IFRS certification and aspire to grow into a Chief Accountant role within a large-scale
-            retail organization in Saudi Arabia.
+            My experience spans retail (perfumes &amp; cosmetics), FMCG, chemical manufacturing, and ICT — giving me a broad understanding of different business models and their accounting challenges. I am passionate about <strong>process automation, strengthening internal controls, and delivering accurate, compliant, data‑driven financial insights</strong>. I hold the <strong>Diploma in International Financial Reporting (DipIFR) from ACCA</strong> and aspire to grow into a <strong>Chief Accountant</strong> role within a large‑scale retail organisation in Saudi Arabia.
           </p>
         </div>
         <div class="about-stats">
@@ -491,60 +594,80 @@
 
     <hr class="section-divider">
 
+    <!-- ===== PROFESSIONAL HIGHLIGHTS ===== -->
+    <section id="highlights" data-aos="fade-up">
+      <h2 class="section-title">Professional Highlights</h2>
+      <p class="section-sub">Key achievements and areas of expertise</p>
+      <div class="highlights-grid">
+        <span class="highlight-badge"><i class="fas fa-calendar-alt"></i> 6+ Years Experience</span>
+        <span class="highlight-badge"><i class="fas fa-certificate"></i> DipIFR (ACCA)</span>
+        <span class="highlight-badge"><i class="fas fa-chart-pie"></i> Power BI Developer</span>
+        <span class="highlight-badge"><i class="fas fa-cubes"></i> ERP Expert (D365, AX)</span>
+        <span class="highlight-badge"><i class="fas fa-store"></i> Retail Industry</span>
+        <span class="highlight-badge"><i class="fas fa-file-invoice"></i> Financial Reporting (IFRS)</span>
+        <span class="highlight-badge"><i class="fas fa-file-invoice"></i> ZATCA / VAT Compliance</span>
+        <span class="highlight-badge"><i class="fas fa-university"></i> Banking &amp; Collections</span>
+        <span class="highlight-badge"><i class="fas fa-cogs"></i> Automation &amp; Commissions</span>
+        <span class="highlight-badge"><i class="fas fa-shield-halved"></i> Fraud Detection</span>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
     <!-- ===== SKILLS ===== -->
     <section id="skills" data-aos="fade-up">
       <h2 class="section-title">Core Competencies</h2>
       <p class="section-sub">Technical expertise paired with operational depth</p>
       <div class="skills-grid">
         <div class="skill-card">
-          <i class="fas fa-chart-bar"></i>
-          <h3>Power BI &amp; DAX</h3>
-          <p>Dashboards, data modeling, drill-through, time intelligence</p>
-        </div>
-        <div class="skill-card">
-          <i class="fas fa-file-excel"></i>
-          <h3>Advanced Excel</h3>
-          <p>Power Query, Pivot Tables, automation, complex formulas</p>
-        </div>
-        <div class="skill-card">
-          <i class="fas fa-database"></i>
+          <i class="fas fa-cubes"></i>
           <h3>ERP Systems</h3>
           <p>Dynamics 365, Dynamics AX, Double Click</p>
         </div>
         <div class="skill-card">
+          <i class="fas fa-chart-bar"></i>
+          <h3>Power BI &amp; DAX</h3>
+          <p>Dashboards, data modeling, drill‑through</p>
+        </div>
+        <div class="skill-card">
+          <i class="fas fa-file-excel"></i>
+          <h3>Advanced Excel</h3>
+          <p>Power Query, Pivot Tables, automation</p>
+        </div>
+        <div class="skill-card">
           <i class="fas fa-landmark"></i>
           <h3>ZATCA &amp; VAT</h3>
-          <p>E-invoicing compliance, VAT returns, regulatory reporting</p>
+          <p>E‑invoicing compliance, VAT returns</p>
         </div>
         <div class="skill-card">
           <i class="fas fa-credit-card"></i>
           <h3>BNPL Reconciliation</h3>
-          <p>Tamara &amp; Tabby installment matching &amp; journal entries</p>
+          <p>Tamara &amp; Tabby installment matching</p>
         </div>
         <div class="skill-card">
           <i class="fas fa-shield-halved"></i>
           <h3>Fraud Detection</h3>
-          <p>POS &amp; Visa collection analytics, anomaly flagging</p>
+          <p>POS &amp; Visa collection analytics</p>
         </div>
         <div class="skill-card">
           <i class="fas fa-rotate"></i>
           <h3>Bank Reconciliation</h3>
-          <p>Daily &amp; monthly, multi-branch deposit matching</p>
+          <p>Daily &amp; monthly, multi‑branch</p>
         </div>
         <div class="skill-card">
           <i class="fas fa-file-invoice-dollar"></i>
           <h3>AR / AP Management</h3>
-          <p>End-to-end cycle, supplier &amp; customer coordination</p>
+          <p>End‑to‑end cycle, supplier &amp; customer</p>
         </div>
         <div class="skill-card">
           <i class="fas fa-book-open"></i>
           <h3>Financial Reporting</h3>
-          <p>Month-end &amp; year-end close, P&amp;L, balance sheet</p>
+          <p>Month‑end &amp; year‑end close, P&amp;L, BS</p>
         </div>
         <div class="skill-card">
           <i class="fas fa-gears"></i>
           <h3>Process Improvement</h3>
-          <p>Automation, internal controls, workflow optimization</p>
+          <p>Automation, internal controls, workflows</p>
         </div>
       </div>
     </section>
@@ -563,14 +686,14 @@
           <span class="exp-date">Mar 2025 – Present</span>
         </div>
         <div class="exp-company">Deraah Trading Company — Riyadh, Saudi Arabia</div>
-        <div class="exp-sector">Perfumes, Cosmetics &amp; Accessories · Multi-Branch Retail</div>
+        <div class="exp-sector">Perfumes, Cosmetics &amp; Accessories · Multi‑Branch Retail</div>
         <ul class="exp-list">
-          <li>Manage bank operations end-to-end: daily &amp; monthly reconciliations, store deposit matching, shortage/surplus resolution across branches.</li>
-          <li><span class="highlight">Built Power BI dashboard for shortage &amp; surplus analysis</span>, cutting manual reporting time by <span class="highlight">40%</span>.</li>
-          <li>Designed analytical reports that <span class="highlight">detected fraud in POS &amp; Visa collections</span> across showrooms.</li>
-          <li>Lead commissions section and automated calculations, reducing processing effort by <span class="highlight">30%</span>.</li>
-          <li>Reconcile BNPL installment reports from <span class="highlight">Tamara &amp; Tabby</span>; record accurate journal entries in Dynamics 365.</li>
-          <li>Manage AR/AP cycle; collaborate with procurement and operations for financial accuracy.</li>
+          <li>Managed the bank section end‑to‑end, including daily/monthly reconciliations, Sales Store deposit matching, and shortage/surplus adjustments across all branches.</li>
+          <li><span class="highlight">Developed a Power BI dashboard for shortage &amp; surplus analysis</span> — reduced reporting time and manual effort by <span class="highlight">40%</span>, significantly accelerating month‑end task completion across the finance team.</li>
+          <li>Designed analytical reports that <span class="highlight">successfully detected fraud</span> by sales representatives in Sales Store POS/card collections (Visa network), enabling corrective action and strengthening internal controls.</li>
+          <li>Took full ownership of the commissions section; restructured workflows and automated calculations — reducing processing time and effort by approximately <span class="highlight">30%</span>.</li>
+          <li>Reconcile and validate installment reports from BNPL platforms (<span class="highlight">Tamara &amp; Tabby</span>), ensuring accurate revenue recognition and settlement matching.</li>
+          <li>Record and review all journal entries; manage AR/AP via Dynamics 365, collaborate with procurement and operations to ensure financial accuracy and compliance.</li>
         </ul>
       </div>
 
@@ -583,71 +706,49 @@
         <div class="exp-company">Integrated Technics — Cairo, Egypt</div>
         <div class="exp-sector">System Integrator · Security &amp; ICT</div>
         <ul class="exp-list">
-          <li>Managed accounts payable and established a structured accounting database for the ERP system.</li>
-          <li>Supported external audits, tax preparation, and regulatory financial reporting.</li>
-          <li>Oversaw GL, month-end and year-end closing; prepared balance sheets and income statements for shareholders.</li>
-          <li>Coordinated with suppliers, customers, logistics, and pre-sales teams on financial matters.</li>
-        </ul>
-      </div>
-
-      <!-- Tawreda Supervisor -->
-      <div class="exp-card" data-aos="fade-up" data-aos-delay="100">
-        <div class="exp-header">
-          <span class="exp-title">Account Supervisor (Part-Time)</span>
-          <span class="exp-date">Jun 2021 – Dec 2022</span>
-        </div>
-        <div class="exp-company">Tawreda.com — Cairo, Egypt</div>
-        <div class="exp-sector">HORECA Food Supply</div>
-        <ul class="exp-list">
-          <li>Prepared financial statements (Income Statement, Statement of Financial Position).</li>
-          <li>Recorded adjusting entries, payroll entries, and prepared VAT returns with external auditors.</li>
-          <li>Developed management reports (sales, profitability) to support executive decision-making.</li>
-          <li>Supervised the accounting team to ensure timely month-end close and compliance.</li>
+          <li>Managed accounts payable and established a structured database for the accounting program.</li>
+          <li>Oversaw project follow‑ups with suppliers, customers, logistics coordinators, and pre‑sales teams.</li>
+          <li>Assisted with audits, tax preparations, and preparation of financial reports for regulatory bodies and shareholders.</li>
+          <li>Managed the general ledger and supported month‑end and year‑end closing processes.</li>
+          <li>Collaborated with the accounting manager to interpret complex financial data for stakeholders.</li>
         </ul>
       </div>
 
       <!-- Tawreda Senior -->
-      <div class="exp-card" data-aos="fade-up" data-aos-delay="120">
+      <div class="exp-card" data-aos="fade-up" data-aos-delay="110">
         <div class="exp-header">
           <span class="exp-title">Senior Accountant</span>
-          <span class="exp-date">Feb 2020 – Jun 2021</span>
+          <span class="exp-date">Jan 2021 – Dec 2022</span>
         </div>
         <div class="exp-company">Tawreda.com — Cairo, Egypt</div>
         <div class="exp-sector">HORECA Food Supply</div>
         <ul class="exp-list">
-          <li>Maintained daily accounting operations and month-end closing procedures.</li>
-          <li>Controlled AR/AP, reviewed expenses, reconciled transactions, and managed cash flow.</li>
-          <li>Prepared financial performance reports and maintained accurate financial databases.</li>
+          <li>Prepared financial statements (Income Statement &amp; Statement of Financial Position) in compliance with accounting standards.</li>
+          <li>Prepared VAT returns in coordination with external auditors and tax consultants.</li>
+          <li>Developed and presented monthly sales and profitability management reports to support decision‑making.</li>
+          <li>Supervised the accounting team to ensure timely and accurate month‑end closing.</li>
+          <li>Maintained daily accounts and managed month‑end closing, including correcting journal entries.</li>
+          <li>Oversaw AR/AP with timely customer follow‑up; reconciled transactions and maintained a daily Cash Flow Sheet.</li>
         </ul>
       </div>
 
-      <!-- Cattelya -->
+      <!-- Tawreda Junior -->
       <div class="exp-card" data-aos="fade-up" data-aos-delay="140">
         <div class="exp-header">
-          <span class="exp-title">General Accountant</span>
-          <span class="exp-date">Jul 2019 – Feb 2020</span>
+          <span class="exp-title">Junior Accountant</span>
+          <span class="exp-date">Jul 2019 – Jan 2021</span>
         </div>
-        <div class="exp-company">Cattelya For Chemical Co — Alexandria, Egypt</div>
-        <div class="exp-sector">Chemical Manufacturing</div>
+        <div class="exp-company">Tawreda.com — Cairo, Egypt</div>
+        <div class="exp-sector">HORECA Food Supply</div>
         <ul class="exp-list">
-          <li>Prepared journal entries, managed fixed assets register, and calculated depreciation.</li>
-          <li>Handled bank reconciliation, online banking, daily cash balances, and payroll accruals.</li>
+          <li>Prepared and recorded journal entries, assisted departments with expense reviews.</li>
+          <li>Maintained a fixed assets register, calculated depreciation, and managed online banking transactions.</li>
+          <li>Monitored daily cash balances and assisted with payroll accruals.</li>
         </ul>
       </div>
 
-      <!-- Elmotaheda -->
-      <div class="exp-card" data-aos="fade-up" data-aos-delay="160">
-        <div class="exp-header">
-          <span class="exp-title">Accountant</span>
-          <span class="exp-date">Jul 2019 – Feb 2020</span>
-        </div>
-        <div class="exp-company">Elmotaheda for Trade and Finance — Tanta, Egypt</div>
-        <div class="exp-sector">Trade &amp; Finance</div>
-        <ul class="exp-list">
-          <li>Managed cash operations, journal entries, invoice verification, and payment distribution.</li>
-          <li>Controlled expenses by matching invoices and processing supplier payments.</li>
-        </ul>
-      </div>
+      <!-- Cattelya (not in CV but included? CV only shows Tawreda and previous? Actually CV shows only Deraah, Integrated Technics, Tawreda. Cattelya and Elmotaheda are not in this CV. So we remove them. -->
+      <!-- The CV does NOT include Cattelya or Elmotaheda. So we omit them. -->
     </section>
 
     <hr class="section-divider">
@@ -661,7 +762,7 @@
         <div class="project-card">
           <div class="project-icon"><i class="fas fa-store"></i></div>
           <h3>Shortage &amp; Surplus Dashboard</h3>
-          <p>Multi-branch retail analysis for Deraah. Automated daily cash variance tracking, reduced manual reporting by 40%, and surfaced fraud signals in POS collections.</p>
+          <p>Multi‑branch retail analysis for Deraah. Automated daily cash variance tracking, reduced manual reporting by 40%, and surfaced fraud signals in POS collections.</p>
           <div class="project-tags">
             <span class="tag">Power BI</span><span class="tag">Retail</span><span class="tag">Fraud Detection</span><span class="tag">DAX</span>
           </div>
@@ -671,7 +772,7 @@
         <div class="project-card">
           <div class="project-icon"><i class="fas fa-file-invoice-dollar"></i></div>
           <h3>Income Statement Report</h3>
-          <p>Interactive P&amp;L with revenue breakdown, gross margin analysis, and period-over-period comparisons using time intelligence.</p>
+          <p>Interactive P&amp;L with revenue breakdown, gross margin analysis, and period‑over‑period comparisons using time intelligence.</p>
           <div class="project-tags">
             <span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">Finance</span>
           </div>
@@ -681,7 +782,7 @@
         <div class="project-card">
           <div class="project-icon"><i class="fas fa-chart-line"></i></div>
           <h3>Sales &amp; Profit Dashboard</h3>
-          <p>Interactive filtering, profit margins by product category, and business health KPIs with drill-through by period and segment.</p>
+          <p>Interactive filtering, profit margins by product category, and business health KPIs with drill‑through by period and segment.</p>
           <div class="project-tags">
             <span class="tag">Profitability</span><span class="tag">Dashboard</span><span class="tag">Power BI</span>
           </div>
@@ -691,9 +792,9 @@
         <div class="project-card">
           <div class="project-icon"><i class="fas fa-chart-bar"></i></div>
           <h3>Sales Performance Dashboard</h3>
-          <p>Regional team productivity analysis with drill-down capabilities, ranking visuals, and YoY performance indicators.</p>
+          <p>Regional team productivity analysis with drill‑down capabilities, ranking visuals, and YoY performance indicators.</p>
           <div class="project-tags">
-            <span class="tag">Performance</span><span class="tag">Drill-through</span><span class="tag">Regional</span>
+            <span class="tag">Performance</span><span class="tag">Drill‑through</span><span class="tag">Regional</span>
           </div>
           <a href="https://raw.githubusercontent.com/AhmedAwaad97/ahmed-awaad2-portfolio/main/Sales%20Performance%20Dashboard.pbix" download class="btn-download"><i class="fas fa-download"></i> Download .pbix</a>
         </div>
@@ -713,20 +814,39 @@
 
     <hr class="section-divider">
 
-    <!-- ===== CERTIFICATIONS ===== -->
+    <!-- ===== CERTIFICATIONS (NEW CARDS) ===== -->
     <section id="certifications" data-aos="fade-up">
       <h2 class="section-title">Certifications &amp; Professional Development</h2>
-      <p class="section-sub">Continuously upgrading skills in finance, data, and international standards</p>
+      <p class="section-sub">Globally recognised qualifications and continuous learning</p>
       <div class="certs-grid">
-        <div class="cert-item"><i class="fas fa-graduation-cap"></i> IFRS Certification — In Progress (2026)</div>
-        <div class="cert-item"><i class="fas fa-chart-bar"></i> Data Analysis Diploma — Excel &amp; Power BI</div>
-        <div class="cert-item"><i class="fas fa-file-invoice"></i> Qualified Accountant Diploma (QAD) — EAAC (Feb 2020)</div>
-        <div class="cert-item"><i class="fas fa-chart-pie"></i> Professional Financial Accountant (PFA) Workshop (Mar 2019)</div>
-        <div class="cert-item"><i class="fas fa-table"></i> Commercial Excel — EAAC, Egypt (Dec 2020)</div>
-        <div class="cert-item"><i class="fas fa-chart-line"></i> Excel Basics for Data Analysis — Coursera (Jan 2022)</div>
-        <div class="cert-item"><i class="fas fa-laptop"></i> Microsoft Office Specialist Master (Feb 2018)</div>
-        <div class="cert-item"><i class="fas fa-building-columns"></i> Financial Services &amp; Banking Training Program</div>
-        <div class="cert-item"><i class="fas fa-bullhorn"></i> Strategic Marketing for Financial Services Program</div>
+
+        <!-- DipIFR ACCA -->
+        <div class="cert-card">
+          <div class="cert-icon"><i class="fas fa-graduation-cap"></i></div>
+          <h3>Diploma in International Financial Reporting (DipIFR)</h3>
+          <div class="issuer">ACCA</div>
+          <div class="desc">Globally recognised diploma covering International Financial Reporting Standards (IFRS).</div>
+          <a href="./assets/files/Certificate%20DipIFR%20Ahmed%20Awaad%20ACCA.pdf" download class="btn-download"><i class="fas fa-download"></i> Download Certificate</a>
+        </div>
+
+        <!-- DipIFR Preparation -->
+        <div class="cert-card">
+          <div class="cert-icon"><i class="fas fa-certificate"></i></div>
+          <h3>DipIFR Preparation Certificate</h3>
+          <div class="issuer">Efham IFRS</div>
+          <div class="desc">Successfully completed professional DipIFR preparation program.</div>
+          <a href="./assets/files/Cerificate%20DipIFR%20Ahmed%20Awaad%20Efham%20IFRS.pdf" download class="btn-download"><i class="fas fa-download"></i> Download Certificate</a>
+        </div>
+
+        <!-- Updated CV -->
+        <div class="cert-card" id="resume">
+          <div class="cert-icon"><i class="fas fa-file-alt"></i></div>
+          <h3>Professional CV</h3>
+          <div class="issuer">Ahmed Mahmoud Awaad, DipIFR</div>
+          <div class="desc">Latest CV including all experience, DipIFR qualification, and updated achievements.</div>
+          <a href="./assets/files/Ahmed_Mahmoud_Awaad_DipIFR_CV_2026.pdf" download class="btn-download"><i class="fas fa-download"></i> Download CV</a>
+        </div>
+
       </div>
     </section>
 
@@ -747,13 +867,27 @@
 
     <hr class="section-divider">
 
-    <!-- ===== RESUME ===== -->
+    <!-- ===== LANGUAGES ===== -->
+    <section id="languages" data-aos="fade-up">
+      <h2 class="section-title">Languages</h2>
+      <p class="section-sub">Communication proficiency</p>
+      <div class="edu-card lang-card">
+        <div class="lang-items">
+          <span class="lang-item"><i class="fas fa-language"></i> <strong>Arabic</strong> — Native</span>
+          <span class="lang-item"><i class="fas fa-language"></i> <strong>English</strong> — Professional Working Proficiency</span>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- ===== RESUME (duplicate? we already have the CV in certifications, but we can keep a separate resume section) -->
     <section id="resume" data-aos="fade-up">
       <h2 class="section-title">Resume</h2>
       <p class="section-sub">Full CV with complete work history and achievements</p>
       <div class="resume-box">
         <p>Download my detailed CV in PDF format — covering all experience, skills, certifications, and key achievements across 6+ years in finance and data analysis.</p>
-        <a href="./Ahmed-Mahmoud-Awaad-FlowCV-Resume.pdf" download class="btn-primary"><i class="fas fa-file-pdf"></i> Download CV (PDF)</a>
+        <a href="./assets/files/Ahmed_Mahmoud_Awaad_DipIFR_CV_2026.pdf" download class="btn-primary"><i class="fas fa-file-pdf"></i> Download CV (PDF)</a>
       </div>
     </section>
 
@@ -782,8 +916,9 @@
         <div class="social-links">
           <a href="https://www.linkedin.com/in/ahmed-m-awaad-59103b167/" target="_blank" rel="noopener" class="social-btn"><i class="fab fa-linkedin"></i> LinkedIn</a>
           <a href="https://github.com/AhmedAwaad97/ahmed-awaad2-portfolio" target="_blank" rel="noopener" class="social-btn"><i class="fab fa-github"></i> GitHub</a>
-          <a href="mailto:Ahmedawwad01097903539@gmail.com" class="social-btn"><i class="fas fa-envelope"></i> Email</a>
+          <a href="mailto:ahmed.m.awaad1@outlook.com" class="social-btn"><i class="fas fa-envelope"></i> Email</a>
           <a href="tel:+966569237463" class="social-btn"><i class="fas fa-phone-alt"></i> +966 56 923 7463</a>
+          <a href="https://ahmedawaad97.github.io/ahmed-awaad2-portfolio/" target="_blank" rel="noopener" class="social-btn"><i class="fas fa-globe"></i> Portfolio</a>
         </div>
       </div>
     </section>
@@ -791,7 +926,7 @@
   </main>
 
   <footer>
-    <p>© <span id="currentYear"></span> Ahmed Mahmoud Awaad &nbsp;·&nbsp; Senior Accountant &amp; Power BI Analyst &nbsp;·&nbsp; Riyadh, KSA</p>
+    <p>© <span id="currentYear"></span> Ahmed Mahmoud Awaad, DipIFR &nbsp;·&nbsp; Senior Accountant &amp; Power BI Analyst &nbsp;·&nbsp; Riyadh, KSA</p>
     <p style="margin-top:0.4rem;"><a href="https://github.com/AhmedAwaad97/ahmed-awaad2-portfolio" target="_blank" rel="noopener">View Source on GitHub</a></p>
   </footer>
 
