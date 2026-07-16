@@ -298,6 +298,37 @@
     .exp-list li { line-height: 1.6; }
     .highlight { color: #e8eeff; font-weight: 500; }
 
+    /* Nested role inside a company card */
+    .role-divider {
+      border: none;
+      border-top: 1px solid #1e1e38;
+      margin: 1.2rem 0;
+    }
+    .role-header {
+      display: flex; flex-wrap: wrap;
+      justify-content: space-between; align-items: baseline;
+      margin: 0.8rem 0 0.3rem 0;
+    }
+    .role-title {
+      font-weight: 600;
+      color: #cbd5e6;
+      font-size: 0.95rem;
+    }
+    .role-date {
+      color: #475569;
+      font-size: 0.8rem;
+      font-weight: 400;
+    }
+    .role-list {
+      padding-left: 1.1rem;
+      color: #94a3b8;
+      font-size: 0.88rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      margin-bottom: 0.2rem;
+    }
+
     /* ---------- EDUCATION & LANGUAGES ---------- */
     .edu-card, .lang-card {
       background: rgba(14, 14, 34, 0.8);
@@ -502,6 +533,7 @@
       .exp-header { flex-direction: column; gap: 0.15rem; }
       .resume-box { flex-direction: column; }
       .about-stats { grid-template-columns: repeat(2, 1fr); }
+      .role-header { flex-direction: column; gap: 0.1rem; }
     }
   </style>
 </head>
@@ -714,15 +746,17 @@
         </ul>
       </div>
 
-      <!-- Tawreda Senior -->
+      <!-- Tawreda.com (combined card with two roles) -->
       <div class="exp-card" data-aos="fade-up" data-aos-delay="110">
-        <div class="exp-header">
-          <span class="exp-title">Senior Accountant</span>
-          <span class="exp-date">Jan 2021 – Dec 2022</span>
-        </div>
         <div class="exp-company">Tawreda.com — Cairo, Egypt</div>
         <div class="exp-sector">HORECA Food Supply</div>
-        <ul class="exp-list">
+
+        <!-- Senior Accountant role -->
+        <div class="role-header">
+          <span class="role-title">Senior Accountant</span>
+          <span class="role-date">Jan 2021 – Dec 2022</span>
+        </div>
+        <ul class="role-list">
           <li>Prepared financial statements (Income Statement &amp; Statement of Financial Position) in compliance with accounting standards.</li>
           <li>Prepared VAT returns in coordination with external auditors and tax consultants.</li>
           <li>Developed and presented monthly sales and profitability management reports to support decision‑making.</li>
@@ -730,25 +764,20 @@
           <li>Maintained daily accounts and managed month‑end closing, including correcting journal entries.</li>
           <li>Oversaw AR/AP with timely customer follow‑up; reconciled transactions and maintained a daily Cash Flow Sheet.</li>
         </ul>
-      </div>
 
-      <!-- Tawreda Junior -->
-      <div class="exp-card" data-aos="fade-up" data-aos-delay="140">
-        <div class="exp-header">
-          <span class="exp-title">Junior Accountant</span>
-          <span class="exp-date">Jul 2019 – Jan 2021</span>
+        <hr class="role-divider" />
+
+        <!-- Junior Accountant role -->
+        <div class="role-header">
+          <span class="role-title">Junior Accountant</span>
+          <span class="role-date">Jul 2019 – Jan 2021</span>
         </div>
-        <div class="exp-company">Tawreda.com — Cairo, Egypt</div>
-        <div class="exp-sector">HORECA Food Supply</div>
-        <ul class="exp-list">
+        <ul class="role-list">
           <li>Prepared and recorded journal entries, assisted departments with expense reviews.</li>
           <li>Maintained a fixed assets register, calculated depreciation, and managed online banking transactions.</li>
           <li>Monitored daily cash balances and assisted with payroll accruals.</li>
         </ul>
       </div>
-
-      <!-- Cattelya (not in CV but included? CV only shows Tawreda and previous? Actually CV shows only Deraah, Integrated Technics, Tawreda. Cattelya and Elmotaheda are not in this CV. So we remove them. -->
-      <!-- The CV does NOT include Cattelya or Elmotaheda. So we omit them. -->
     </section>
 
     <hr class="section-divider">
@@ -814,7 +843,7 @@
 
     <hr class="section-divider">
 
-    <!-- ===== CERTIFICATIONS (NEW CARDS) ===== -->
+    <!-- ===== CERTIFICATIONS ===== -->
     <section id="certifications" data-aos="fade-up">
       <h2 class="section-title">Certifications &amp; Professional Development</h2>
       <p class="section-sub">Globally recognised qualifications and continuous learning</p>
@@ -826,7 +855,7 @@
           <h3>Diploma in International Financial Reporting (DipIFR)</h3>
           <div class="issuer">ACCA</div>
           <div class="desc">Globally recognised diploma covering International Financial Reporting Standards (IFRS).</div>
-          <a href="./assets/files/Certificate%20DipIFR%20Ahmed%20Awaad%20ACCA.pdf" download class="btn-download"><i class="fas fa-download"></i> Download Certificate</a>
+          <a href="./assets/files/Ahmed_Awaad_DipIFR_ACCA_Certificate.pdf" download class="btn-download"><i class="fas fa-download"></i> Download Certificate</a>
         </div>
 
         <!-- DipIFR Preparation -->
@@ -835,7 +864,7 @@
           <h3>DipIFR Preparation Certificate</h3>
           <div class="issuer">Efham IFRS</div>
           <div class="desc">Successfully completed professional DipIFR preparation program.</div>
-          <a href="./assets/files/Cerificate%20DipIFR%20Ahmed%20Awaad%20Efham%20IFRS.pdf" download class="btn-download"><i class="fas fa-download"></i> Download Certificate</a>
+          <a href="./assets/files/Ahmed_Awaad_DipIFR_Efham_IFRS_Certificate.pdf" download class="btn-download"><i class="fas fa-download"></i> Download Certificate</a>
         </div>
 
         <!-- Updated CV -->
@@ -881,17 +910,8 @@
 
     <hr class="section-divider">
 
-    <!-- ===== RESUME (duplicate? we already have the CV in certifications, but we can keep a separate resume section) -->
-    <section id="resume" data-aos="fade-up">
-      <h2 class="section-title">Resume</h2>
-      <p class="section-sub">Full CV with complete work history and achievements</p>
-      <div class="resume-box">
-        <p>Download my detailed CV in PDF format — covering all experience, skills, certifications, and key achievements across 6+ years in finance and data analysis.</p>
-        <a href="./assets/files/Ahmed_Mahmoud_Awaad_DipIFR_CV_2026.pdf" download class="btn-primary"><i class="fas fa-file-pdf"></i> Download CV (PDF)</a>
-      </div>
-    </section>
-
-    <hr class="section-divider">
+    <!-- ===== RESUME (duplicate section removed to avoid confusion) ===== -->
+    <!-- (Resume is already in certifications, so we skip a separate resume section) -->
 
     <!-- ===== CONTACT ===== -->
     <section id="contact" data-aos="fade-up">
@@ -899,7 +919,8 @@
       <p class="section-sub">Hiring, collaboration, or a quick question — happy to connect</p>
       <div class="contact-form">
         <form id="contactForm" action="https://formspree.io/f/xrbynngg" method="POST">
-          <input type="hidden" name="_subject" value="Portfolio contact — Ahmed Awaad">
+          <!-- NOTE: Update the Formspree endpoint if you want submissions to go to ahmed.m.awaad1@outlook.com -->
+          <input type="hidden" name="_subject" value="Portfolio contact — Ahmed Awaad (ahmed.m.awaad1@outlook.com)">
           <div class="form-group">
             <input type="text" name="name" placeholder="Your Name" required autocomplete="name">
           </div>
