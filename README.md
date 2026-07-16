@@ -1,155 +1,194 @@
-<h1 align="center">Ahmed Mahmoud Awaad</h1>
-<h3 align="center">Senior Accountant | Financial Reporting Specialist | Power BI & Excel Expert</h3>
+# Ahmed Mahmoud Awaad, DipIFR
 
-<p align="center"><em>Senior Accountant & Financial Data Analyst specializing in Power BI, Excel automation, and financial reporting with 5+ years experience in KSA and Egyptian markets.</em></p>
+<p align="center">
+  <strong>Senior Accountant · Power BI Data Analyst · Aspiring Chief Accountant</strong><br>
+  <em>6+ years of experience across retail, FMCG, chemical, and ICT sectors in Egypt and Saudi Arabia</em>
+</p>
 
-<div align="center">
+<p align="center">
+  <a href="https://www.linkedin.com/in/ahmed-awaad-dipifr-59103b167/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=101010" alt="LinkedIn"></a>
+  <a href="mailto:ahmed.m.awaad1@outlook.com"><img src="https://img.shields.io/badge/Email-Contact-D14836?style=for-the-badge&logo=gmail&logoColor=white&labelColor=101010" alt="Email"></a>
+  <a href="https://ahmedawaad97.github.io/ahmed-awaad2-portfolio/" target="_blank"><img src="https://img.shields.io/badge/Portfolio-View-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white&labelColor=101010" alt="Portfolio"></a>
+  <a href="https://ahmedawaad97.github.io/ahmed-awaad2-portfolio/assets/files/Ahmed_Mahmoud_Awaad_DipIFR_CV_2026.pdf" download><img src="https://img.shields.io/badge/CV-Download-8B5CF6?style=for-the-badge&logo=adobeacrobatreader&logoColor=white&labelColor=101010" alt="Download CV"></a>
+</p>
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=101010)](https://www.linkedin.com/in/ahmed-m-awaad-59103b167/)
-[![Email](https://img.shields.io/badge/Email-Contact-D14836?style=for-the-badge&logo=gmail&logoColor=white&labelColor=101010)](mailto:ahmedawwad01097903539@gmail.com)
-[![Portfolio](https://img.shields.io/badge/Portfolio-View-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white&labelColor=101010)](https://ahmedawaad97.github.io/ahmed-awaad2-portfolio/)
-[![CV](https://img.shields.io/badge/CV-Download-8B5CF6?style=for-the-badge&logo=adobeacrobatreader&logoColor=white&labelColor=101010)](./Ahmed-Mahmoud-Awaad-FlowCV-Resume-20251023_1.pdf)
-
-</div>
-
----
-
-## 👨‍💼 Professional Summary
-
-**Senior Accountant** with **5+ years** of experience transforming financial data into actionable insights through **Power BI**, **Excel automation**, and **ERP systems**. Specialized in financial reporting, data analysis, and process optimization for business growth.
-
-**📍 Location:** Riyadh, Saudi Arabia  
-**📞 Phone:** +966 56 923 7463 | +20 109 790 3539  
-**📧 Email:** ahmedawwad01097903539@gmail.com
+<p align="center">
+  <img src="https://img.shields.io/badge/ACCA_DipIFR-Certified-4CC9F0?style=flat-square&logo=academia&logoColor=white" alt="DipIFR">
+  <img src="https://img.shields.io/badge/Power_BI-Expert-F2C811?style=flat-square&logo=power-bi&logoColor=black" alt="Power BI">
+  <img src="https://img.shields.io/badge/Dynamics_365-Experienced-0078D4?style=flat-square&logo=microsoft-dynamics&logoColor=white" alt="Dynamics 365">
+  <img src="https://img.shields.io/badge/Excel-Advanced-217346?style=flat-square&logo=microsoft-excel&logoColor=white" alt="Excel">
+  <img src="https://img.shields.io/badge/ZATCA_Compliance-Expert-FF6B00?style=flat-square&logo=zoho&logoColor=white" alt="ZATCA">
+</p>
 
 ---
 
-## 💡 Core Competencies
+## 👨‍💼 About Me
 
-### 📈 Accounting & Finance
-- Financial Reporting & Analysis (GAAP/IFRS)
-- Auditing & Internal Controls
-- Budgeting & Forecasting
-- Month-end Close & Reconciliations
+I am a **Senior Accountant** with **6+ years** of progressive experience across **retail, FMCG, chemical, and ICT** sectors in **Egypt and Saudi Arabia**. Currently leading the **Commissions Section** at **Deraah Trading Company** (Perfumes & Cosmetics – Multi‑Branch Retail) in Riyadh, with previous responsibility for banking operations and collections.
 
-### 🛠️ Technical Skills
-- **Power BI** (DAX, Data Modeling, Dashboards)
-- **Advanced Excel** (Power Query, Pivot Tables, Automation)
-- **ERP Systems:** Dynamics 365, Dynamics AX, Double Click
-- **Web Technologies:** HTML5, CSS3, JavaScript, Git, GitHub Pages
+I hold the **Diploma in International Financial Reporting (DipIFR) from ACCA** and combine strong financial accounting expertise with modern data tools. My work focuses on:
+
+- **Financial reporting under IFRS** and compliance with **ZATCA/VAT** regulations.
+- **ERP systems** – Microsoft Dynamics 365, Dynamics AX, and Double Click.
+- **Power BI dashboards** and **Excel automation** (Power Query, Pivot Tables) to transform data into actionable insights.
+- **Process automation**, strengthening internal controls, and **fraud detection**.
+
+I am passionate about driving financial excellence, supporting business growth, and delivering accurate, compliant, and data‑driven financial insights. My ambition is to grow into a **Chief Accountant** role within a large‑scale retail organisation in Saudi Arabia.
 
 ---
 
 ## 💼 Professional Experience
 
-### **Senior Accountant** | Deraah Trading Company  
-**Riyadh, KSA** | 03/2025 – Present  
-*Perfumes, Cosmetics & Accessories Retail*
-- Manage bank operations, daily/monthly reconciliations, showroom deposit matching.
-- Reconcile installment reports from Tamara & Tabby platforms; maintain accurate journal entries.
-- Oversee AR/AP using ERP; collaborate with procurement & operations.
+### **Senior Accountant**  
+**Deraah Trading Company** – Perfumes, Cosmetics & Accessories · Multi‑Branch Retail  
+📍 Riyadh, Saudi Arabia | 🗓️ Mar 2025 – Present
 
-### **Senior Accountant** | Integrated Technics  
-**Cairo, Egypt** | 12/2022 – 03/2025  
-*Security & ICT Solutions*
-- Updated accounts payable, established database for accounting program, managed project follow-ups.
-- Assisted with audits, tax preparations, prepared financial reports for stakeholders.
-- Supported month-end/year-end closings and general ledger activities.
-
-### **Account Supervisor (Part‑time)** | Tawreda.com  
-**Cairo, Egypt** | 12/2022 – 03/2025  
-*HORECA Food Supply*
-- Prepared financial statements, adjusting entries, VAT returns.
-- Developed management reports (sales, profitability) to support decision-making.
-- Supervised accounting team for timely month-end close.
-
-### **Senior Accountant** | Tawreda.com  
-**Cairo, Egypt** | 06/2021 – 12/2022  
-- Maintained daily accounts, month-end close, prepared financial performance reports.
-- Oversaw AR/AP, reviewed expenses, payroll records, reconciled cash flow.
-
-### **General Accountant** | Cattelya For Chemical Co  
-**Alexandria, Egypt** | 07/2019 – 02/2020  
-- Prepared journal entries, bank reconciliation, fixed assets register, payroll accruals.
-
-### **Accountant** | Elmotaheda for Trade and Finance  
-**Tanta, Egypt** | 07/2019 – 02/2020  
-- Cash management, journal entries, invoice verification, payment processing.
+- Managed the bank section end‑to‑end, including daily/monthly reconciliations, Sales Store deposit matching, and shortage/surplus adjustments across all branches.
+- Developed a **Power BI dashboard for shortage & surplus analysis** – reduced reporting time and manual effort by **40%**, accelerating month‑end task completion.
+- Designed analytical reports that **successfully detected fraud** by sales representatives in POS/card collections (Visa network), enabling corrective action and strengthening internal controls.
+- Took full ownership of the commissions section; restructured workflows and automated calculations – reducing processing time and effort by approximately **30%**.
+- Reconcile and validate installment reports from BNPL platforms (**Tamara & Tabby**), ensuring accurate revenue recognition and settlement matching.
+- Record and review journal entries; manage AR/AP via Dynamics 365, collaborate with procurement and operations to ensure financial accuracy and compliance.
 
 ---
 
-## 🎓 Education & Certifications
+### **Senior Accountant**  
+**Integrated Technics** – System Integrator · Security & ICT Solutions  
+📍 Cairo, Egypt | 🗓️ Dec 2022 – Mar 2025
 
-### Education
-- **Bachelor of Commerce, Accounting Department** – Tanta University (2015–2019) | Grade: Good
+- Managed accounts payable and established a structured database for the accounting program.
+- Oversaw project follow‑ups with suppliers, customers, logistics coordinators, and pre‑sales teams.
+- Assisted with audits, tax preparations, and preparation of financial reports for regulatory bodies and shareholders.
+- Managed the general ledger and supported month‑end and year‑end closing processes.
+- Collaborated with the accounting manager to interpret complex financial data for stakeholders.
 
-### Certifications
-- Data Analysis Diploma (Excel & Power BI)
-- IFRS Course – Ongoing (2025)
-- Commercial Excel – EAAC (Dec 2020)
-- Excel Basics for Data Analysis – Coursera (Jan 2022)
-- Qualified Accountant Diploma (QAD) – EAAC (Feb 2020)
-- Professional Financial Accountant (PFA) Workshop (Mar 2019)
-- Microsoft Office Specialist Master (Feb 2018)
-- Financial Services & Banking Training Program
-- Strategic Marketing for Financial Services Program
+---
+
+### **Tawreda.com** – HORECA Food Supply  
+📍 Cairo, Egypt
+
+**Senior Accountant** · Jan 2021 – Dec 2022  
+- Prepared financial statements (Income Statement & Statement of Financial Position) in compliance with accounting standards.
+- Prepared VAT returns in coordination with external auditors and tax consultants.
+- Developed and presented monthly sales and profitability management reports to support decision‑making.
+- Supervised the accounting team to ensure timely and accurate month‑end closing.
+- Oversaw AR/AP with timely customer follow‑up; reconciled transactions and maintained a daily Cash Flow Sheet.
+
+**Junior Accountant** · Jul 2019 – Jan 2021  
+- Prepared and recorded journal entries, assisted departments with expense reviews.
+- Maintained a fixed assets register, calculated depreciation, and managed online banking transactions.
+- Monitored daily cash balances and assisted with payroll accruals.
+
+---
+
+## 🎓 Education
+
+**Bachelor of Commerce (English Section – Accounting)**  
+Tanta University | 2015 – 2019 | Grade: Good
+
+---
+
+## 📜 Certifications
+
+| Certification | Issuer | Year |
+|---------------|--------|------|
+| **Diploma in International Financial Reporting (DipIFR)** | ACCA | 2026 |
+| **DipIFR Preparation Certificate** | Efham IFRS | 2026 |
+| **Data Analysis Diploma** (Excel & Power BI) | – | – |
+| **Commercial Excel** | EAAC | Dec 2020 |
+| **Excel Basics for Data Analysis** | Coursera | Jan 2022 |
+| **Qualified Accountant Diploma (QAD)** | EAAC | Feb 2020 |
+| **Professional Financial Accountant (PFA)** | Workshop | Mar 2019 |
+| **Microsoft Office Specialist Master** | Microsoft | Feb 2018 |
+| **Financial Services & Banking Training** | – | – |
+| **Strategic Marketing for Financial Services** | – | – |
+
+> 📁 Download my [DipIFR Certificate](https://ahmedawaad97.github.io/ahmed-awaad2-portfolio/assets/files/Ahmed_Awaad_DipIFR_ACCA_Certificate.pdf) and [Preparation Certificate](https://ahmedawaad97.github.io/ahmed-awaad2-portfolio/assets/files/Ahmed_Awaad_DipIFR_Efham_IFRS_Certificate.pdf)
+
+---
+
+## 🛠️ Core Competencies
+
+### 📊 Accounting & Finance
+- Financial Reporting (IFRS)
+- General Ledger & Month‑End Closing
+- Bank Reconciliation & Cash Control
+- Accounts Receivable / Accounts Payable
+- VAT & ZATCA Compliance
+- Financial Analysis & Variance Analysis
+- Budgeting & Forecasting
+
+### 💻 ERP & Systems
+- Microsoft Dynamics 365
+- Microsoft Dynamics AX
+- Double Click
+
+### 📈 Data Analytics & Automation
+- **Power BI** – Dashboards, DAX, Data Modeling
+- **Power Query** – ETL, Data Transformation
+- **Advanced Excel** – Pivot Tables, Automation
+- **Power Automate** – Workflow Automation
+- **n8n** – Automation & Integration
+- **SQL** – Basic Querying
+
+### 🧠 Soft Skills
+- Leadership & Team Collaboration
+- Critical Thinking & Problem Solving
+- Effective Communication
+- Time Management & Adaptability
+- Cross‑functional Coordination
 
 ---
 
 ## 📊 Featured Projects
 
-### Power BI Dashboards
-- **Income Statement Report** – Interactive P&L with margin analysis and period‑over‑period comparisons.
-- **Car Sales Dashboard** – KPIs: total sales, average price, YoY trends, time intelligence.
-- **Sales & Profit Dashboard** – Profit margins, business health indicators, interactive filtering.
-- **Sales Performance Dashboard** – Regional analysis, team productivity, drill‑down capabilities.
+### 🔹 Store Shortage & Surplus Analysis Dashboard  
+**Description:** Multi‑branch retail analysis for Deraah Trading Company. Automated daily cash variance tracking, reduced manual reporting by 40%, and surfaced fraud signals in POS collections.  
+**Tools:** Power BI, Power Query, DAX  
+**Impact:** Accelerated month‑end task completion and strengthened internal controls.
 
-> All dashboards are available for download in the [portfolio website](https://ahmedawaad97.github.io/ahmed-awaad2-portfolio/#projects).
+### 🔹 Income Statement Report  
+**Description:** Interactive P&L with revenue breakdown, gross margin analysis, and period‑over‑period comparisons using time intelligence.  
+**Tools:** Power BI, DAX
 
----
+### 🔹 Sales & Profit Dashboard  
+**Description:** Profit margins by product category, business health KPIs, drill‑through by period and segment.  
+**Tools:** Power BI, DAX
 
-## 🛠️ Technical Stack
+### 🔹 Sales Performance Dashboard  
+**Description:** Regional team productivity analysis with drill‑down capabilities, ranking visuals, and YoY performance indicators.  
+**Tools:** Power BI, Power Query
 
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-222222?style=for-the-badge&logo=githubpages&logoColor=white)
+### 🔹 Car Sales Dashboard  
+**Description:** KPIs covering total units sold, average price, YoY trends, and time intelligence metrics across sales channels.  
+**Tools:** Power BI, Time Intelligence
 
----
-
-## 📬 Contact
-
-- **Email:** [ahmedawwad01097903539@gmail.com](mailto:ahmedawwad01097903539@gmail.com)
-- **LinkedIn:** [Ahmed M. Awaad](https://www.linkedin.com/in/ahmed-m-awaad-59103b167/)
-- **Portfolio:** [Live Website](https://ahmedawaad97.github.io/ahmed-awaad2-portfolio/)
-- **Phone:** [+966 56 923 7463](tel:+966569237463) | [+20 109 790 3539](tel:+201097903539)
+> Explore all dashboards on my [Portfolio](https://ahmedawaad97.github.io/ahmed-awaad2-portfolio/#projects) – downloadable .pbix files available.
 
 ---
 
-<div align="center">
+## 🌐 Portfolio & Contact
 
-## 🤝 Let's Connect & Collaborate!
-
-I'm always open to discussing opportunities in accounting, financial analysis, and data analytics.
-
-**✨ Empowering Business Growth through Data & Finance ✨**
-
-[![LinkedIn](https://img.shields.io/badge/Connect_LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ahmed-m-awaad-59103b167/)
-[![Email](https://img.shields.io/badge/Send_Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ahmedawwad01097903539@gmail.com)
-[![Portfolio](https://img.shields.io/badge/View_Portfolio-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white)](https://ahmedawaad97.github.io/ahmed-awaad2-portfolio/)
-[![Call](https://img.shields.io/badge/Call_Now-22C55E?style=for-the-badge&logo=whatsapp&logoColor=white)](tel:+966569237463)
-
-</div>
+- **Portfolio Website:** [https://ahmedawaad97.github.io/ahmed-awaad2-portfolio/](https://ahmedawaad97.github.io/ahmed-awaad2-portfolio/)
+- **LinkedIn:** [https://www.linkedin.com/in/ahmed-awaad-dipifr-59103b167/](https://www.linkedin.com/in/ahmed-awaad-dipifr-59103b167/)
+- **Email:** [ahmed.m.awaad1@outlook.com](mailto:ahmed.m.awaad1@outlook.com)
+- **Phone:** +966 56 923 7463 | +20 109 790 3539
 
 ---
 
-<div align="center">
+<p align="center">
+  <a href="https://www.linkedin.com/in/ahmed-awaad-dipifr-59103b167/" target="_blank"><img src="https://img.shields.io/badge/Connect_on_LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
+  <a href="mailto:ahmed.m.awaad1@outlook.com"><img src="https://img.shields.io/badge/Email_Me-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"></a>
+  <a href="https://ahmedawaad97.github.io/ahmed-awaad2-portfolio/" target="_blank"><img src="https://img.shields.io/badge/View_My_Portfolio-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Portfolio"></a>
+</p>
 
-**© 2025 Ahmed Mahmoud Awaad** – *All rights reserved.*
+---
 
-*Professional portfolio showcasing expertise in accounting and data analytics*
+<p align="center">
+  <em>Empowering Business Growth through Data & Finance</em><br>
+  <strong>© 2026 Ahmed Mahmoud Awaad, DipIFR</strong>
+</p>
 
-![Profile Views](https://komarev.com/ghpvc/?username=ahmedawaad97&color=blue&style=flat-square)
-
-</div>
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=ahmedawaad97&color=blue&style=flat-square" alt="Profile Views">
+</p>
